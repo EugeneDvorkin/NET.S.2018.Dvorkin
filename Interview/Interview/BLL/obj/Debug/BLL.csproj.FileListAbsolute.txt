@@ -1,0 +1,6 @@
+E:\GitProjects\NET.S.2018.Dvorkin\Interview\Interview\BLL\bin\Debug\BLL.dll
+E:\GitProjects\NET.S.2018.Dvorkin\Interview\Interview\BLL\bin\Debug\BLL.pdb
+E:\GitProjects\NET.S.2018.Dvorkin\Interview\Interview\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+E:\GitProjects\NET.S.2018.Dvorkin\Interview\Interview\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+E:\GitProjects\NET.S.2018.Dvorkin\Interview\Interview\BLL\obj\Debug\BLL.dll
+E:\GitProjects\NET.S.2018.Dvorkin\Interview\Interview\BLL\obj\Debug\BLL.pdb
