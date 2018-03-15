@@ -1,0 +1,12 @@
+e:\EPAM\Day1\Sorting\Sorting\bin\Debug\Sorting.dll
+e:\EPAM\Day1\Sorting\Sorting\bin\Debug\Sorting.pdb
+e:\EPAM\Day1\Sorting\Sorting\obj\Debug\Sorting.csprojResolveAssemblyReference.cache
+e:\EPAM\Day1\Sorting\Sorting\obj\Debug\Sorting.csproj.CoreCompileInputs.cache
+e:\EPAM\Day1\Sorting\Sorting\obj\Debug\Sorting.dll
+e:\EPAM\Day1\Sorting\Sorting\obj\Debug\Sorting.pdb
+d:\EPAM\Day1\Sorting\Sorting\bin\Debug\Sorting.dll
+d:\EPAM\Day1\Sorting\Sorting\bin\Debug\Sorting.pdb
+d:\EPAM\Day1\Sorting\Sorting\obj\Debug\Sorting.csprojResolveAssemblyReference.cache
+d:\EPAM\Day1\Sorting\Sorting\obj\Debug\Sorting.csproj.CoreCompileInputs.cache
+d:\EPAM\Day1\Sorting\Sorting\obj\Debug\Sorting.dll
+d:\EPAM\Day1\Sorting\Sorting\obj\Debug\Sorting.pdb
