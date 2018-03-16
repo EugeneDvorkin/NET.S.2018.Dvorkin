@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Task6;
 
 
 namespace Task6.Tests
@@ -39,6 +40,22 @@ namespace Task6.Tests
             int[] actualArray = Filter.FilterDigit(arrayForFilter, 10);
 
             CollectionAssert.AreEqual(filtredArray, actualArray);
-        }        
+        }   
+        
+        public TestContext TestContext { get; set; }
+
+        [TestMethod]
+        [DataSource ("Microsoft.VisualStudio.TestTools.DataSource.XML", "|DataDirectory|\\TestCases.xml"
+            , "TestCase",DataAccessMethod.Sequential)]        
+        public void FilterDigit_UnFiltredArrays_FiltredArrays()
+        {
+            int[] arrayForFiltering = Array.ConvertAll(Convert.ToString(TestContext.DataRow["Actual"]).Split(' '), int.Parse);
+            int[] filteredArray = Array.ConvertAll(Convert.ToString(TestContext.DataRow["ExpectedResult"]).Split(' '), int.Parse);
+            int flag = Convert.ToInt32(TestContext.DataRow["Filter"]);
+
+            int[] actualArray = Filter.FilterDigit(arrayForFiltering, flag);
+
+            CollectionAssert.AreEqual(filteredArray, actualArray);
+        }
     }
 }
