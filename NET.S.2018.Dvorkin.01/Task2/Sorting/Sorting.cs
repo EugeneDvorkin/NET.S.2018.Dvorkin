@@ -9,55 +9,56 @@ namespace Sorting
     /// <summary>
     /// Sorting class. This class contains two type of sorting integer array: Merge Sorting and Quick Sorting
     /// </summary>
-    public class Sorting
+    public static class Sorting
     {
         /// <summary>
         /// Quick sorting of the array which consists of integer elements 
         /// </summary>
-        /// <param name="arrayforsort">Array which needs to be sorted</param>
+        /// <param name="arrayForSort">Array which needs to be sorted</param>
         /// <param name="start">Start index of sorting</param>
-        /// <param name="end">End index of sorting</param>
-        /// <returns>New sorted array consists of integer elements</returns>
-        public static int[] QuickSort(int[] arrayforsort, int start, int end)
+        /// <param name="end">End index of sorting</param>        
+        public static void QuickSort(int[] arrayForSort, int start, int end)
         {
-            int startingelem = start;
-            int endingelem = end;
-            int middle = arrayforsort[(start + end) / 2];
+            if (arrayForSort == null)
+            {
+                throw new ArgumentNullException($"{nameof(arrayForSort)} is null");
+            }            
+            int startingElem = start;
+            int endingElem = end;
+            int middle = arrayForSort[(start + end) / 2];
             int swapper;
             do
             {
-                while (arrayforsort[startingelem] < middle)
+                while (arrayForSort[startingElem] < middle)
                 {
-                    startingelem++;
+                    startingElem++;
                 }
 
-                while (arrayforsort[endingelem] > middle)
+                while (arrayForSort[endingElem] > middle)
                 {
-                    endingelem--;
+                    endingElem--;
                 }
 
-                if (startingelem <= endingelem)
+                if (startingElem <= endingElem)
                 {
-                    swapper = arrayforsort[startingelem];
-                    arrayforsort[startingelem] = arrayforsort[endingelem];
-                    arrayforsort[endingelem] = swapper;
-                    startingelem++;
-                    endingelem--;
+                    swapper = arrayForSort[startingElem];
+                    arrayForSort[startingElem] = arrayForSort[endingElem];
+                    arrayForSort[endingElem] = swapper;
+                    startingElem++;
+                    endingElem--;
                 }
             }
-            while (startingelem < endingelem);
+            while (startingElem < endingElem);
 
-            if (start < endingelem)
+            if (start < endingElem)
             {
-                QuickSort(arrayforsort, start, endingelem);
+                QuickSort(arrayForSort, start, endingElem);
             }
 
             if (start < end)
             {
-                QuickSort(arrayforsort, startingelem, end);
+                QuickSort(arrayForSort, startingElem, end);
             }
-
-            return arrayforsort;
         }
 
         /// <summary>
@@ -67,8 +68,12 @@ namespace Sorting
         /// <param name="start">Start index of sorting</param>
         /// <param name="end">End index of sorting</param>
         /// <returns>New sorted array which consists of integer elements</returns>
-        public static int[] MergeSort(int[] arrayforsort, int start, int end)
-        {            
+        public static void MergeSort(int[] arrayforsort, int start, int end)
+        {
+            if (arrayforsort == null)
+            {
+                throw new ArgumentNullException($"{nameof(arrayforsort)} is null");
+            }            
             int middle = (start + end) / 2;
             if (end > start)
             {
@@ -76,10 +81,8 @@ namespace Sorting
                 MergeSort(arrayforsort, middle + 1, end);
 
                 Merge(arrayforsort, start, middle + 1, end);
-                return arrayforsort;
             }
 
-            return arrayforsort;
         }
 
         /// <summary>
@@ -93,7 +96,7 @@ namespace Sorting
         {
             int[] temp = new int[arrayforsort.Length * 2];
             int counter = end - start + 1;
-            int temp_pos = start;            
+            int temp_pos = start;
             while ((start <= mid - 1) && (mid <= end))
             {
                 if (arrayforsort[start] <= arrayforsort[mid])
