@@ -40,10 +40,11 @@ namespace Sorting.Tests
         /// <summary>
         /// Test for Quick Sort. Array contains random elements
         /// </summary>
+        [TestMethod]
         public void QuickSortTest_Array1000RandomElements_SortedArray()
         {
             Random random = new Random();
-            int[] arrayForSort = new int[int.MaxValue];
+            int[] arrayForSort = new int[2000000];
             foreach (var item in arrayForSort)
             {
                 arrayForSort[item] = random.Next(int.MinValue, int.MaxValue);
@@ -94,6 +95,27 @@ namespace Sorting.Tests
         {
             int[] arrayForSort = { 9, 9, 8, 8, 7, 7, 6, 6, 5, 5, 4, 4, 3, 3 };
             int[] sortedArray = { 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9 };
+
+            Sorting.MergeSort(arrayForSort, 0, arrayForSort.Length - 1);
+
+            CollectionAssert.AreEqual(sortedArray, arrayForSort);
+        }
+
+        /// <summary>
+        /// Test for Quick Sort. Array contains random elements
+        /// </summary>
+        [TestMethod]
+        public void MergeSortTest_ArrayRandomElements_SortedArray()
+        {
+            Random random = new Random();
+            int[] arrayForSort = new int[200000];
+            foreach (var item in arrayForSort)
+            {
+                arrayForSort[item] = random.Next(int.MinValue, int.MaxValue);
+            }
+            int[] sortedArray = new int[arrayForSort.Length];
+            Array.Copy(arrayForSort, sortedArray, sortedArray.Length);
+            Array.Sort(sortedArray);
 
             Sorting.MergeSort(arrayForSort, 0, arrayForSort.Length - 1);
 
