@@ -1,0 +1,12 @@
+D:\EPAM\Day2\Task6\Task6\bin\Debug\Task6.dll
+D:\EPAM\Day2\Task6\Task6\bin\Debug\Task6.pdb
+D:\EPAM\Day2\Task6\Task6\obj\Debug\Task6.csprojResolveAssemblyReference.cache
+D:\EPAM\Day2\Task6\Task6\obj\Debug\Task6.csproj.CoreCompileInputs.cache
+D:\EPAM\Day2\Task6\Task6\obj\Debug\Task6.dll
+D:\EPAM\Day2\Task6\Task6\obj\Debug\Task6.pdb
+E:\EPAM\Day2\Task6\Task6\bin\Debug\Task6.dll
+E:\EPAM\Day2\Task6\Task6\bin\Debug\Task6.pdb
+E:\EPAM\Day2\Task6\Task6\obj\Debug\Task6.csprojResolveAssemblyReference.cache
+E:\EPAM\Day2\Task6\Task6\obj\Debug\Task6.csproj.CoreCompileInputs.cache
+E:\EPAM\Day2\Task6\Task6\obj\Debug\Task6.dll
+E:\EPAM\Day2\Task6\Task6\obj\Debug\Task6.pdb
