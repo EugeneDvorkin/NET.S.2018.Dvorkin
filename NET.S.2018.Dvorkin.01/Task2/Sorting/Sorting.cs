@@ -22,7 +22,13 @@ namespace Sorting
             if (arrayForSort == null)
             {
                 throw new ArgumentNullException($"{nameof(arrayForSort)} is null");
-            }            
+            }
+
+            if (start > end)
+            {
+                throw new ArgumentException($"{nameof(start)} is more then{nameof(end)}");
+            }
+
             int startingElem = start;
             int endingElem = end;
             int middle = arrayForSort[(start + end) / 2];
@@ -73,7 +79,13 @@ namespace Sorting
             if (arrayforsort == null)
             {
                 throw new ArgumentNullException($"{nameof(arrayforsort)} is null");
-            }            
+            }
+
+            if (start>end)
+            {
+                throw new ArgumentException($"{nameof(start)} is more then{nameof(end)}");
+            }
+
             int middle = (start + end) / 2;
             if (end > start)
             {

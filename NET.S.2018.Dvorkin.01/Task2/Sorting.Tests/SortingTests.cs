@@ -62,7 +62,7 @@ namespace Sorting.Tests
         /// Test for Quick Sort. Catch IndexOutOfRangeException
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(IndexOutOfRangeException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void QuickSortTest_ArraySortingFromEndToStart_IndexOutOfRangeException()
         {
             int[] arrayForSort = { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 };
