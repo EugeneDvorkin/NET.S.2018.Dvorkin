@@ -4,16 +4,16 @@ using System;
 namespace Task6
 {
     /// <summary>
-    /// Filtring array with digit key
+    /// Filtering array with digit key
     /// </summary>
     public class Filter
     {
         /// <summary>
-        /// Filtring array with the digit
+        /// Filtering array with the digit
         /// </summary>
-        /// <param name="filterArray">Filtring array</param>
-        /// <param name="digit">Filtring key</param>
-        /// <returns>Filtred array</returns>
+        /// <param name="filterArray">Filtering array</param>
+        /// <param name="digit">Filtering key</param>
+        /// <returns>Filtering array</returns>
         public static int[] FilterDigit(int[] filterArray, int digit)
         {
             if (filterArray == null)
