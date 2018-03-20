@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sorting
 {
@@ -11,12 +7,15 @@ namespace Sorting
     /// </summary>
     public static class Sorting
     {
+
         /// <summary>
-        /// Quick sorting of the array which consists of integer elements 
+        /// Quicks the sort.
         /// </summary>
-        /// <param name="arrayForSort">Array which needs to be sorted</param>
-        /// <param name="start">Start index of sorting</param>
-        /// <param name="end">End index of sorting</param>        
+        /// <param name="arrayForSort">The array for sort.</param>
+        /// <param name="start">The start.</param>
+        /// <param name="end">The end.</param>
+        /// <exception cref="ArgumentNullException">arrayForSort</exception>
+        /// <exception cref="ArgumentException">start</exception>
         public static void QuickSort(int[] arrayForSort, int start, int end)
         {
             if (arrayForSort == null)
@@ -68,12 +67,13 @@ namespace Sorting
         }
 
         /// <summary>
-        /// Merge sorting of the array which consists of integer elements 
+        /// Merge sorting of the array which consists of integer elements
         /// </summary>
         /// <param name="arrayforsort">Array which needs to be sorted</param>
         /// <param name="start">Start index of sorting</param>
         /// <param name="end">End index of sorting</param>
-        /// <returns>New sorted array which consists of integer elements</returns>
+        /// <exception cref="ArgumentNullException">arrayforsort</exception>
+        /// <exception cref="ArgumentException">start</exception>
         public static void MergeSort(int[] arrayforsort, int start, int end)
         {
             if (arrayforsort == null)
@@ -108,34 +108,34 @@ namespace Sorting
         {
             int[] temp = new int[arrayforsort.Length * 2];
             int counter = end - start + 1;
-            int temp_pos = start;
+            int tempPos = start;
             while ((start <= mid - 1) && (mid <= end))
             {
                 if (arrayforsort[start] <= arrayforsort[mid])
                 {
-                    temp[temp_pos] = arrayforsort[start];
-                    temp_pos++;
+                    temp[tempPos] = arrayforsort[start];
+                    tempPos++;
                     start++;
                 }
                 else
                 {
-                    temp[temp_pos] = arrayforsort[mid];
-                    temp_pos++;
+                    temp[tempPos] = arrayforsort[mid];
+                    tempPos++;
                     mid++;
                 }
             }
 
             while (start <= mid - 1)
             {
-                temp[temp_pos] = arrayforsort[start];
-                temp_pos++;
+                temp[tempPos] = arrayforsort[start];
+                tempPos++;
                 start++;
             }
 
             while (mid <= end)
             {
-                temp[temp_pos] = arrayforsort[mid];
-                temp_pos++;
+                temp[tempPos] = arrayforsort[mid];
+                tempPos++;
                 mid++;
             }
 

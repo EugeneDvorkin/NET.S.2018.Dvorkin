@@ -13,7 +13,15 @@ namespace Task6
         /// </summary>
         /// <param name="filterArray">Filtering array</param>
         /// <param name="digit">Filtering key</param>
-        /// <returns>Filtering array</returns>
+        /// <returns>
+        /// Filtering array
+        /// </returns>
+        /// <exception cref="ArgumentNullException">filterArray</exception>
+        /// <exception cref="ArgumentException">
+        /// digit
+        /// or
+        /// filterArray
+        /// </exception>
         public static int[] FilterDigit(int[] filterArray, int digit)
         {
             if (filterArray == null)
@@ -50,7 +58,9 @@ namespace Task6
         /// </summary>
         /// <param name="element">Element from array</param>
         /// <param name="digit">Flag for checking</param>
-        /// <returns>True if element contains digit</returns>
+        /// <returns>
+        /// True if element contains digit
+        /// </returns>
         private static bool IsElementContainsDigit(int element, int digit)
         {
             if (element < 0)

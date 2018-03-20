@@ -6,7 +6,7 @@ namespace NET.S._2018.Dvorkin.Task1
     /// Contains insert bites method 
     /// </summary>
     public static class InsertNumbers
-    {   
+    {
         /// <summary>
         /// Inserts bites from second number into first from required range
         /// </summary>
@@ -14,6 +14,13 @@ namespace NET.S._2018.Dvorkin.Task1
         /// <param name="insertNumber">Inserting number</param>
         /// <param name="startBit">Start range for inserting</param>
         /// <param name="endBit">End range for inserting</param>
+        /// <returns>New number, which consists of bits of the current elements</returns>
+        /// <exception cref="ArgumentException">startBit bigger, then endBit</exception>
+        /// <exception cref="ArgumentOutOfRangeException">
+        /// startBit
+        /// or
+        /// endBit
+        /// </exception>
         public static Int32 InsertNumber(Int32 targretNumber, Int32 insertNumber, int startBit, int endBit)
         {
             #region Validation
