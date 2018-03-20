@@ -13,7 +13,16 @@ namespace NET.S._2018.Dvorkin.Task1
         /// <param name="element">number for Sqrt</param>
         /// <param name="pow">Degree for Sqrt</param>
         /// <param name="eps">Precision</param>
-        /// <returns>Result of Sqrt</returns>
+        /// <returns>
+        /// Result of Sqrt
+        /// </returns>
+        /// <exception cref="ArgumentException">
+        /// pow
+        /// or
+        /// element
+        /// or
+        /// eps
+        /// </exception>
         public static double FindNthRoot(double element, int pow, double eps)
         {
             if (pow < 0)
