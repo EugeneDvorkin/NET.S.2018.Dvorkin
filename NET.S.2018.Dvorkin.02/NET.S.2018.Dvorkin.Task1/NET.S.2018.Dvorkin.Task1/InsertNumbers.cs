@@ -10,7 +10,7 @@ namespace NET.S._2018.Dvorkin.Task1
         /// <summary>
         /// Inserts bites from second number into first from required range
         /// </summary>
-        /// <param name="targretNumber">Inserted number</param>
+        /// <param name="targetNumber">Inserted number</param>
         /// <param name="insertNumber">Inserting number</param>
         /// <param name="startBit">Start range for inserting</param>
         /// <param name="endBit">End range for inserting</param>
@@ -21,7 +21,7 @@ namespace NET.S._2018.Dvorkin.Task1
         /// or
         /// endBit
         /// </exception>
-        public static Int32 InsertNumber(Int32 targretNumber, Int32 insertNumber, int startBit, int endBit)
+        public static Int32 InsertNumber(Int32 targetNumber, Int32 insertNumber, int startBit, int endBit)
         {
             #region Validation
 
@@ -40,6 +40,11 @@ namespace NET.S._2018.Dvorkin.Task1
                 throw new ArgumentOutOfRangeException($"{nameof(endBit)} is more then length of bite array of target number");
             }
 
+            if (targetNumber<=0 || insertNumber<0)
+            {
+                throw new ArgumentException($"{nameof(targetNumber)} or{nameof(insertNumber)} must be greater than 0");
+            }
+
             #endregion
 
             #region Fields
@@ -53,10 +58,10 @@ namespace NET.S._2018.Dvorkin.Task1
             #endregion
 
             #region MainLogic
-            while (targretNumber > 0)
+            while (targetNumber > 0)
             {
-                targetNumberBiteArray[counterTargetArray] = targretNumber % 2;
-                targretNumber /= 2;
+                targetNumberBiteArray[counterTargetArray] = targetNumber % 2;
+                targetNumber /= 2;
                 counterTargetArray++;
             }
 
@@ -81,9 +86,44 @@ namespace NET.S._2018.Dvorkin.Task1
                 }
             }
 
-            //targretNumber = Convert.ToInt32(temp);
+            //targetNumber = Convert.ToInt32(temp);
             return Convert.ToInt32(temp);
             #endregion
+        }
+
+        public static int InsertNumber_BitsOperation(int targetNumber, int insertNumber, int startBit, int endBit)
+        {
+            #region Validation
+
+            if (startBit > endBit)
+            {
+                throw new ArgumentException($"{nameof(startBit)} bigger, then {nameof(endBit)}");
+            }
+
+            if (startBit > 32)
+            {
+                throw new ArgumentOutOfRangeException($"{nameof(startBit)} is more then length of bite array of target number");
+            }
+
+            if (endBit > 32)
+            {
+                throw new ArgumentOutOfRangeException($"{nameof(endBit)} is more then length of bite array of target number");
+            }
+
+            if (targetNumber <= 0 || insertNumber < 0)
+            {
+                throw new ArgumentException($"{nameof(targetNumber)} or{nameof(insertNumber)} must be greater than 0");
+            }
+
+            #endregion
+
+            insertNumber &= ~-(1 << endBit - startBit);
+            insertNumber <<= startBit;
+            int tRightPart = targetNumber & ~-(1 << startBit);
+            int tLeftPart = targetNumber & -(1 << endBit);
+            targetNumber = tLeftPart | tRightPart;
+            targetNumber |= insertNumber;
+            return targetNumber;
         }
     }
 }
