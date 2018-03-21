@@ -21,7 +21,7 @@ namespace NET.S._2018.Dvorkin.Task1
         /// or
         /// endBit
         /// </exception>
-        public static Int32 InsertNumber(Int32 targetNumber, Int32 insertNumber, int startBit, int endBit)
+        public static int InsertNumber(int targetNumber, int insertNumber, int startBit, int endBit)
         {
             #region Validation
 
@@ -91,6 +91,24 @@ namespace NET.S._2018.Dvorkin.Task1
             #endregion
         }
 
+        /// <summary>
+        /// Inserts bites from second number into first from required range
+        /// </summary>
+        /// <param name="targetNumber">The target number.</param>
+        /// <param name="insertNumber">The insert number.</param>
+        /// <param name="startBit">The start bit.</param>
+        /// <param name="endBit">The end bit.</param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException">
+        /// startBit
+        /// or
+        /// targetNumber
+        /// </exception>
+        /// <exception cref="ArgumentOutOfRangeException">
+        /// startBit
+        /// or
+        /// endBit
+        /// </exception>
         public static int InsertNumber_BitsOperation(int targetNumber, int insertNumber, int startBit, int endBit)
         {
             #region Validation
