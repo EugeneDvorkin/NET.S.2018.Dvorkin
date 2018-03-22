@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2011
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET.S.2018.Dvorkin.Task2", "NET.S.2018.Dvorkin.Task2\NET.S.2018.Dvorkin.Task2.csproj", "{081A18DC-04FC-44D5-BA50-33D71153325E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET.S.2018.Dvorkin.Task2.Tests", "NET.S.2018.Dvorkin.Task2.Tests\NET.S.2018.Dvorkin.Task2.Tests.csproj", "{2B72E78D-80CC-4D02-BAD9-9BF234019F87}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{081A18DC-04FC-44D5-BA50-33D71153325E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{081A18DC-04FC-44D5-BA50-33D71153325E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{081A18DC-04FC-44D5-BA50-33D71153325E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{081A18DC-04FC-44D5-BA50-33D71153325E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B72E78D-80CC-4D02-BAD9-9BF234019F87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B72E78D-80CC-4D02-BAD9-9BF234019F87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B72E78D-80CC-4D02-BAD9-9BF234019F87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B72E78D-80CC-4D02-BAD9-9BF234019F87}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72E27DA3-F0A0-4B03-BDD3-343D117BB365}
+	EndGlobalSection
+EndGlobal
