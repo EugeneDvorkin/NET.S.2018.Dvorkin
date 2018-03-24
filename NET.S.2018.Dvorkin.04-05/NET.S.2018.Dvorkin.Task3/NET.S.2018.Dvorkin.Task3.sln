@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2011
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET.S.2018.Dvorkin.Task3", "NET.S.2018.Dvorkin.Task3\NET.S.2018.Dvorkin.Task3.csproj", "{19048959-C1E1-407D-9CC6-23523289074D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET.S.2018.Dvorkin.Task3.Tests", "NET.S.2018.Dvorkin.Task3.Tests\NET.S.2018.Dvorkin.Task3.Tests.csproj", "{781D55C3-61F7-48B4-9181-BB8023F7DB84}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19048959-C1E1-407D-9CC6-23523289074D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19048959-C1E1-407D-9CC6-23523289074D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19048959-C1E1-407D-9CC6-23523289074D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19048959-C1E1-407D-9CC6-23523289074D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{781D55C3-61F7-48B4-9181-BB8023F7DB84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{781D55C3-61F7-48B4-9181-BB8023F7DB84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{781D55C3-61F7-48B4-9181-BB8023F7DB84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{781D55C3-61F7-48B4-9181-BB8023F7DB84}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4457B4DB-DF83-4DBE-B7D1-064E6F2A4B9A}
+	EndGlobalSection
+EndGlobal
