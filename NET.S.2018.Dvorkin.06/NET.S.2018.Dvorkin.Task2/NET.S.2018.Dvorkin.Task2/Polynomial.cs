@@ -11,6 +11,7 @@ namespace NET.S._2018.Dvorkin.Task2
     /// <seealso cref="System.IComparable" />
     public class Polynomial : IEnumerable, IComparable
     {
+        #region Properties and constructor
         /// <summary>
         /// The collection of coefficients
         /// </summary>
@@ -70,6 +71,8 @@ namespace NET.S._2018.Dvorkin.Task2
                 return this.coeff[indexer];
             }
         }
+        #endregion
+        #region Static methods
 
         /// <summary>
         /// Equals the specified polynomials.
@@ -216,6 +219,8 @@ namespace NET.S._2018.Dvorkin.Task2
         /// <param name="number">The number.</param>
         /// <returns>Multiplies of polynomial and number.</returns>
         public static Polynomial Multiply(Polynomial poly, double number) => Mult(poly, number);
+        #endregion
+        #region All public methods(include override)
 
         /// <summary>
         /// Returns an enumerator that iterates through a collection.
@@ -331,6 +336,8 @@ namespace NET.S._2018.Dvorkin.Task2
 
             return result;
         }
+        #endregion
+        #region Private methods
 
         /// <summary>
         /// Sums the specified polynomial 1 to polynomial 2.
@@ -484,5 +491,6 @@ namespace NET.S._2018.Dvorkin.Task2
                 throw new ArgumentException($"{nameof(poly)} has 0 arguments");
             }
         }
+        #endregion
     }
 }
