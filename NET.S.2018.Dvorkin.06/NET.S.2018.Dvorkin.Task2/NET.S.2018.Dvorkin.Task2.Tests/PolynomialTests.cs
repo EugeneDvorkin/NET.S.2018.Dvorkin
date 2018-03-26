@@ -14,21 +14,23 @@ namespace NET.S._2018.Dvorkin.Task2.Tests
             Assert.AreEqual(expected, polynomial.ToString());
         }
 
-        [TestCase()]
+        [TestCase]
         public void PolynomialToString_InvalidParams_ArgumentExeptions(params double[] test)
         {
             Polynomial polynomial;
             Assert.Throws<ArgumentException>(() => polynomial = new Polynomial(test));
         }
 
-        [TestCase("2 4 6 ")]
-        public void PolynomialAdd_validTwoPolynomial_ValidResult(string expected)
+        [TestCase]
+        public void PolynomialAdd_ValidTwoPolynomial_ValidResult()
         {
             Polynomial poly1 = new Polynomial(1, 2, 3);
             Polynomial poly2 = new Polynomial(1, 2, 3);
             Polynomial result = Polynomial.Add(poly1, poly2);
-            string res = result.ToString();
-            Assert.AreEqual(expected, res);        
+
+            Polynomial expected = new Polynomial(2, 4, 6);
+
+            Assert.AreEqual(expected, result);
         }
 
         [TestCase]
@@ -37,9 +39,10 @@ namespace NET.S._2018.Dvorkin.Task2.Tests
             Polynomial poly1 = new Polynomial(2, 4, 6);
             Polynomial poly2 = new Polynomial(1, 2, 3);
             Polynomial result = poly1 - poly2;
-            string res = result.ToString();
-            string expected = "1 2 3 ";
-            Assert.AreEqual(expected, res);
+
+            Polynomial expected = new Polynomial(1, 2, 3);
+            
+            Assert.AreEqual(expected, result);
         }
     }
 }

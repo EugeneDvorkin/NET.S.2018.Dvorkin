@@ -7,9 +7,8 @@ namespace NET.S._2018.Dvorkin.Task2
     /// <summary>
     /// Contains methods for polynomials
     /// </summary>
-    /// <seealso cref="System.Collections.IEnumerable" />
     /// <seealso cref="System.IComparable" />
-    public class Polynomial : IEnumerable, IComparable
+    public class Polynomial :  IComparable
     {
         #region Properties and constructor
         /// <summary>
@@ -73,24 +72,6 @@ namespace NET.S._2018.Dvorkin.Task2
         }
         #endregion
         #region Static methods
-
-        /// <summary>
-        /// Equals the specified polynomials.
-        /// </summary>
-        /// <param name="poly1">The polynomial 1.</param>
-        /// <param name="poly2">The polynomial 2.</param>
-        /// <returns>
-        /// <c>true</c> if the specified <see cref="System.Object" /> is equal to this instance; otherwise, <c>false</c>.
-        /// </returns>
-        public static bool Equals(Polynomial poly1, Polynomial poly2)
-        {
-            if (poly1.Equals(poly2) == true)
-            {
-                return true;
-            }
-
-            return false;
-        }
 
         /// <summary>
         /// Implements the operator +.
@@ -221,17 +202,6 @@ namespace NET.S._2018.Dvorkin.Task2
         public static Polynomial Multiply(Polynomial poly, double number) => Mult(poly, number);
         #endregion
         #region All public methods(include override)
-
-        /// <summary>
-        /// Returns an enumerator that iterates through a collection.
-        /// </summary>
-        /// <returns>
-        /// An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.
-        /// </returns>
-        public IEnumerator GetEnumerator()
-        {
-            return this.coeff.GetEnumerator();
-        }
 
         /// <summary>
         /// Compares the current instance with another object of the same type and returns an integer that indicates whether the current instance precedes, follows, or occurs in the same position in the sort order as the other object.
