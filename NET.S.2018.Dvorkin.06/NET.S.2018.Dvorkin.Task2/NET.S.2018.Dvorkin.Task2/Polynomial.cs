@@ -257,6 +257,7 @@ namespace NET.S._2018.Dvorkin.Task2
         public override bool Equals(object obj)
         {
             Polynomial poly = obj as Polynomial;
+            Check(poly);
 
             if (poly == null)
             {
