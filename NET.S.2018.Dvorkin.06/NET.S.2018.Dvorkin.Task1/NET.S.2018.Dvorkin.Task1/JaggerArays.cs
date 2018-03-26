@@ -7,24 +7,29 @@ namespace NET.S._2018.Dvorkin.Task1
     /// </summary>
     public class JaggerArays
     {
+        #region Public methods
         /// <summary>
         /// Sums the increasing sort.
         /// </summary>
-        /// <param name="jaggerArray">The jaggers array.</param>
+        /// <param name = "jaggerArray" > The jaggers array.</param>
         public static void SumIncreasingSort(int[][] jaggerArray)
         {
             Checker(jaggerArray);
-            for (int i = 0; i < jaggerArray.Length - 1; i++)
-            {
-                if (jaggerArray[i] == null)
-                {
-                    Swapper(jaggerArray[i], jaggerArray[i + 1]);
-                    break;
-                }
 
-                if (Sum(jaggerArray[i]) > Sum(jaggerArray[i + 1]))
+            for (int i = 0; i < jaggerArray.Length; i++)
+            {
+                for (int j = 0; j < jaggerArray.Length - 1; j++)
                 {
-                    Swapper(jaggerArray[i], jaggerArray[i + 1]);
+                    if (jaggerArray[j] == null)
+                    {
+                        Swapper(ref jaggerArray[j], ref jaggerArray[j + 1]);
+                        continue;
+                    }
+
+                    if (Sum(jaggerArray[j]) > Sum(jaggerArray[j + 1]))
+                    {
+                        Swapper(ref jaggerArray[j], ref jaggerArray[j + 1]);
+                    }
                 }
             }
         }
@@ -37,17 +42,20 @@ namespace NET.S._2018.Dvorkin.Task1
         {
             Checker(jaggerArray);
 
-            for (int i = 0; i < jaggerArray.Length - 1; i++)
+            for (int i = 0; i < jaggerArray.Length; i++)
             {
-                if (jaggerArray[i] == null)
+                for (int j = 0; j < jaggerArray.Length - 1; j++)
                 {
-                    Swapper(jaggerArray[i], jaggerArray[i + 1]);
-                    continue;
-                }
+                    if (jaggerArray[j] == null)
+                    {
+                        Swapper(ref jaggerArray[j], ref jaggerArray[j + 1]);
+                        continue;
+                    }
 
-                if (MaxElement(jaggerArray[i]) > MaxElement(jaggerArray[i + 1]))
-                {
-                    Swapper(jaggerArray[i], jaggerArray[i + 1]);
+                    if (MaxElement(jaggerArray[j]) > MaxElement(jaggerArray[j + 1]))
+                    {
+                        Swapper(ref jaggerArray[j], ref jaggerArray[j + 1]);
+                    }
                 }
             }
         }
@@ -60,17 +68,20 @@ namespace NET.S._2018.Dvorkin.Task1
         {
             Checker(jaggerArray);
 
-            for (int i = 0; i < jaggerArray.Length - 1; i++)
+            for (int i = 0; i < jaggerArray.Length; i++)
             {
-                if (jaggerArray[i] == null)
+                for (int j = 0; j < jaggerArray.Length - 1; j++)
                 {
-                    Swapper(jaggerArray[i], jaggerArray[i + 1]);
-                    continue;
-                }
+                    if (jaggerArray[j] == null)
+                    {
+                        Swapper(ref jaggerArray[j], ref jaggerArray[j + 1]);
+                        continue;
+                    }
 
-                if (MinElement(jaggerArray[i]) > MinElement(jaggerArray[i + 1]))
-                {
-                    Swapper(jaggerArray[i], jaggerArray[i + 1]);
+                    if (MinElement(jaggerArray[j]) > MinElement(jaggerArray[j + 1]))
+                    {
+                        Swapper(ref jaggerArray[j], ref jaggerArray[j + 1]);
+                    }
                 }
             }
         }
@@ -79,21 +90,24 @@ namespace NET.S._2018.Dvorkin.Task1
         /// Sums the decreasing sort.
         /// </summary>
         /// <param name="jaggerArray">The jaggers array.</param>
-        public void SumDecreasingSort(int[][] jaggerArray)
+        public static void SumDecreasingSort(int[][] jaggerArray)
         {
             Checker(jaggerArray);
 
-            for (int i = 0; i < jaggerArray.Length - 1; i++)
+            for (int i = 0; i < jaggerArray.Length; i++)
             {
-                if (jaggerArray[i] == null)
+                for (int j = 0; j < jaggerArray.Length - 1; j++)
                 {
-                    Swapper(jaggerArray[i], jaggerArray[i + 1]);
-                    continue;
-                }
+                    if (jaggerArray[j + 1] == null)
+                    {
+                        Swapper(ref jaggerArray[j], ref jaggerArray[j + 1]);
+                        continue;
+                    }
 
-                if (Sum(jaggerArray[i]) < Sum(jaggerArray[i + 1]))
-                {
-                    Swapper(jaggerArray[i], jaggerArray[i + 1]);
+                    if (Sum(jaggerArray[j]) < Sum(jaggerArray[j + 1]))
+                    {
+                        Swapper(ref jaggerArray[j], ref jaggerArray[j + 1]);
+                    }
                 }
             }
         }
@@ -102,21 +116,24 @@ namespace NET.S._2018.Dvorkin.Task1
         /// Maximums the decreasing sort.
         /// </summary>
         /// <param name="jaggerArray">The jaggers array.</param>
-        public void MaxDecreasingSort(int[][] jaggerArray)
+        public static void MaxDecreasingSort(int[][] jaggerArray)
         {
             Checker(jaggerArray);
 
-            for (int i = 0; i < jaggerArray.Length - 1; i++)
+            for (int i = 0; i < jaggerArray.Length; i++)
             {
-                if (jaggerArray[i] == null)
+                for (int j = 0; j < jaggerArray.Length - 1; j++)
                 {
-                    Swapper(jaggerArray[i], jaggerArray[i + 1]);
-                    continue;
-                }
+                    if (jaggerArray[j + 1] == null)
+                    {
+                        Swapper(ref jaggerArray[j], ref jaggerArray[j + 1]);
+                        continue;
+                    }
 
-                if (MaxElement(jaggerArray[i]) < MaxElement(jaggerArray[i + 1]))
-                {
-                    Swapper(jaggerArray[i], jaggerArray[i + 1]);
+                    if (MaxElement(jaggerArray[j]) < MaxElement(jaggerArray[j + 1]))
+                    {
+                        Swapper(ref jaggerArray[j], ref jaggerArray[j + 1]);
+                    }
                 }
             }
         }
@@ -125,25 +142,30 @@ namespace NET.S._2018.Dvorkin.Task1
         /// Minimums the decreasing sort.
         /// </summary>
         /// <param name="jaggerArray">The jaggers array.</param>
-        public void MinDecreasingSort(int[][] jaggerArray)
+        public static void MinDecreasingSort(int[][] jaggerArray)
         {
             Checker(jaggerArray);
 
-            for (int i = 0; i < jaggerArray.Length - 1; i++)
+            for (int i = 0; i < jaggerArray.Length; i++)
             {
-                if (jaggerArray[i] == null)
+                for (int j = 0; j < jaggerArray.Length - 1; j++)
                 {
-                    Swapper(jaggerArray[i], jaggerArray[i + 1]);
-                    break;
-                }
+                    if (jaggerArray[j + 1] == null)
+                    {
+                        Swapper(ref jaggerArray[j], ref jaggerArray[j + 1]);
+                        break;
+                    }
 
-                if (MinElement(jaggerArray[i]) < MinElement(jaggerArray[i + 1]))
-                {
-                    Swapper(jaggerArray[i], jaggerArray[i + 1]);
+                    if (MinElement(jaggerArray[j]) < MinElement(jaggerArray[j + 1]))
+                    {
+                        Swapper(ref jaggerArray[j], ref jaggerArray[j + 1]);
+                    }
                 }
             }
         }
+        #endregion
 
+        #region Private methods
         /// <summary>
         /// Sums the specified row.
         /// </summary>
@@ -219,7 +241,7 @@ namespace NET.S._2018.Dvorkin.Task1
         /// </summary>
         /// <param name="first">The first.</param>
         /// <param name="second">The second.</param>
-        private static void Swapper(int[] first, int[] second)
+        private static void Swapper(ref int[] first, ref int[] second)
         {
             int[] temp = first;
             first = second;
@@ -238,5 +260,6 @@ namespace NET.S._2018.Dvorkin.Task1
                 throw new ArgumentNullException($"{nameof(jaggerArray)} is null");
             }
         }
+        #endregion
     }
 }
