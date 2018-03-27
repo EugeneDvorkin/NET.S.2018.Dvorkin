@@ -34,7 +34,7 @@ namespace Task6
                 throw new ArgumentException($"{nameof(digit)} is not a digit");
             }
 
-            if (filterArray.Length==0)
+            if (filterArray.Length == 0)
             {
                 throw new ArgumentException($"{nameof(filterArray)} is empty");
             }
@@ -42,12 +42,10 @@ namespace Task6
             List<int> result = new List<int>();
             foreach (var item in filterArray)
             {
-
                 if (IsElementContainsDigit(item, digit))
                 {
                     result.Add(item);
                 }
-
             }
 
             return result.ToArray();
