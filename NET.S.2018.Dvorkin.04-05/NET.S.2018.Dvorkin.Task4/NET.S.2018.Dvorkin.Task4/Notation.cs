@@ -5,10 +5,9 @@ namespace NET.S._2018.Dvorkin.Task4
     /// <summary>
     /// Validations and builder necessary string
     /// </summary>
-    public class Notations
+    public class Notation
     {
         private int order;
-        private string _string;
         private string standartString = "0123456789ABCDEF";
 
         /// <summary>
@@ -20,10 +19,7 @@ namespace NET.S._2018.Dvorkin.Task4
         /// <exception cref="ArgumentException">order</exception>
         public int Order
         {
-            get
-            {
-                return order;
-            }
+            get => order;
 
             set
             {
@@ -41,26 +37,16 @@ namespace NET.S._2018.Dvorkin.Task4
         /// <value>
         /// The string.
         /// </value>
-        public string String
-        {
-            get
-            {
-                return _string;
-            }
-            private set
-            {                
-                _string = value;
-            }
-        }
+        public string ActualString { get; private set; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Notations"/> class.
+        /// Initializes a new instance of the <see cref="Notation"/> class.
         /// </summary>
         /// <param name="order">The order.</param>
-        public Notations(int order)
+        public Notation(int order)
         {
             Order = order;
-            String = standartString.Substring(0, order);
+            ActualString = standartString.Substring(0, order);
         }
     }
 }

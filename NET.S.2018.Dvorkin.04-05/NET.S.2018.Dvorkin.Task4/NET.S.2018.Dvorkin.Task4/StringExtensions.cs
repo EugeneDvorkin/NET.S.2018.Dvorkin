@@ -14,11 +14,11 @@ namespace NET.S._2018.Dvorkin.Task4
         /// <param name="notations">The notations.</param>
         /// <returns>Number from <param name="source"/> binary string representations</returns>
         /// <exception cref="ArgumentException">source</exception>
-        public static int ToNumber(this string source, Notations notations)
+        public static int ToNumber(this string source, Notation notations)
         { 
             foreach (char item in source.ToUpper())
             {
-                if (!notations.String.Contains(item.ToString()))
+                if (!notations.ActualString.Contains(item.ToString()))
                 {
                     throw new ArgumentException($"{nameof(source)} contains invalid letters");
                 }
@@ -30,7 +30,7 @@ namespace NET.S._2018.Dvorkin.Task4
             {
                 for (int i = 0, j = source.Length - 1; i < source.Length; i++)
                 {
-                    result += (int)(Math.Pow(notations.Order, j - i)) * notations.String.IndexOf(source[i].ToString().ToUpper(), StringComparison.Ordinal);
+                    result += (int)(Math.Pow(notations.Order, j - i)) * notations.ActualString.IndexOf(source[i].ToString().ToUpper(), StringComparison.Ordinal);
                 }
             }            
 

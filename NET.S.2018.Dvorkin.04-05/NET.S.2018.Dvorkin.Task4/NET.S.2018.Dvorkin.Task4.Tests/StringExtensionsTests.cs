@@ -15,7 +15,7 @@ namespace NET.S._2018.Dvorkin.Task4.Tests
         [TestCase("10", 5, 5)]
         public void ToNumber_ValidParams_ValidResult(string source, int order, int expectedResult)
         {
-            int actualresult = source.ToNumber(new Notations(order));
+            int actualresult = source.ToNumber(new Notation(order));
 
             Assert.AreEqual(expectedResult, actualresult);
         }
@@ -27,13 +27,13 @@ namespace NET.S._2018.Dvorkin.Task4.Tests
         [TestCase("SA123", 2)]
         public void ToNumber_InvalidParams_ArgumentExceptions(string source, int order)
         {
-            Assert.Throws<ArgumentException>(()=>source.ToNumber(new Notations(order)));
+            Assert.Throws<ArgumentException>(()=>source.ToNumber(new Notation(order)));
         }
 
         [TestCase("11111111111111111111111111111111", 2)]
         public void ToNumber_InvalidParams_OverFlowException(string source, int order)
         {
-            Assert.Throws<OverflowException>(() => source.ToNumber(new Notations(order)));
+            Assert.Throws<OverflowException>(() => source.ToNumber(new Notation(order)));
         }
     }
 }
