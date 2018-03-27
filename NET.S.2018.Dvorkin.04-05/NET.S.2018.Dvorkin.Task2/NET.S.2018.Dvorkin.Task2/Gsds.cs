@@ -18,7 +18,7 @@ namespace NET.S._2018.Dvorkin.Task2
         /// <exception cref="ArgumentException">
         /// If params contains int.MinValue
         /// or
-        /// there is 0 params
+        /// there is 0 params.
         /// </exception>
         public static int GsdParams(params int[] numbers)
         {
@@ -51,7 +51,7 @@ namespace NET.S._2018.Dvorkin.Task2
         /// <exception cref="ArgumentException">
         /// If any parameters are int.Minvalue
         /// or
-        /// first and second parametrs are 0
+        /// first and second parametrs are 0.
         /// </exception>
         public static int EuclideanGsd(int first, int second)
         {
@@ -69,6 +69,33 @@ namespace NET.S._2018.Dvorkin.Task2
         }
 
         /// <summary>
+        /// Euclideans the GSD three elem.
+        /// </summary>
+        /// <param name="first">The first.</param>
+        /// <param name="second">The second.</param>
+        /// <param name="three">The three.</param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException">
+        ///If any parameters are int.Minvalue
+        /// or
+        /// first, second and three parametrs are 0.
+        /// </exception>
+        public static int EuclideanGsdThreeElem(int first, int second, int three)
+        {
+            if (first == int.MinValue || second == int.MinValue || three == int.MinValue)
+            {
+                throw new ArgumentException($"{nameof(first)} or {nameof(second)} can't be processed");
+            }
+
+            if (first == 0 && second == 0 && three == 0)
+            {
+                throw new ArgumentException($"{nameof(first)} and {nameof(second)} are 0.");
+            }
+
+            return Gsd(Gsd(Math.Abs(first), Math.Abs(second)), Math.Abs(three));
+        }
+
+        /// <summary>
         /// Binaries the GSD with params.
         /// </summary>
         /// <param name="numbers">The numbers.</param>
@@ -76,7 +103,7 @@ namespace NET.S._2018.Dvorkin.Task2
         /// <exception cref="ArgumentException">
         /// If params contains int.MinValue
         /// or
-        /// there is 0 params
+        /// there is 0 params.
         /// </exception>
         public static int BinaryGsdParams(params int[] numbers)
         {
