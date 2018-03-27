@@ -18,7 +18,7 @@ namespace Sorting.Tests
             int[] arrayForSort = { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 };
             int[] sortedArray = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
-            Sorting.QuickSort(arrayForSort, 0, arrayForSort.Length - 1);
+            Sorting.QuickSort(arrayForSort, arrayForSort.Length - 1, 0);
 
             CollectionAssert.AreEqual(sortedArray, arrayForSort);
         }
@@ -32,7 +32,7 @@ namespace Sorting.Tests
             int[] arrayForSort = { 9, 9, 8, 8, 7, 7, 6, 6, 5, 5, 4, 4, 3, 3 };
             int[] sortedArray = { 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9 };
 
-            Sorting.QuickSort(arrayForSort, 0, arrayForSort.Length - 1);
+            Sorting.QuickSort(arrayForSort, arrayForSort.Length - 1, 0);
 
             CollectionAssert.AreEqual(sortedArray, arrayForSort);
         }
@@ -53,7 +53,7 @@ namespace Sorting.Tests
             Array.Copy(arrayForSort, sortedArray, sortedArray.Length);
             Array.Sort(sortedArray);
 
-            Sorting.QuickSort(arrayForSort, 0, arrayForSort.Length - 1);
+            Sorting.QuickSort(arrayForSort, arrayForSort.Length - 1, 0);
 
             CollectionAssert.AreEqual(sortedArray, arrayForSort);
         }
@@ -68,7 +68,7 @@ namespace Sorting.Tests
             int[] arrayForSort = { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 };
             int[] sortedArray = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
-            Sorting.QuickSort(arrayForSort, arrayForSort.Length - 1, 0);
+            Sorting.QuickSort(arrayForSort, 0, arrayForSort.Length - 1);
 
             CollectionAssert.AreEqual(sortedArray, arrayForSort);
         }
@@ -82,7 +82,7 @@ namespace Sorting.Tests
             int[] arrayForSort = { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 };
             int[] sortedArray = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
-            Sorting.MergeSort(arrayForSort, 0, arrayForSort.Length - 1);
+            Sorting.MergeSort(arrayForSort, arrayForSort.Length - 1, 0);
 
             CollectionAssert.AreEqual(sortedArray, arrayForSort);
         }
@@ -96,7 +96,7 @@ namespace Sorting.Tests
             int[] arrayForSort = { 9, 9, 8, 8, 7, 7, 6, 6, 5, 5, 4, 4, 3, 3 };
             int[] sortedArray = { 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9 };
 
-            Sorting.MergeSort(arrayForSort, 0, arrayForSort.Length - 1);
+            Sorting.MergeSort(arrayForSort, arrayForSort.Length - 1, 0);
 
             CollectionAssert.AreEqual(sortedArray, arrayForSort);
         }
@@ -117,7 +117,7 @@ namespace Sorting.Tests
             Array.Copy(arrayForSort, sortedArray, sortedArray.Length);
             Array.Sort(sortedArray);
 
-            Sorting.MergeSort(arrayForSort, 0, arrayForSort.Length - 1);
+            Sorting.MergeSort(arrayForSort, arrayForSort.Length - 1, 0);
 
             CollectionAssert.AreEqual(sortedArray, arrayForSort);
         }

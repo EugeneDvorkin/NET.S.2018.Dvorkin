@@ -18,7 +18,6 @@ d:\GitRepositories\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.01\Task2\Sorting\obj\De
 d:\GitRepositories\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.01\Task2\Sorting\obj\Debug\Sorting.pdb
 d:\GitRepositories\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.01\NET.S.2018.Dvorkin.Task2\Sorting\bin\Debug\Sorting.dll
 d:\GitRepositories\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.01\NET.S.2018.Dvorkin.Task2\Sorting\bin\Debug\Sorting.pdb
-d:\GitRepositories\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.01\NET.S.2018.Dvorkin.Task2\Sorting\obj\Debug\Sorting.csprojResolveAssemblyReference.cache
 d:\GitRepositories\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.01\NET.S.2018.Dvorkin.Task2\Sorting\obj\Debug\Sorting.csproj.CoreCompileInputs.cache
 d:\GitRepositories\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.01\NET.S.2018.Dvorkin.Task2\Sorting\obj\Debug\Sorting.dll
 d:\GitRepositories\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.01\NET.S.2018.Dvorkin.Task2\Sorting\obj\Debug\Sorting.pdb

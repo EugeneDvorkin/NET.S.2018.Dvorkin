@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 
 namespace Sorting
 {
@@ -16,7 +17,7 @@ namespace Sorting
         /// <param name="end">The end.</param>
         /// <exception cref="ArgumentNullException">arrayForSort</exception>
         /// <exception cref="ArgumentException">start</exception>
-        public static void QuickSort(int[] arrayForSort, int start, int end)
+        public static void QuickSort(int[] arrayForSort, int end, int start = 0)
         {
             if (arrayForSort == null)
             {
@@ -25,9 +26,51 @@ namespace Sorting
 
             if (start > end)
             {
-                throw new ArgumentException($"{nameof(start)} is more then{nameof(end)}");
+                throw new ArgumentException($"{nameof(start)} is more then {nameof(end)}");
             }
 
+            Quick(arrayForSort, end, start);
+        }
+
+        /// <summary>
+        /// Merge sorting of the array which consists of integer elements
+        /// </summary>
+        /// <param name="arrayforsort">Array which needs to be sorted</param>
+        /// <param name="start">Start index of sorting</param>
+        /// <param name="end">End index of sorting</param>
+        /// <exception cref="ArgumentNullException">arrayforsort</exception>
+        /// <exception cref="ArgumentException">start</exception>
+        public static void MergeSort(int[] arrayforsort, int end, int start = 0)
+        {
+            if (arrayforsort == null)
+            {
+                throw new ArgumentNullException($"{nameof(arrayforsort)} is null");
+            }
+
+            if (start > end)
+            {
+                throw new ArgumentException($"{nameof(start)} is more then {nameof(end)}");
+            }
+
+            int middle = (start + end) / 2;
+            if (end > start)
+            {
+                MergeSort(arrayforsort, middle, start);
+                MergeSort(arrayforsort, end, middle + 1);
+
+                Merge(arrayforsort, start, middle + 1, end);
+            }
+
+        }
+
+        /// <summary>
+        /// Quicks the specified array for sort.
+        /// </summary>
+        /// <param name="arrayForSort">The array for sort.</param>
+        /// <param name="end">The end.</param>
+        /// <param name="start">The start.</param>
+        private static void Quick(int[] arrayForSort, int end, int start)
+        {
             int startingElem = start;
             int endingElem = end;
             int middle = arrayForSort[(start + end) / 2];
@@ -57,44 +100,13 @@ namespace Sorting
 
             if (start < endingElem)
             {
-                QuickSort(arrayForSort, start, endingElem);
+                Quick(arrayForSort, start, endingElem);
             }
 
             if (start < end)
             {
-                QuickSort(arrayForSort, startingElem, end);
+                Quick(arrayForSort, startingElem, end);
             }
-        }
-
-        /// <summary>
-        /// Merge sorting of the array which consists of integer elements
-        /// </summary>
-        /// <param name="arrayforsort">Array which needs to be sorted</param>
-        /// <param name="start">Start index of sorting</param>
-        /// <param name="end">End index of sorting</param>
-        /// <exception cref="ArgumentNullException">arrayforsort</exception>
-        /// <exception cref="ArgumentException">start</exception>
-        public static void MergeSort(int[] arrayforsort, int start, int end)
-        {
-            if (arrayforsort == null)
-            {
-                throw new ArgumentNullException($"{nameof(arrayforsort)} is null");
-            }
-
-            if (start>end)
-            {
-                throw new ArgumentException($"{nameof(start)} is more then{nameof(end)}");
-            }
-
-            int middle = (start + end) / 2;
-            if (end > start)
-            {
-                MergeSort(arrayforsort, start, middle);
-                MergeSort(arrayforsort, middle + 1, end);
-
-                Merge(arrayforsort, start, middle + 1, end);
-            }
-
         }
 
         /// <summary>
