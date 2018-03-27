@@ -24,6 +24,35 @@ namespace NET.S._2018.Dvorkin.Task5
                 throw new ArgumentException($"{nameof(enterNumber)} should be more 0");
             }
 
+            return NextBiggerNumber(enterNumber);
+        }
+
+        /// <summary>
+        /// Search next bigger number, which consists of elements <paramref name="enterNumber" /> and time of working
+        /// </summary>
+        /// <param name="enterNumber">Element for search</param>
+        /// <param name="timeOfWork">Time of working</param>
+        /// <returns>
+        /// Next bigger number
+        /// </returns>
+        /// <exception cref="ArgumentException">enterNumber</exception>
+        public static int FindNextBiggerNumberWithTimer(int enterNumber, out double timeOfWork)
+        {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            int result = FindNextBiggerNumber(enterNumber);
+            stopwatch.Stop();
+            timeOfWork = stopwatch.ElapsedMilliseconds;
+            return result;
+        }
+
+        /// <summary>
+        /// Nexts the bigger number.
+        /// </summary>
+        /// <param name="enterNumber">The enter number.</param>
+        /// <returns>Next bigger number.</returns>
+        private static int NextBiggerNumber(int enterNumber)
+        {
             int result = 0;
             List<int> elementList = new List<int>();
             int counter = 0;
@@ -67,25 +96,6 @@ namespace NET.S._2018.Dvorkin.Task5
 
                 return result;
             }
-        }
-
-        /// <summary>
-        /// Search next bigger number, which consists of elements <paramref name="enterNumber" /> and time of working
-        /// </summary>
-        /// <param name="enterNumber">Element for search</param>
-        /// <param name="timeOfWork">Time of working</param>
-        /// <returns>
-        /// Next bigger number
-        /// </returns>
-        /// <exception cref="ArgumentException">enterNumber</exception>
-        public static int FindNextBiggerNumberWithTimer(int enterNumber, out double timeOfWork)
-        {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
-            int result = FindNextBiggerNumber(enterNumber);
-            stopwatch.Stop();
-            timeOfWork = stopwatch.ElapsedMilliseconds;
-            return result;
         }
     }
 }
