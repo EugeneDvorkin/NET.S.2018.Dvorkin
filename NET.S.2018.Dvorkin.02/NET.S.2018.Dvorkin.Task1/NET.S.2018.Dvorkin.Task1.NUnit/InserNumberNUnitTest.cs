@@ -1,7 +1,6 @@
 ﻿using NUnit.Framework;
 using static NET.S._2018.Dvorkin.Task1.InsertNumbers;
 
-
 namespace NET.S._2018.Dvorkin.Task1.NUnit
 {
     [TestFixture]
