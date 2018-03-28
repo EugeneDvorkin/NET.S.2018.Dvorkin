@@ -8,7 +8,7 @@ namespace NET.S._2018.Dvorkin.Task2
     /// Contains methods for polynomials
     /// </summary>
     /// <seealso cref="System.IComparable" />
-    public class Polynomial :  IComparable
+    public class Polynomial : IComparable
     {
         #region Properties and constructor
         /// <summary>
@@ -71,6 +71,7 @@ namespace NET.S._2018.Dvorkin.Task2
             }
         }
         #endregion
+
         #region Static methods
 
         /// <summary>
@@ -183,7 +184,7 @@ namespace NET.S._2018.Dvorkin.Task2
         /// <param name="poly">The to number.</param>
         /// <param name="number">The number.</param>
         /// <returns>Subtract of polynomial and number.</returns>
-        public static Polynomial Subtract(Polynomial poly, double number) => Subtr(poly, number);
+        public static Polynomial Subtract(Polynomial poly, double number) => Subtr(poly, number);//=> Sum(poly, -number);
 
         /// <summary>
         /// Multiplies the specified polynomial 1 to polynomial 2.
@@ -201,6 +202,7 @@ namespace NET.S._2018.Dvorkin.Task2
         /// <returns>Multiplies of polynomial and number.</returns>
         public static Polynomial Multiply(Polynomial poly, double number) => Mult(poly, number);
         #endregion
+
         #region All public methods(include override)
 
         /// <summary>
@@ -246,7 +248,7 @@ namespace NET.S._2018.Dvorkin.Task2
 
             return coeff;
         }
-       
+
         /// <summary>
         /// Determines whether the specified <see cref="System.Object" />, is equal to this instance.
         /// </summary>
@@ -259,7 +261,7 @@ namespace NET.S._2018.Dvorkin.Task2
             Polynomial poly = obj as Polynomial;
             Check(poly);
 
-            if (poly == null)
+            if (poly is null)
             {
                 return false;
             }
@@ -279,7 +281,7 @@ namespace NET.S._2018.Dvorkin.Task2
 
             return true;
         }
-        
+
         /// <summary>
         /// Returns a hash code for this instance.
         /// </summary>
@@ -308,6 +310,7 @@ namespace NET.S._2018.Dvorkin.Task2
             return result;
         }
         #endregion
+
         #region Private methods
 
         /// <summary>
@@ -319,13 +322,12 @@ namespace NET.S._2018.Dvorkin.Task2
         private static Polynomial Sum(Polynomial poly1, Polynomial poly2)
         {
             Polynomial.Check(poly1, poly2);
-            double[] longest = (poly1.Coeff().Length > poly2.Coeff().Length) ? poly1.Coeff() : poly2.Coeff();
-            double[] shortest = (poly1.Coeff() == longest) ? poly2.Coeff() : poly1.Coeff();
-            double[] result = new double[longest.Length];
-            longest.CopyTo(result, 0);
-            for (int i = 0; i < shortest.Length; i++)
+            double[] result = Copy(poly1, poly2);
+            poly1.Coeff().CopyTo(result, 0);
+
+            for (int i = 0; i < poly2.Coeff().Length; i++)
             {
-                result[i] += shortest[i];
+                result[i] += poly2[i];
             }
 
             return new Polynomial(result);
@@ -359,9 +361,7 @@ namespace NET.S._2018.Dvorkin.Task2
         private static Polynomial Subtr(Polynomial poly1, Polynomial poly2)
         {
             Polynomial.Check(poly1, poly2);
-            double[] longest = (poly1.Coeff().Length > poly2.Coeff().Length) ? poly1.Coeff() : poly2.Coeff();
-
-            double[] result = new double[longest.Length];
+            double[] result = Copy(poly1, poly2);
             poly1.Coeff().CopyTo(result, 0);
 
             for (int i = 0; i < poly2.Coeff().Length; i++)
@@ -400,8 +400,7 @@ namespace NET.S._2018.Dvorkin.Task2
         private static Polynomial Mult(Polynomial poly1, Polynomial poly2)
         {
             Polynomial.Check(poly1, poly2);
-            double[] longest = (poly1.Coeff().Length > poly2.Coeff().Length) ? poly1.Coeff() : poly2.Coeff();
-            double[] result = new double[longest.Length];
+            double[] result = Copy(poly1, poly2);
             poly1.Coeff().CopyTo(result, 0);
             for (int j = 0; j < poly1.Length; j++)
             {
@@ -452,7 +451,7 @@ namespace NET.S._2018.Dvorkin.Task2
         /// <exception cref="ArgumentException">polynomial</exception>
         private static void Check(Polynomial poly)
         {
-            if (poly == null)
+            if (poly is null)
             {
                 throw new ArgumentNullException($"{nameof(poly)} is null");
             }
@@ -461,6 +460,20 @@ namespace NET.S._2018.Dvorkin.Task2
             {
                 throw new ArgumentException($"{nameof(poly)} has 0 arguments");
             }
+        }
+
+        /// <summary>
+        /// Copies the specified poly1 or poly2, consists of which is longer.
+        /// </summary>
+        /// <param name="poly1">The poly1.</param>
+        /// <param name="poly2">The poly2.</param>
+        /// <returns>New longest array from poly1 or poly2.</returns>
+        private static double[] Copy(Polynomial poly1, Polynomial poly2)
+        {
+            double[] longest = (poly1.Coeff().Length > poly2.Coeff().Length) ? poly1.Coeff() : poly2.Coeff();
+            double[] result = new double[longest.Length];
+
+            return result;
         }
         #endregion
     }
