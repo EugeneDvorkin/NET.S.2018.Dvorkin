@@ -2,7 +2,6 @@
 
 namespace NET.S._2018.Dvorkin.Task1
 {
-
     /// <summary>
     /// Contains methods for interactions with a bank account.
     /// </summary>
@@ -10,11 +9,11 @@ namespace NET.S._2018.Dvorkin.Task1
     public class BankService : IBankService<Acc>
     {
         #region Constants
-        private const int baseCountUp = 100;
-        private const int baseUp = 125;
-        private const int baseCountDown = 75;
-        private const int baseDown = 50;
-        private const double percent = 0.1;
+        private const int BaseCountUp = 100;
+        private const int BaseUp = 125;
+        private const int BaseCountDown = 75;
+        private const int BaseDown = 50;
+        private const double Percent = 0.1;
         #endregion
 
         #region Public methods
@@ -88,7 +87,7 @@ namespace NET.S._2018.Dvorkin.Task1
         /// <returns>New score of a account.</returns>
         private int ScoreUp(Acc acc, decimal account)
         {
-            acc.Score = acc.Score + Convert.ToInt32(baseUp * (int)acc.Type * percent * Convert.ToInt32(account)) + Convert.ToInt32(baseCountUp * Convert.ToInt32(acc.Account) * percent);
+            acc.Score = acc.Score + Convert.ToInt32(BaseUp * (int)acc.Type * Percent * Convert.ToInt32(account)) + Convert.ToInt32(BaseCountUp * Convert.ToInt32(acc.Account) * Percent);
 
             return acc.Score;
         }
@@ -101,8 +100,8 @@ namespace NET.S._2018.Dvorkin.Task1
         /// <returns>New score of a account.</returns>
         private int ScoreDown(Acc acc, decimal account)
         {
-            int difference = Convert.ToInt32(baseDown * (int)acc.Type * percent * Convert.ToInt32(account)) +
-                             Convert.ToInt32(baseCountDown * Convert.ToInt32(acc.Account) * percent);
+            int difference = Convert.ToInt32(BaseDown * (int)acc.Type * Percent * Convert.ToInt32(account)) +
+                             Convert.ToInt32(BaseCountDown * Convert.ToInt32(acc.Account) * Percent);
 
             if (acc.Score > difference)
             {
@@ -127,12 +126,12 @@ namespace NET.S._2018.Dvorkin.Task1
                 acc.Type = (Acc.AccType)1;
             }
 
-            if (200 <= acc.Score && acc.Score < 300)
+            if (acc.Score >= 200 && acc.Score < 300)
             {
                 acc.Type = (Acc.AccType)2;
             }
 
-            if (300 <= acc.Score && acc.Score < 400)
+            if (acc.Score >= 300 && acc.Score < 400)
             {
                 acc.Type = (Acc.AccType)3;
             }

@@ -9,6 +9,9 @@ namespace NET.S._2018.Dvorkin.Task1
     public class Acc
     {
         #region Fields
+        private readonly Regex numbeRegex = new Regex(@"^[0-9A-Z]{15}([A - Z]{0,1})?$");
+        private readonly Regex nameRegex = new Regex(@"^[A-Z]{1}[a-z]");
+        private readonly Regex passportRegex = new Regex(@"^[0-9A-Z]");
         private string number;
         private string name;
         private string surname;
@@ -17,10 +20,33 @@ namespace NET.S._2018.Dvorkin.Task1
         private int score;
         private AccType type;
         private bool valid;
-        private readonly Regex numbeRegex = new Regex(@"^[0-9A-Z]{15}([A - Z]{0,1})?$");
-        private readonly Regex nameRegex = new Regex(@"^[A-Z]{1}[a-z]");
-        private readonly Regex passportRegex = new Regex(@"^[0-9A-Z]");
+        #endregion
 
+        #region Constructor
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Acc"/> class.
+        /// </summary>
+        /// <param name="number">The number.</param>
+        /// <param name="name">The name.</param>
+        /// <param name="surname">The surname.</param>
+        /// <param name="passport">The passport.</param>
+        /// <param name="account">The account.</param>
+        /// <param name="score">The score.</param>
+        /// <param name="accType">Type of the account.</param>
+        public Acc(string number, string name, string surname, string passport, decimal account = 0, int score = 0, AccType accType = (AccType)1)
+        {
+            this.Number = number;
+            this.Name = name;
+            this.Surname = surname;
+            this.Passport = passport;
+            this.Valid = true;
+            this.Score = score;
+            this.Type = accType;
+            this.Account = account;
+        }
+        #endregion
+
+        #region Properties and Enums
         public enum AccType
         {
             Base = 1,
@@ -28,9 +54,7 @@ namespace NET.S._2018.Dvorkin.Task1
             Gold,
             Platinum
         }
-        #endregion
-
-        #region Properties
+        
         /// <summary>
         /// Gets or sets the number of a count.
         /// </summary>
@@ -171,33 +195,12 @@ namespace NET.S._2018.Dvorkin.Task1
             get => score;
             set
             {
-                //if (score - value < 0)
-                //{
-                //    value = score;
-                //}
+                ////if (score - value < 0)
+                ////{
+                ////    value = score;
+                ////}
 
                 score = value;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the type of a account.
-        /// </summary>
-        /// <value>
-        /// The type.
-        /// </value>
-        /// <exception cref="ArgumentException">value</exception>
-        public AccType Type
-        {
-            get => type;
-            set
-            {
-                if (value < (AccType)1 || value > (AccType)4)
-                {
-                    throw new ArgumentException($"{nameof(value)} can't be this value");
-                }
-
-                type = value;
             }
         }
 
@@ -221,29 +224,26 @@ namespace NET.S._2018.Dvorkin.Task1
                 valid = value;
             }
         }
-        #endregion
 
-        #region Constructor
         /// <summary>
-        /// Initializes a new instance of the <see cref="Acc"/> class.
+        /// Gets or sets the type of a account.
         /// </summary>
-        /// <param name="number">The number.</param>
-        /// <param name="name">The name.</param>
-        /// <param name="surname">The surname.</param>
-        /// <param name="passport">The passport.</param>
-        /// <param name="account">The account.</param>
-        /// <param name="score">The score.</param>
-        /// <param name="accType">Type of the account.</param>
-        public Acc(string number, string name, string surname, string passport, decimal account = 0, int score = 0, AccType accType = (AccType)1)
+        /// <value>
+        /// The type.
+        /// </value>
+        /// <exception cref="ArgumentException">value</exception>
+        public AccType Type
         {
-            this.Number = number;
-            this.Name = name;
-            this.Surname = surname;
-            this.Passport = passport;
-            this.Valid = true;
-            this.Score = score;
-            this.Type = accType;
-            this.Account = account;
+            get => type;
+            set
+            {
+                if (value < (AccType)1 || value > (AccType)4)
+                {
+                    throw new ArgumentException($"{nameof(value)} can't be this value");
+                }
+
+                type = value;
+            }
         }
         #endregion
     }
