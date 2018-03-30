@@ -8,13 +8,13 @@ namespace NET.S._2018.Dvorkin.Task2
     /// Contains methods for polynomials
     /// </summary>
     /// <seealso cref="System.IComparable" />
-    public class Polynomial : IComparable
+    public sealed class Polynomial : IComparable
     {
         #region Properties and constructor
         /// <summary>
         /// The collection of coefficients
         /// </summary>
-        private readonly double[] coeff;
+        private readonly double[] coeff = { };
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Polynomial"/> class.
@@ -46,7 +46,7 @@ namespace NET.S._2018.Dvorkin.Task2
         /// </value>
         public int Length
         {
-            get { return this.coeff.Length; }
+            get { return this.coeff.Length - 1; }
         }
 
         /// <summary>
