@@ -1,0 +1,40 @@
+C:\Users\MIB\Desktop\StreamsTask2017\ConsoleClient\obj\Debug\ConsoleClient.csprojResolveAssemblyReference.cache
+C:\Users\MIB\Desktop\StreamsTask2017\ConsoleClient\obj\Debug\ConsoleClient.csproj.CoreCompileInputs.cache
+C:\Users\MIB\Desktop\StreamsTask2017\ConsoleClient\bin\Debug\TextFile.txt
+C:\Users\MIB\Desktop\StreamsTask2017\ConsoleClient\bin\Debug\ConsoleClient.exe.config
+C:\Users\MIB\Desktop\StreamsTask2017\ConsoleClient\bin\Debug\ConsoleClient.exe
+C:\Users\MIB\Desktop\StreamsTask2017\ConsoleClient\bin\Debug\ConsoleClient.pdb
+C:\Users\MIB\Desktop\StreamsTask2017\ConsoleClient\bin\Debug\StreamsDemo.dll
+C:\Users\MIB\Desktop\StreamsTask2017\ConsoleClient\bin\Debug\StreamsDemo.pdb
+C:\Users\MIB\Desktop\StreamsTask2017\ConsoleClient\obj\Debug\ConsoleClient.exe
+C:\Users\MIB\Desktop\StreamsTask2017\ConsoleClient\obj\Debug\ConsoleClient.pdb
+C:\Users\MIB\Desktop\New tasks for Spring training 2018\StreamsTask2017\ConsoleClient\bin\Debug\ConsoleClient.exe.config
+C:\Users\MIB\Desktop\New tasks for Spring training 2018\StreamsTask2017\ConsoleClient\bin\Debug\ConsoleClient.exe
+C:\Users\MIB\Desktop\New tasks for Spring training 2018\StreamsTask2017\ConsoleClient\bin\Debug\ConsoleClient.pdb
+C:\Users\MIB\Desktop\New tasks for Spring training 2018\StreamsTask2017\ConsoleClient\bin\Debug\StreamsDemo.dll
+C:\Users\MIB\Desktop\New tasks for Spring training 2018\StreamsTask2017\ConsoleClient\bin\Debug\StreamsDemo.pdb
+C:\Users\MIB\Desktop\New tasks for Spring training 2018\StreamsTask2017\ConsoleClient\obj\Debug\ConsoleClient.csprojResolveAssemblyReference.cache
+C:\Users\MIB\Desktop\New tasks for Spring training 2018\StreamsTask2017\ConsoleClient\obj\Debug\ConsoleClient.csproj.CoreCompileInputs.cache
+C:\Users\MIB\Desktop\New tasks for Spring training 2018\StreamsTask2017\ConsoleClient\obj\Debug\ConsoleClient.exe
+C:\Users\MIB\Desktop\New tasks for Spring training 2018\StreamsTask2017\ConsoleClient\obj\Debug\ConsoleClient.pdb
+C:\Users\MIB\Desktop\New tasks for Spring training 2018\StreamsTask2017\ConsoleClient\bin\Debug\SourceText.txt
+e:\EPAM\M13.Streams.Task\ConsoleClient\bin\Debug\ConsoleClient.exe.config
+e:\EPAM\M13.Streams.Task\ConsoleClient\bin\Debug\ConsoleClient.exe
+e:\EPAM\M13.Streams.Task\ConsoleClient\bin\Debug\ConsoleClient.pdb
+e:\EPAM\M13.Streams.Task\ConsoleClient\bin\Debug\StreamsDemo.dll
+e:\EPAM\M13.Streams.Task\ConsoleClient\bin\Debug\StreamsDemo.pdb
+e:\EPAM\M13.Streams.Task\ConsoleClient\obj\Debug\ConsoleClient.csprojResolveAssemblyReference.cache
+e:\EPAM\M13.Streams.Task\ConsoleClient\obj\Debug\ConsoleClient.csproj.CoreCompileInputs.cache
+e:\EPAM\M13.Streams.Task\ConsoleClient\obj\Debug\ConsoleClient.csproj.CopyComplete
+e:\EPAM\M13.Streams.Task\ConsoleClient\obj\Debug\ConsoleClient.exe
+e:\EPAM\M13.Streams.Task\ConsoleClient\obj\Debug\ConsoleClient.pdb
+e:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.09\M13.Streams.Task\ConsoleClient\bin\Debug\ConsoleClient.exe.config
+e:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.09\M13.Streams.Task\ConsoleClient\bin\Debug\ConsoleClient.exe
+e:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.09\M13.Streams.Task\ConsoleClient\bin\Debug\ConsoleClient.pdb
+e:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.09\M13.Streams.Task\ConsoleClient\bin\Debug\StreamsDemo.dll
+e:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.09\M13.Streams.Task\ConsoleClient\bin\Debug\StreamsDemo.pdb
+e:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.09\M13.Streams.Task\ConsoleClient\obj\Debug\ConsoleClient.csprojResolveAssemblyReference.cache
+e:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.09\M13.Streams.Task\ConsoleClient\obj\Debug\ConsoleClient.csproj.CoreCompileInputs.cache
+e:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.09\M13.Streams.Task\ConsoleClient\obj\Debug\ConsoleClient.csproj.CopyComplete
+e:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.09\M13.Streams.Task\ConsoleClient\obj\Debug\ConsoleClient.exe
+e:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.09\M13.Streams.Task\ConsoleClient\obj\Debug\ConsoleClient.pdb
