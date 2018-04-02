@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 
 namespace Task6.NUnitTests
 {
@@ -19,17 +20,17 @@ namespace Task6.NUnitTests
         [Test, TestCaseSource("ListForSort")]
         public void FilterDigit_ArrayFor10Elem_FiltredArray(int[] arrayForFilter, int[] filtredArray)
         {
-
-            int[] actualArray = Filter.FilterDigit(arrayForFilter, 2);
+            Predicate logic = new Predicate(2);
+            int[] actualArray = Filter.FilterDigit(arrayForFilter, logic);
 
             CollectionAssert.AreEqual(filtredArray, actualArray);
         }
 
-        [Test, TestCase(new int[] { 1, 0, 10, 232, 5, 100, 222, 8, 1, 123 }, new int[] { 0, 10, 100 }, 0)]        
+        [Test, TestCase(new int[] { 1, 0, 10, 232, 5, 100, 222, 8, 1, 123 }, new int[] { 0, 10, 100 }, 0)]
         public void FilterDigit_ArraySomeIntElem_FiltredArray(int[] arrayForFilter, int[] filtredArray, int flag)
         {
-
-            int[] actualArray = Filter.FilterDigit(arrayForFilter, flag);
+            Predicate logic = new Predicate(flag);
+            int[] actualArray = Filter.FilterDigit(arrayForFilter, logic);
 
             CollectionAssert.AreEqual(filtredArray, actualArray);
         }
@@ -37,13 +38,8 @@ namespace Task6.NUnitTests
         [Test]
         public void FilterDigit_ArrayArgumentNullException_ArgumentNullException()
         {
-            Assert.That(() => Filter.FilterDigit(null, 9), Throws.ArgumentNullException);
+            Predicate logic = new Predicate(9);
+            Assert.That(() => Filter.FilterDigit(null, logic), Throws.ArgumentNullException);
         }
-
-        [Test]
-        public void Filter_DigirMoreNine_ArgumentException()
-        {
-            Assert.That(() => Filter.FilterDigit(new int[] { 1, 1, 2, 3 }, 11), Throws.ArgumentException);
-        }        
     }
 }

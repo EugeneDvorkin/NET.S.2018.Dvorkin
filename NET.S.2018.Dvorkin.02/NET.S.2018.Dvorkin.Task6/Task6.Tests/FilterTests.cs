@@ -13,8 +13,9 @@ namespace Task6.Tests
         {
             int[] arrayForFilter = { 1, 2, 22, 232, 5, 55, 222, 8, 9, 123 };
             int[] filtredArray = { 2, 22, 232, 222, 123 };
+            Predicate logic = new Predicate(2);
 
-            int[] actualArray = Filter.FilterDigit(arrayForFilter, 2);
+            int[] actualArray = Filter.FilterDigit(arrayForFilter, logic);
 
             CollectionAssert.AreEqual(filtredArray, actualArray);
         }
@@ -24,8 +25,9 @@ namespace Task6.Tests
         {
             int[] arrayForFilter = { 1, -2, -22, -232, 5, 55, -222, 8, 9, -123 };
             int[] filtredArray = { -2, -22, -232, -222, -123 };
+            Predicate logic = new Predicate(2);
 
-            int[] actualArray = Filter.FilterDigit(arrayForFilter, 2);
+            int[] actualArray = Filter.FilterDigit(arrayForFilter, logic);
 
             CollectionAssert.AreEqual(filtredArray, actualArray);
         }
@@ -36,8 +38,9 @@ namespace Task6.Tests
         {
             int[] arrayForFilter = { 1, -2, -22, -232, 5, 55, -222, 8, 9, -123 };
             int[] filtredArray = { -2, -22, -232, -222, -123 };
+            Predicate logic = new Predicate(10);
 
-            int[] actualArray = Filter.FilterDigit(arrayForFilter, 10);
+            int[] actualArray = Filter.FilterDigit(arrayForFilter, logic);
 
             CollectionAssert.AreEqual(filtredArray, actualArray);
         }   
@@ -52,8 +55,9 @@ namespace Task6.Tests
             int[] arrayForFiltering = Array.ConvertAll(Convert.ToString(TestContext.DataRow["Actual"]).Split(' '), int.Parse);
             int[] filteredArray = Array.ConvertAll(Convert.ToString(TestContext.DataRow["ExpectedResult"]).Split(' '), int.Parse);
             int flag = Convert.ToInt32(TestContext.DataRow["Filter"]);
+            Predicate logic = new Predicate(flag);
 
-            int[] actualArray = Filter.FilterDigit(arrayForFiltering, flag);
+            int[] actualArray = Filter.FilterDigit(arrayForFiltering, logic);
 
             CollectionAssert.AreEqual(filteredArray, actualArray);
         }
