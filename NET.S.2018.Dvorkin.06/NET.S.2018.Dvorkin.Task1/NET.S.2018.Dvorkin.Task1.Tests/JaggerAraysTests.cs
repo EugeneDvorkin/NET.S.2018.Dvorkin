@@ -18,13 +18,13 @@ namespace NET.S._2018.Dvorkin.Task1.Tests
                 actual[2] = firstRow;
                 actual[3] = secondRow;
 
-                SumIncreasingSort(actual);
+                BubleSort(actual, new ComparerSumIncrease());
 
                 int[][] expected = new int[4][];
-                expected[0] = secondRow;
-                expected[1] = fouthRow;
-                expected[2] = firstRow;
-                expected[3] = thirdRow;
+                expected[0] = thirdRow;
+                expected[1] = secondRow;
+                expected[2] = fouthRow;
+                expected[3] = firstRow;
 
                 CollectionAssert.AreEqual(expected, actual);
             }
@@ -39,7 +39,7 @@ namespace NET.S._2018.Dvorkin.Task1.Tests
                 actual[3] = firstRow;
 
 
-                MaxIncreasingSort(actual);
+                BubleSort(actual, new ComparerMaxEncrease());
 
                 int[][] expected = new int[4][];
                 expected[0] = firstRow;
@@ -60,7 +60,7 @@ namespace NET.S._2018.Dvorkin.Task1.Tests
                 actual[3] = firstRow;
 
 
-                MinIncreasingSort(actual);
+                BubleSort(actual, new ComparerMinEncrease());
 
                 int[][] expected = new int[4][];
                 expected[0] = firstRow;
@@ -86,7 +86,7 @@ namespace NET.S._2018.Dvorkin.Task1.Tests
                 expected[2] = fouthRow;
                 expected[3] = thirdRow;
 
-                SumDecreasingSort(actual);
+                BubleSort(actual, new ComparerSumDecrease());
 
                 CollectionAssert.AreEqual(expected, actual);
             }
@@ -101,12 +101,12 @@ namespace NET.S._2018.Dvorkin.Task1.Tests
                 actual[3] = firstRow;
 
                 int[][] expected = new int[4][];
-                expected[0] = secondRow;
-                expected[1] = fouthRow;
-                expected[2] = thirdRow;
-                expected[3] = firstRow;
+                expected[0] = fouthRow;
+                expected[1] = thirdRow;
+                expected[2] = firstRow;
+                expected[3] = secondRow;
 
-                MaxDecreasingSort(actual);
+                BubleSort(actual, new ComparerMaxDecrease());
 
                 CollectionAssert.AreEqual(expected, actual);
             }
@@ -121,12 +121,12 @@ namespace NET.S._2018.Dvorkin.Task1.Tests
                 actual[3] = firstRow;
 
                 int[][] expected = new int[4][];
-                expected[0] = secondRow;
-                expected[1] = fouthRow;
-                expected[2] = thirdRow;
-                expected[3] = firstRow;
+                expected[0] = fouthRow;
+                expected[1] = thirdRow;
+                expected[2] = firstRow;
+                expected[3] = secondRow;
 
-                MinDecreasingSort(actual);
+                BubleSort(actual, new ComparerMinDecrease());
 
                 CollectionAssert.AreEqual(expected, actual);
             }

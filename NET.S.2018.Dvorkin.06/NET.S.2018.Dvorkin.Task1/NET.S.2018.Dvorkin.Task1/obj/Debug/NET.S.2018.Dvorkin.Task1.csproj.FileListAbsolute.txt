@@ -9,3 +9,9 @@ d:\EPAM\Day06\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1\bin\Debug\NET.S.
 d:\EPAM\Day06\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1\obj\Debug\NET.S.2018.Dvorkin.Task1.csproj.CoreCompileInputs.cache
 d:\EPAM\Day06\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1\obj\Debug\NET.S.2018.Dvorkin.Task1.dll
 d:\EPAM\Day06\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1\obj\Debug\NET.S.2018.Dvorkin.Task1.pdb
+d:\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1\bin\Debug\NET.S.2018.Dvorkin.Task1.dll
+d:\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1\bin\Debug\NET.S.2018.Dvorkin.Task1.pdb
+d:\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1\obj\Debug\NET.S.2018.Dvorkin.Task1.csprojResolveAssemblyReference.cache
+d:\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1\obj\Debug\NET.S.2018.Dvorkin.Task1.csproj.CoreCompileInputs.cache
+d:\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1\obj\Debug\NET.S.2018.Dvorkin.Task1.dll
+d:\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1\obj\Debug\NET.S.2018.Dvorkin.Task1.pdb
