@@ -8,7 +8,7 @@ namespace NET.S._2018.Dvorkin.Task2
     /// Contains methods for polynomials
     /// </summary>
     /// <seealso cref="System.IComparable" />
-    public sealed class Polynomial : IComparable
+    public sealed class Polynomial : IComparable, IEquatable<Polynomial>
     {
         #region Properties and constructor
         /// <summary>
@@ -46,7 +46,7 @@ namespace NET.S._2018.Dvorkin.Task2
         /// </value>
         public int Length
         {
-            get { return this.coeff.Length - 1; }
+            get { return this.coeff.Length; }
         }
 
         /// <summary>
@@ -261,7 +261,7 @@ namespace NET.S._2018.Dvorkin.Task2
             Polynomial poly = obj as Polynomial;
             Check(poly);
 
-            if (poly is null)
+            if (ReferenceEquals(poly, null))
             {
                 return false;
             }
@@ -280,6 +280,28 @@ namespace NET.S._2018.Dvorkin.Task2
             }
 
             return true;
+        }
+
+        /// <summary>
+        /// Indicates whether the current object is equal to another object of the same type.
+        /// </summary>
+        /// <param name="other">An object to compare with this object.</param>
+        /// <returns>
+        ///   <see langword="true" /> if the current object is equal to the <paramref name="other" /> parameter; otherwise, <see langword="false" />.
+        /// </returns>
+        public bool Equals(Polynomial other)
+        {
+            if (ReferenceEquals(null, other))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, other))
+            {
+                return true;
+            }
+
+            return Equals(this, other);
         }
 
         /// <summary>

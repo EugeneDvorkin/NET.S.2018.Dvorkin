@@ -20,3 +20,4 @@ e:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.06\NET.S.2018.Dvorkin.Task2
 e:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.06\NET.S.2018.Dvorkin.Task2\NET.S.2018.Dvorkin.Task2\obj\Debug\NET.S.2018.Dvorkin.Task2.csproj.CoreCompileInputs.cache
 e:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.06\NET.S.2018.Dvorkin.Task2\NET.S.2018.Dvorkin.Task2\obj\Debug\NET.S.2018.Dvorkin.Task2.dll
 e:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.06\NET.S.2018.Dvorkin.Task2\NET.S.2018.Dvorkin.Task2\obj\Debug\NET.S.2018.Dvorkin.Task2.pdb
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.06\NET.S.2018.Dvorkin.Task2\NET.S.2018.Dvorkin.Task2\obj\Debug\NET.S.2018.Dvorkin.Task2.csprojResolveAssemblyReference.cache
