@@ -5,7 +5,7 @@ Task1
 
 Расширить функциональность метода-фильтра (#6) таким образом, чтобы была возможность фильтрации входящего целочисленного массива согласно любой функции-предикату. Делегаты не использовать!
 
-[смотреть здесьъ](https://github.com/EugeneDvorkin/NET.S.2018.Dvorkin/tree/master/NET.S.2018.Dvorkin.02/NET.S.2018.Dvorkin.Task6)
+[смотреть здесь](https://github.com/EugeneDvorkin/NET.S.2018.Dvorkin/tree/master/NET.S.2018.Dvorkin.02/NET.S.2018.Dvorkin.Task6)
 
 Task2
 
