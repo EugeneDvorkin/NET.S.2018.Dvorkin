@@ -37,3 +37,16 @@ d:\EPAM\Day11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.Tests\obj\Debug\N
 d:\EPAM\Day11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.Tests\obj\Debug\NET.S.2018.Dvorkin.Task.Tests.csproj.CopyComplete
 d:\EPAM\Day11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.Tests\obj\Debug\NET.S.2018.Dvorkin.Task.Tests.dll
 d:\EPAM\Day11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.Tests\obj\Debug\NET.S.2018.Dvorkin.Task.Tests.pdb
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.Tests\bin\Debug\NLog.config
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.Tests\bin\Debug\NLog.xsd
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.Tests\bin\Debug\NET.S.2018.Dvorkin.Task.Tests.dll
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.Tests\bin\Debug\NET.S.2018.Dvorkin.Task.Tests.pdb
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.Tests\bin\Debug\NET.S.2018.Dvorkin.Task1.dll
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.Tests\bin\Debug\NLog.dll
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.Tests\bin\Debug\NET.S.2018.Dvorkin.Task1.pdb
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.Tests\bin\Debug\NLog.xml
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.Tests\obj\Debug\NET.S.2018.Dvorkin.Task.Tests.csprojResolveAssemblyReference.cache
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.Tests\obj\Debug\NET.S.2018.Dvorkin.Task.Tests.csproj.CoreCompileInputs.cache
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.Tests\obj\Debug\NET.S.2018.Dvorkin.Task.Tests.csproj.CopyComplete
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.Tests\obj\Debug\NET.S.2018.Dvorkin.Task.Tests.dll
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.Tests\obj\Debug\NET.S.2018.Dvorkin.Task.Tests.pdb

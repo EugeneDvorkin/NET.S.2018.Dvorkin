@@ -46,7 +46,7 @@ namespace NET.S._2018.Dvorkin.Task1
         /// <param name="filePath">The file path.</param>
         /// <returns>Copy of current collection</returns>
         /// <exception cref="ArgumentNullException">storage</exception>
-        public List<Book> ReadBooks(Storage storage, string filePath)
+        public List<Book> ReadBooks(IStogare storage, string filePath)
         {
             if (storage == null)
             {
@@ -58,7 +58,7 @@ namespace NET.S._2018.Dvorkin.Task1
                 throw new ArgumentNullException($"{nameof(storage)} is null");
             }
             
-            this.books = storage.ReadBooks(filePath);
+            this.books = storage.ReadBooks();
 
             return this.books.ToList();
         }
@@ -73,7 +73,7 @@ namespace NET.S._2018.Dvorkin.Task1
         /// or
         /// filePath is null or empty
         /// </exception>
-        public void WriteBooks(Storage storage, string filePath)
+        public void WriteBooks(IStogare storage, string filePath)
         {
             if (storage == null)
             {
@@ -85,7 +85,7 @@ namespace NET.S._2018.Dvorkin.Task1
                 throw new ArgumentNullException($"{nameof(filePath)} is null");
             }
 
-            storage.WriteBooks(filePath, this.books);
+            storage.WriteBooks(this.books);
         }
 
         /// <summary>

@@ -14,13 +14,13 @@ namespace NET.S._2018.Dvorkin.Task1
         /// <returns>
         /// Collection of book from current storage.
         /// </returns>
-        List<Book> ReadBooks(string filePath);
+        List<Book> ReadBooks();
 
         /// <summary>
         /// Writes the books.
         /// </summary>
         /// <param name="filePath">The file path.</param>
         /// <param name="books">The books.</param>
-        void WriteBooks(string filePath, List<Book> books);
+        void WriteBooks(List<Book> books);
     }
 }
