@@ -1,0 +1,71 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.0",
+    "signature": "9442ee5713d39267a5f0515f0ba9a77e06eab4ff"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.0": {
+      "ConsoleUI/1.0.0": {
+        "dependencies": {
+          "NET.S.2018.Dvorkin.Task": "1.0.0",
+          "NLog": "4.5.2",
+          "NLog.Config": "4.5.2"
+        },
+        "runtime": {
+          "ConsoleUI.dll": {}
+        }
+      },
+      "NLog/4.5.2": {
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {}
+        }
+      },
+      "NLog.Config/4.5.2": {
+        "dependencies": {
+          "NLog": "4.5.2",
+          "NLog.Schema": "4.5.2"
+        }
+      },
+      "NLog.Schema/4.5.2": {},
+      "NET.S.2018.Dvorkin.Task/1.0.0": {
+        "runtime": {
+          "NET.S.2018.Dvorkin.Task1.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ConsoleUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NLog/4.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8xX3ZFfZ9C68FJSG2exBbfUx9vWH01gdwcwPGwJ4EIeYqxEDFP793uj7vD1AvJ3Y7KW6KxL4iWiJF4+wPa5uJg==",
+      "path": "nlog/4.5.2",
+      "hashPath": "nlog.4.5.2.nupkg.sha512"
+    },
+    "NLog.Config/4.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zHbKfy1aq6M5gbb5tjyCNCVk9CU/HX0d6ccwV30Vtk3CM7OUX86zkcEdLmnRxPRyeCLQohosIkCJPuDW55iI8Q==",
+      "path": "nlog.config/4.5.2",
+      "hashPath": "nlog.config.4.5.2.nupkg.sha512"
+    },
+    "NLog.Schema/4.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-d93bX17FJsQajchD5tYiwIe4SkyrJPM3EaPCnapFFvqNtJGL2tjHyfE2+HehsQ9TcCU30b52TQErGGm7KOf6qg==",
+      "path": "nlog.schema/4.5.2",
+      "hashPath": "nlog.schema.4.5.2.nupkg.sha512"
+    },
+    "NET.S.2018.Dvorkin.Task/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

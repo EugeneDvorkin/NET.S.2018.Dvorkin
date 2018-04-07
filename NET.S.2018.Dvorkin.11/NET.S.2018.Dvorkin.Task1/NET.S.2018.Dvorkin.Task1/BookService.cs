@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 
 namespace NET.S._2018.Dvorkin.Task1
@@ -7,12 +10,17 @@ namespace NET.S._2018.Dvorkin.Task1
     /// <summary>
     /// Contains method for services for a book.
     /// </summary>
-    public class BookService
+    public class BookService : IEnumerable<Book>
     {
         /// <summary>
         /// The books
         /// </summary>
         private List<Book> books = new List<Book>();
+
+        /// <summary>
+        /// The logger
+        /// </summary>
+        private readonly ILogger logger;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BookService"/> class.
@@ -22,13 +30,19 @@ namespace NET.S._2018.Dvorkin.Task1
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BookService"/> class.
+        /// Initializes a new instance of the <see cref="BookService" /> class.
         /// </summary>
         /// <param name="books">The books.</param>
-        public BookService(List<Book> books)
+        /// <param name="logger">The logger.</param>
+        /// <exception cref="System.ArgumentNullException">
+        /// books
+        /// or
+        /// logger
+        /// </exception>
+        public BookService(List<Book> books, ILogger logger)
         {
-            this.books = books.ToList();
-            ////this.books = books;
+            this.books = books ?? throw new ArgumentNullException($"{nameof(books)} is null");
+            this.logger = logger ?? throw new ArgumentNullException($"{nameof(logger)} is null");
         }
 
         /// <summary>
@@ -43,22 +57,28 @@ namespace NET.S._2018.Dvorkin.Task1
         /// Reads the books.
         /// </summary>
         /// <param name="storage">The storage.</param>
-        /// <param name="filePath">The file path.</param>
-        /// <returns>Copy of current collection</returns>
+        /// <returns>
+        /// Copy of current collection
+        /// </returns>
         /// <exception cref="ArgumentNullException">storage</exception>
-        public List<Book> ReadBooks(IStogare storage, string filePath)
+        /// <exception cref="CustomException">There is no such storage</exception>
+        /// <exception cref="StackTrace"></exception>
+        public IEnumerable<Book> ReadBooks(IStogare storage)
         {
             if (storage == null)
             {
                 throw new ArgumentNullException($"{nameof(storage)} is null");
             }
 
-            if (string.IsNullOrWhiteSpace(filePath))
+            try
             {
-                throw new ArgumentNullException($"{nameof(storage)} is null");
+                this.books = storage.ReadBooks();
             }
-            
-            this.books = storage.ReadBooks();
+            catch (IOException e)
+            {
+                logger.Log(e, e.Message, LogLevel.Fatal);
+                throw new CustomException(e, new StackTrace(e), "There is no such storage");
+            }
 
             return this.books.ToList();
         }
@@ -67,25 +87,28 @@ namespace NET.S._2018.Dvorkin.Task1
         /// Writes the books.
         /// </summary>
         /// <param name="storage">The storage.</param>
-        /// <param name="filePath">The file path.</param>
-        /// <exception cref="ArgumentNullException">
-        /// storage in null
+        /// <param name="books">The books.</param>
+        /// <exception cref="ArgumentNullException">storage in null
         /// or
-        /// filePath is null or empty
-        /// </exception>
-        public void WriteBooks(IStogare storage, string filePath)
+        /// filePath is null or empty</exception>
+        /// <exception cref="CustomException">There is no such storage</exception>
+        /// <exception cref="StackTrace"></exception>
+        public void WriteBooks(IStogare storage, IEnumerable<Book> books)
         {
             if (storage == null)
             {
                 throw new ArgumentNullException($"{nameof(storage)} is null");
             }
 
-            if (string.IsNullOrWhiteSpace(filePath))
+            try
             {
-                throw new ArgumentNullException($"{nameof(filePath)} is null");
+                storage.WriteBooks(books.ToList());
             }
-
-            storage.WriteBooks(this.books);
+            catch (IOException e)
+            {
+                logger.Log(e, e.Message, LogLevel.Fatal);
+                throw new CustomException(e, new StackTrace(e), "There is no such storage");
+            }
         }
 
         /// <summary>
@@ -95,7 +118,7 @@ namespace NET.S._2018.Dvorkin.Task1
         /// <returns>Copy of the current collection of books after adding the book</returns>
         /// <exception cref="ArgumentNullException">book</exception>
         /// <exception cref="ArgumentException">book</exception>
-        public List<Book> AddBook(Book book)
+        public void AddBook(Book book)
         {
             if (book == null)
             {
@@ -108,8 +131,6 @@ namespace NET.S._2018.Dvorkin.Task1
             }
 
             this.books.Add(book);
-
-            return this.books.ToList();
         }
 
         /// <summary>
@@ -122,7 +143,7 @@ namespace NET.S._2018.Dvorkin.Task1
         /// or
         /// </exception>
         /// <exception cref="ArgumentException">book</exception>
-        public List<Book> DeleteBook(Book book)
+        public void DeleteBook(Book book)
         {
             if (book == null)
             {
@@ -140,8 +161,6 @@ namespace NET.S._2018.Dvorkin.Task1
             }
 
             this.books.Remove(book);
-
-            return this.books.ToList();
         }
 
         /// <summary>
@@ -159,7 +178,7 @@ namespace NET.S._2018.Dvorkin.Task1
             {
                 if (this.books[i].CompareTo(this.books[i + 1]) > 0)
                 {
-                    this.Swap(i);
+                    Swap(i);
                 }
             }
         }
@@ -181,7 +200,13 @@ namespace NET.S._2018.Dvorkin.Task1
                 throw new ArgumentNullException($"{nameof(tagComparer)} is null");
             }
 
-            this.books.Sort(tagComparer);
+            for (int i = 0; i < books.Count - 1; i++)
+            {
+                if (tagComparer.Compare(books[i], books[i + 1]) > 0)
+                {
+                    Swap(i);
+                }
+            }
         }
 
         /// <summary>
@@ -218,23 +243,23 @@ namespace NET.S._2018.Dvorkin.Task1
             throw new ArgumentNullException($"There is no book with such {nameof(title)}");
         }
 
+
         /// <summary>
         /// Finds the book by tag.
         /// </summary>
-        /// <param name="tag">The tag.</param>
-        /// <param name="tagFinder">The tag finder.</param>
-        /// <returns>Founded book.</returns>
-        /// <exception cref="ArgumentNullException">
-        /// tagFinder is null
+        /// <param name="tagPredicate">The tag predicate.</param>
+        /// <returns></returns>
+        /// <exception cref="System.ArgumentNullException">tagPredicate</exception>
+        /// <exception cref="System.ArgumentException">
+        /// books count is 0
         /// or
-        /// tag is null or empty.
+        /// tagPredicate can't find such book.
         /// </exception>
-        /// <exception cref="ArgumentException">books</exception>
-        public Book FindBookByTag(string tag, IFinder tagFinder)
+        public Book FindBookByTag(IPredicate<Book> tagPredicate)
         {
-            if (tagFinder == null)
+            if (tagPredicate == null)
             {
-                throw new ArgumentNullException($"{nameof(tagFinder)} is null");
+                throw new ArgumentNullException($"{nameof(tagPredicate)} is null");
             }
 
             if (this.books.Count == 0)
@@ -242,24 +267,37 @@ namespace NET.S._2018.Dvorkin.Task1
                 throw new ArgumentException($"{nameof(books)} has 0 elements");
             }
 
-            if (string.IsNullOrWhiteSpace(tag))
+            foreach (Book book in books)
             {
-                throw new ArgumentNullException($"{nameof(tag)} is null");
+                if (tagPredicate.Find(book))
+                {
+                    return book;
+                }
             }
 
-            return tagFinder.Find(tag);
+            throw new ArgumentException($"{nameof(tagPredicate)} can't find such book");
         }
 
         /// <summary>
-        /// Copies the books.
+        /// Returns an enumerator that iterates through the collection.
         /// </summary>
-        /// <returns>Copied list of current books collection.</returns>
-        private List<Book> CopyBooks()
+        /// <returns>
+        /// An enumerator that can be used to iterate through the collection.
+        /// </returns>
+        public IEnumerator<Book> GetEnumerator()
         {
-            Book[] temp = new Book[this.books.Count];
-            this.books.CopyTo(temp);
+            return books.GetEnumerator();
+        }
 
-            return temp.ToList();
+        /// <summary>
+        /// Returns an enumerator that iterates through a collection.
+        /// </summary>
+        /// <returns>
+        /// An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.
+        /// </returns>
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return ((IEnumerable)books).GetEnumerator();
         }
 
         /// <summary>
@@ -278,5 +316,7 @@ namespace NET.S._2018.Dvorkin.Task1
             this.books[i] = this.books[i + 1];
             this.books[i + 1] = temp;
         }
+
+
     }
 }

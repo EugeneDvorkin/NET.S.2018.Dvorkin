@@ -1,0 +1,11 @@
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.CustomFormat\bin\Debug\NLog.config
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.CustomFormat\bin\Debug\NLog.xsd
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.CustomFormat\bin\Debug\NET.S.2018.Dvorkin.Task.CustomFormat.dll
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.CustomFormat\bin\Debug\NET.S.2018.Dvorkin.Task.CustomFormat.pdb
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.CustomFormat\bin\Debug\NET.S.2018.Dvorkin.Task1.dll
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.CustomFormat\bin\Debug\NET.S.2018.Dvorkin.Task1.pdb
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.CustomFormat\obj\Debug\NET.S.2018.Dvorkin.Task.CustomFormat.csprojResolveAssemblyReference.cache
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.CustomFormat\obj\Debug\NET.S.2018.Dvorkin.Task.CustomFormat.csproj.CoreCompileInputs.cache
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.CustomFormat\obj\Debug\NET.S.2018.Dvorkin.Task.CustomFormat.csproj.CopyComplete
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.CustomFormat\obj\Debug\NET.S.2018.Dvorkin.Task.CustomFormat.dll
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task.CustomFormat\obj\Debug\NET.S.2018.Dvorkin.Task.CustomFormat.pdb

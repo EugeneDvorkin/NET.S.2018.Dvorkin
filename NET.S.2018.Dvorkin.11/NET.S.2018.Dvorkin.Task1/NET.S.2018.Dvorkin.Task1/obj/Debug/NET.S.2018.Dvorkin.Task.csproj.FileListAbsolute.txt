@@ -42,3 +42,14 @@ d:\GitRepositories\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.T
 d:\GitRepositories\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1\obj\Debug\NET.S.2018.Dvorkin.Task.csproj.CopyComplete
 d:\GitRepositories\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1\obj\Debug\NET.S.2018.Dvorkin.Task1.dll
 d:\GitRepositories\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1\obj\Debug\NET.S.2018.Dvorkin.Task1.pdb
+e:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1\bin\Debug\NLog.config
+e:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1\bin\Debug\NLog.xsd
+e:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1\bin\Debug\NET.S.2018.Dvorkin.Task1.dll
+e:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1\bin\Debug\NET.S.2018.Dvorkin.Task1.pdb
+e:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1\bin\Debug\NLog.dll
+e:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1\bin\Debug\NLog.xml
+e:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1\obj\Debug\NET.S.2018.Dvorkin.Task.csprojResolveAssemblyReference.cache
+e:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1\obj\Debug\NET.S.2018.Dvorkin.Task.csproj.CoreCompileInputs.cache
+e:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1\obj\Debug\NET.S.2018.Dvorkin.Task.csproj.CopyComplete
+e:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1\obj\Debug\NET.S.2018.Dvorkin.Task1.dll
+e:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1\obj\Debug\NET.S.2018.Dvorkin.Task1.pdb

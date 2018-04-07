@@ -47,7 +47,7 @@ namespace NET.S._2018.Dvorkin.Task1
                 throw new IOException($"{nameof(filePath)} doesn't exist");
             }
 
-            return BinaryReaderLocal(this.filePath);
+            return BinaryReaderLocal();
         }
 
         /// <summary>
@@ -78,32 +78,31 @@ namespace NET.S._2018.Dvorkin.Task1
                 throw new ArgumentException($"{nameof(books)} has 0 books");
             }
 
-            BinaryWriterLocal(this.filePath, books);
+            BinaryWriterLocal(books);
         }
 
         /// <summary>
         /// Binaries the reader local.
         /// </summary>
-        /// <param name="filePath">The file path.</param>
-        /// <returns>Copied collection of current storage.</returns>
-        private List<Book> BinaryReaderLocal(string filePath)
+        /// <returns>
+        /// Copied collection of current storage.
+        /// </returns>
+        private List<Book> BinaryReaderLocal()
         {
-            List<Book> bookStorage=new List<Book>();
+            List<Book> bookStorage = new List<Book>();
             FileStream fileReaderStream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
             BinaryReader fileBinaryReader = new BinaryReader(fileReaderStream);
             for (int i = 0; i < fileReaderStream.Length; i++)
             {
-                Book temp = new Book
-                {
-                    Isbn = fileBinaryReader.ReadString(),
-                    AuthorFirstName = fileBinaryReader.ReadString(),
-                    AuthorLastName = fileBinaryReader.ReadString(),
-                    Title = fileBinaryReader.ReadString(),
-                    Page = fileBinaryReader.ReadInt32(),
-                    Publisher = fileBinaryReader.ReadString(),
-                    YearPublish = fileBinaryReader.ReadInt32(),
-                    Price = fileBinaryReader.ReadDecimal()
-                };
+                string isbn = fileBinaryReader.ReadString();
+                string authorFirstName = fileBinaryReader.ReadString();
+                string authorLastName = fileBinaryReader.ReadString();
+                string title = fileBinaryReader.ReadString();
+                int page = fileBinaryReader.ReadInt32();
+                string publisher = fileBinaryReader.ReadString();
+                int yearPublish = fileBinaryReader.ReadInt32();
+                decimal price = fileBinaryReader.ReadDecimal();
+                Book temp = new Book(isbn, authorFirstName, authorLastName, title, publisher, yearPublish, page, price);
                 bookStorage.Add(temp);
             }
 
@@ -116,9 +115,8 @@ namespace NET.S._2018.Dvorkin.Task1
         /// <summary>
         /// Binaries the writer local.
         /// </summary>
-        /// <param name="filePath">The file path.</param>
         /// <param name="books">The books.</param>
-        private void BinaryWriterLocal(string filePath, List<Book> books)
+        private void BinaryWriterLocal(List<Book> books)
         {
             FileStream fileWriterStream = new FileStream(filePath, FileMode.OpenOrCreate);
             BinaryWriter fileBinaryWriter = new BinaryWriter(fileWriterStream);
@@ -139,68 +137,3 @@ namespace NET.S._2018.Dvorkin.Task1
         }
     }
 }
-///// <summary>
-///// Writes the books.
-///// </summary>
-///// <param name="filePath">The file path.</param>
-///// <param name="books">The books.</param>
-///// <param name="storage">The storage.</param>
-///// <param name="logger">The logger.</param>
-///// <exception cref="IOException">filePath</exception>
-///// <exception cref="ArgumentNullException">filePath is null or empty
-///// or
-///// books is null
-///// or
-///// storage is null</exception>
-///// <exception cref="ArgumentException">books has 0 elements</exception>
-///// <exception cref="CustomException">
-///// There is no such storage
-///// or
-///// There is no books in the storage
-///// or
-///// There is no such storage
-///// </exception>
-///// <exception cref="StackTrace">
-///// </exception>
-//public void WriteBooks(string filePath, List<Book> books, IStream storage, ILogger logger)
-//{
-//    try
-//    {
-//        if (string.IsNullOrWhiteSpace(filePath))
-//        {
-//            throw new IOException($"{nameof(filePath)} is null");
-//        }
-
-//        if (books == null)
-//        {
-//            throw new ArgumentNullException($"{nameof(books)} is null");
-//        }
-
-//        if (books.Count == 0)
-//        {
-//            throw new ArgumentException($"{nameof(books)} has 0 books");
-//        }
-
-//        if (storage == null)
-//        {
-//            throw new ArgumentNullException($"{nameof(storage)} is null");
-//        }
-
-//        storage.WriteBooks(filePath, books);
-//    }
-//    catch (IOException e)
-//    {
-//        logger.Log(e, $"{nameof(filePath)} doesn't exist", LogLevel.Fatal);
-//        throw new CustomException(e, new StackTrace(e), "There is no such storage");
-//    }
-//    catch (ArgumentNullException e) when (e.ParamName == books.ToString())
-//    {
-//        logger.Log(e, $"{nameof(books)} is null", LogLevel.Error);
-//        throw new CustomException(e, new StackTrace(e), "There is no books in the storage");
-//    }
-//    catch (ArgumentNullException e) when (e.ParamName == storage.ToString())
-//    {
-//        logger.Log(e, $"{nameof(books)} is null", LogLevel.Fatal);
-//        throw new CustomException(e, new StackTrace(e), "There is no such storage");
-//    }
-//}

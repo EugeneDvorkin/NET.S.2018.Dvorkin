@@ -1,0 +1,16 @@
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\ConsoleUI\bin\Debug\netcoreapp2.0\NLog.config
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\ConsoleUI\bin\Debug\netcoreapp2.0\NLog.xsd
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\ConsoleUI\bin\Debug\netcoreapp2.0\ConsoleUI.deps.json
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\ConsoleUI\bin\Debug\netcoreapp2.0\ConsoleUI.runtimeconfig.json
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\ConsoleUI\bin\Debug\netcoreapp2.0\ConsoleUI.runtimeconfig.dev.json
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\ConsoleUI\bin\Debug\netcoreapp2.0\ConsoleUI.dll
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\ConsoleUI\bin\Debug\netcoreapp2.0\NET.S.2018.Dvorkin.Task1.dll
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\ConsoleUI\bin\Debug\netcoreapp2.0\NET.S.2018.Dvorkin.Task1.pdb
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\ConsoleUI\obj\Debug\netcoreapp2.0\ConsoleUI.csprojResolveAssemblyReference.cache
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\ConsoleUI\obj\Debug\netcoreapp2.0\ConsoleUI.csproj.CoreCompileInputs.cache
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\ConsoleUI\obj\Debug\netcoreapp2.0\ConsoleUI.AssemblyInfoInputs.cache
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\ConsoleUI\obj\Debug\netcoreapp2.0\ConsoleUI.AssemblyInfo.cs
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\ConsoleUI\obj\Debug\netcoreapp2.0\ConsoleUI.csproj.CopyComplete
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\ConsoleUI\bin\Debug\netcoreapp2.0\ConsoleUI.pdb
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\ConsoleUI\obj\Debug\netcoreapp2.0\ConsoleUI.dll
+E:\GitProjects\NET.S.2018.Dvorkin\NET.S.2018.Dvorkin.11\NET.S.2018.Dvorkin.Task1\ConsoleUI\obj\Debug\netcoreapp2.0\ConsoleUI.pdb
