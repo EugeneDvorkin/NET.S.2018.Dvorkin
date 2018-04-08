@@ -46,7 +46,7 @@ namespace NET.S._2018.Dvorkin.Task1
             {
                 for (int j = 0; j < jaggerArray.Length - 1 - i; j++)
                 {
-                    if (predicate.Invoke(jaggerArray[j], jaggerArray[j+1]) > 0)
+                    if (predicate.Invoke(jaggerArray[j], jaggerArray[j + 1]) > 0)
                     {
                         Swapper(ref jaggerArray[j], ref jaggerArray[j + 1]);
                     }

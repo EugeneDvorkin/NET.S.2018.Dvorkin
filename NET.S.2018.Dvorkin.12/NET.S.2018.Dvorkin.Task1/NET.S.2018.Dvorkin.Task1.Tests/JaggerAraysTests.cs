@@ -1,5 +1,4 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using static NET.S._2018.Dvorkin.Task1.JaggerArays;
 
 namespace NET.S._2018.Dvorkin.Task1.Tests
