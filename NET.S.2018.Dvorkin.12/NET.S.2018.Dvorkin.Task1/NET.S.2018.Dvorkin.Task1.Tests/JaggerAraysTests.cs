@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 using static NET.S._2018.Dvorkin.Task1.JaggerArays;
 
 namespace NET.S._2018.Dvorkin.Task1.Tests
@@ -139,8 +140,8 @@ namespace NET.S._2018.Dvorkin.Task1.Tests
                 actual[1] = thirdRow;
                 actual[2] = firstRow;
                 actual[3] = secondRow;
-                ComparerSumIncrease SumInc = new ComparerSumIncrease();
-                Predicate predicate = SumInc.Compare;
+                ComparerSumIncrease sumInc = new ComparerSumIncrease();
+                Func<int[], int[], int> predicate = sumInc.Compare;
 
                 BubbleSort(actual, predicate);
 
@@ -161,8 +162,8 @@ namespace NET.S._2018.Dvorkin.Task1.Tests
                 actual[1] = thirdRow;
                 actual[2] = firstRow;
                 actual[3] = secondRow;
-                ComparerSumIncrease SumInc = new ComparerSumIncrease();
-                Predicate predicate = SumInc.Compare;
+                ComparerSumIncrease sumInc = new ComparerSumIncrease();
+                Func<int[], int[], int> predicate=(sumInc.Compare);
 
                 ComparerFunc comparerFunc = new ComparerFunc(predicate);
 

@@ -10,7 +10,7 @@ namespace NET.S._2018.Dvorkin.Task1
     {
         #region Public methods
 
-        public delegate int Predicate(int[] jaggerArrayA, int[] jaggerArrayB);
+        //public delegate int Predicate(int[] jaggerArrayA, int[] jaggerArrayB);
 
         /// <summary>
         /// Sums the increasing sort.
@@ -38,7 +38,7 @@ namespace NET.S._2018.Dvorkin.Task1
         /// </summary>
         /// <param name="jaggerArray">The jagger array.</param>
         /// <param name="predicate">The predicate.</param>
-        public static void BubbleSort(int[][] jaggerArray, Predicate predicate)
+        public static void BubbleSort(int[][] jaggerArray, Func<int[], int[], int> predicate)
         {
             Checker(jaggerArray, predicate);
 
@@ -46,7 +46,7 @@ namespace NET.S._2018.Dvorkin.Task1
             {
                 for (int j = 0; j < jaggerArray.Length - 1 - i; j++)
                 {
-                    if (predicate.Invoke(jaggerArray[j], jaggerArray[j + 1]) > 0)
+                    if (predicate(jaggerArray[j], jaggerArray[j + 1]) > 0)
                     {
                         Swapper(ref jaggerArray[j], ref jaggerArray[j + 1]);
                     }
@@ -93,7 +93,7 @@ namespace NET.S._2018.Dvorkin.Task1
         /// <param name="jaggerArray">The jaggers array.</param>
         /// <param name="keyComparer">The key comparer.</param>
         /// <exception cref="ArgumentNullException">jaggerArray</exception>
-        private static void Checker(int[][] jaggerArray, Predicate keyComparer)
+        private static void Checker(int[][] jaggerArray, Func<int[], int[], int> keyComparer)
         {
             if (jaggerArray == null)
             {
