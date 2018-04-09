@@ -111,22 +111,6 @@ namespace NET.S._2018.Dvorkin.Task1.Tests
         }
     }
 
-    public class ComparerFunc : IComparer<int[]>
-    {
-        //private readonly JaggerArays.Predicate predicate;
-        private readonly Func<int[], int[], int> predicate;
-
-        public ComparerFunc(Func<int[], int[], int> predicate)
-        {
-            this.predicate = predicate;
-        }
-
-        public int Compare(int[] x, int[] y)
-        {
-            return predicate(x, y);
-        }
-    }
-
     public class Comparer
     {
         /// <summary>

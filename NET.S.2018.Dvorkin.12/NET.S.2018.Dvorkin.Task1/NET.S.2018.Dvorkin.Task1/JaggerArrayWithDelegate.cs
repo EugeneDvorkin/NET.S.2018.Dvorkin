@@ -4,18 +4,17 @@ using System.Collections.Generic;
 namespace NET.S._2018.Dvorkin.Task1
 {
     /// <summary>
-    /// Contains methods for sorting jaggers array.
+    /// Comparer with delegates
     /// </summary>
-    public static class JaggerArays
+    class JaggerArrayWithDelegate
     {
         #region Public methods
-
         /// <summary>
-        /// Sums the increasing sort.
+        /// Bubbles the sort.
         /// </summary>
-        /// <param name="jaggerArray">The jaggers array.</param>
+        /// <param name="jaggerArray">The jagger array.</param>
         /// <param name="keyComparer">The key comparer.</param>
-        public static void BubbleSort(int[][] jaggerArray, IComparer<int[]> keyComparer)
+        public static void BubbleSort(int[][] jaggerArray, Func<int[], int[], int> keyComparer)
         {
             Checker(jaggerArray, keyComparer);
 
@@ -23,7 +22,7 @@ namespace NET.S._2018.Dvorkin.Task1
             {
                 for (int j = 0; j < jaggerArray.Length - 1 - i; j++)
                 {
-                    if (keyComparer.Compare(jaggerArray[j], jaggerArray[j + 1]) > 0)
+                    if (keyComparer(jaggerArray[j], jaggerArray[j + 1]) > 0)
                     {
                         Swapper(ref jaggerArray[j], ref jaggerArray[j + 1]);
                     }
@@ -35,12 +34,13 @@ namespace NET.S._2018.Dvorkin.Task1
         /// Bubbles the sort.
         /// </summary>
         /// <param name="jaggerArray">The jagger array.</param>
-        /// <param name="predicate">The predicate.</param>
-        public static void BubbleSort(int[][] jaggerArray, Func<int[], int[], int> predicate)
+        /// <param name="keyComparer">The key comparer.</param>
+        public static void BubbleSort(int[][] jaggerArray, IComparer<int[]> keyComparer)
         {
-            Checker(jaggerArray, predicate);
+            Checker(jaggerArray, keyComparer);
+            Func<int[], int[], int> comparer = keyComparer.Compare;
 
-            BubbleSort(jaggerArray, new ComparerFunc(predicate));
+            BubbleSort(jaggerArray, comparer);
         }
         #endregion
 
@@ -95,58 +95,5 @@ namespace NET.S._2018.Dvorkin.Task1
             }
         }
         #endregion
-    }
-
-    /// <summary>
-    /// Adapter for IComparer.
-    /// </summary>
-    /// <seealso cref="int" />
-    public class ComparerFunc : IComparer<int[]>
-    {
-        /// <summary>
-        /// The comparer.
-        /// </summary>
-        private Func<int[], int[], int> comparer;
-
-        /// <summary>
-        /// Gets the comparer.
-        /// </summary>
-        /// <value>
-        /// The comparer.
-        /// </value>
-        /// <exception cref="ArgumentNullException">comparer</exception>
-        public Func<int[], int[], int> Comparer
-        {
-            get => comparer;
-            private set
-            {
-                this.comparer = value ?? throw new ArgumentNullException($"{nameof(comparer)} is null");
-            }
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ComparerFunc"/> class.
-        /// </summary>
-        /// <param name="comparer">The comparer.</param>
-        public ComparerFunc(Func<int[], int[], int> comparer)
-        {
-            this.Comparer = comparer;
-        }
-
-        /// <summary>
-        /// Compares two objects and returns a value indicating whether one is less than, equal to, or greater than the other.
-        /// </summary>
-        /// <param name="x">The first object to compare.</param>
-        /// <param name="y">The second object to compare.</param>
-        /// <returns>
-        /// A signed integer that indicates the relative values of <paramref name="x" /> and <paramref name="y" />, as shown in the following table.Value Meaning Less than zero
-        /// <paramref name="x" /> is less than <paramref name="y" />.Zero
-        /// <paramref name="x" /> equals <paramref name="y" />.Greater than zero
-        /// <paramref name="x" /> is greater than <paramref name="y" />.
-        /// </returns>
-        public int Compare(int[] x, int[] y)
-        {
-            return comparer(x, y);
-        }
     }
 }
