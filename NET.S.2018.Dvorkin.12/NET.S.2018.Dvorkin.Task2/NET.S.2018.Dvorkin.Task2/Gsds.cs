@@ -3,20 +3,16 @@ using System.Linq;
 
 namespace NET.S._2018.Dvorkin.Task2
 {
-
     /// <summary>
     /// Contains GSD methods
     /// </summary>
-    public class Gsds
+    public static class Gsds
     {
-        private static readonly Func<int, int, int> GsdDeleg = Gsd;
-        private static readonly Func<int, int, int> BinaryGsdDeleg = BinaryGsd;
-
         /// <summary>
         /// GSDs for params elements.
         /// </summary>
         /// <param name="numbers">The params.</param>
-        /// <returns>GSD for params</returns>
+        /// <returns>GSD for params.</returns>
         /// <exception cref="ArgumentException">
         /// If params contains int.MinValue
         /// or
@@ -24,51 +20,9 @@ namespace NET.S._2018.Dvorkin.Task2
         /// </exception>
         public static int GsdParams(params int[] numbers)
         {
-            if (numbers.Contains(int.MinValue))
-            {
-                throw new ArgumentException($"{nameof(numbers)} contains int.MinValue. It can't be processed");
-            }
+            Func<int, int, int> gsd = Gsd;
 
-            if (numbers.Length == 0)
-            {
-                throw new ArgumentException($"{nameof(numbers)} contains 0 element");
-            }
-
-            int gsd = numbers[0];
-
-            for (int i = 1; i < numbers.Length; i++)
-            {
-
-                gsd = GsdDeleg(Math.Abs(gsd), Math.Abs(numbers[i]));
-            }
-
-            return gsd;
-        }
-
-        /// <summary>
-        /// Euclideans the GSD.
-        /// </summary>
-        /// <param name="first">The first number.</param>
-        /// <param name="second">The second number.</param>
-        /// <returns>GSD for this 2 numbers</returns>
-        /// <exception cref="ArgumentException">
-        /// If any parameters are int.Minvalue
-        /// or
-        /// first and second parametrs are 0.
-        /// </exception>
-        public static int EuclideanGsd(int first, int second)
-        {
-            if (first == int.MinValue || second == int.MinValue)
-            {
-                throw new ArgumentException($"{nameof(first)} or {nameof(second)} can't be processed");
-            }
-
-            if (first == 0 && second == 0)
-            {
-                throw new ArgumentException($"{nameof(first)} and {nameof(second)} are 0.");
-            }
-
-            return GsdDeleg(first, second);
+            return GsdDel(gsd, numbers);
         }
 
         /// <summary>
@@ -77,7 +31,7 @@ namespace NET.S._2018.Dvorkin.Task2
         /// <param name="first">The first.</param>
         /// <param name="second">The second.</param>
         /// <param name="three">The three.</param>
-        /// <returns></returns>
+        /// <returns>For three elements.</returns>
         /// <exception cref="ArgumentException">
         ///If any parameters are int.Minvalue
         /// or
@@ -85,30 +39,95 @@ namespace NET.S._2018.Dvorkin.Task2
         /// </exception>
         public static int EuclideanGsdThreeElem(int first, int second, int three)
         {
-            if (first == int.MinValue || second == int.MinValue || three == int.MinValue)
-            {
-                throw new ArgumentException($"{nameof(first)} or {nameof(second)} can't be processed");
-            }
+            Func<int, int, int> gsd = Gsd;
 
-            if (first == 0 && second == 0 && three == 0)
-            {
-                throw new ArgumentException($"{nameof(first)} and {nameof(second)} are 0.");
-            }
+            return GsdDel(gsd, first, second, three);
+        }
 
-            return GsdDeleg(GsdDeleg(first, second), three);
+        /// <summary>
+        /// Euclideans the GSD.
+        /// </summary>
+        /// <param name="first">The first number.</param>
+        /// <param name="second">The second number.</param>
+        /// <returns>GSD for this 2 numbers.</returns>
+        /// <exception cref="ArgumentException">
+        /// If any parameters are int.Minvalue
+        /// or
+        /// first and second parametrs are 0.
+        /// </exception>
+        public static int EuclideanGsd(int first, int second)
+        {
+            Func<int, int, int> gsd = Gsd;
+
+            return GsdDel(gsd, first, second);
         }
 
         /// <summary>
         /// Binaries the GSD with params.
         /// </summary>
         /// <param name="numbers">The numbers.</param>
-        /// <returns>GSD for this params</returns>
+        /// <returns>GSD for this params.</returns>
         /// <exception cref="ArgumentException">
         /// If params contains int.MinValue
         /// or
         /// there is 0 params.
         /// </exception>
         public static int BinaryGsdParams(params int[] numbers)
+        {
+            Func<int, int, int> gsd = BinaryGsd;
+
+            return GsdDel(gsd, numbers);
+        }
+
+        /// <summary>
+        /// Binaries the GSD three elem.
+        /// </summary>
+        /// <param name="first">The first.</param>
+        /// <param name="second">The second.</param>
+        /// <param name="three">The three.</param>
+        /// <returns>GSD for three elements.</returns>
+        /// <exception cref="ArgumentException">
+        /// If params contains int.MinValue
+        /// or
+        /// there is 0 params.
+        /// </exception>
+        public static int BinaryGsdThreeElem(int first, int second, int three)
+        {
+            Func<int, int, int> gsd = BinaryGsd;
+
+            return GsdDel(gsd, first, second, three);
+        }
+
+        /// <summary>
+        /// Binaries the GSD three elem.
+        /// </summary>
+        /// <param name="first">The first.</param>
+        /// <param name="second">The second.</param>
+        /// <returns>GSD.</returns>
+        /// <exception cref="ArgumentException">
+        /// If params contains int.MinValue
+        /// or
+        /// there is 0 params.
+        /// </exception>
+        public static int BinaryGsdThreeElem(int first, int second)
+        {
+            Func<int, int, int> gsd = BinaryGsd;
+
+            return GsdDel(gsd, first, second);
+        }
+
+        /// <summary>
+        /// GSDs the delete.
+        /// </summary>
+        /// <param name="gsd">The GSD.</param>
+        /// <param name="numbers">The numbers.</param>
+        /// <returns>GSD.</returns>
+        /// <exception cref="ArgumentException">
+        /// numbers contains int.MinValue
+        /// or
+        /// numbers.Length is 0.
+        /// </exception>
+        private static int GsdDel(Func<int, int, int> gsd, params int[] numbers)
         {
             if (numbers.Contains(int.MinValue))
             {
@@ -120,14 +139,14 @@ namespace NET.S._2018.Dvorkin.Task2
                 throw new ArgumentException($"{nameof(numbers)} contains 0 element");
             }
 
-            int gsd = numbers[0];
+            int result = numbers[0];
 
-            for (int i = 1; i < numbers.Length; i++)
+            foreach (int i in numbers)
             {
-                gsd = BinaryGsdDeleg(Math.Abs(gsd), Math.Abs(numbers[i]));
+                result = gsd(result, i);
             }
 
-            return gsd;
+            return result;
         }
 
         /// <summary>
@@ -135,9 +154,12 @@ namespace NET.S._2018.Dvorkin.Task2
         /// </summary>
         /// <param name="first">The first.</param>
         /// <param name="second">The second.</param>
-        /// <returns>GSD for this two elements</returns>
+        /// <returns>GSD for this two elements.</returns>
         private static int Gsd(int first, int second)
         {
+            first = Math.Abs(first);
+            second = Math.Abs(second);
+
             while (second != 0)
             {
                 int temp = second;
@@ -153,9 +175,12 @@ namespace NET.S._2018.Dvorkin.Task2
         /// </summary>
         /// <param name="first">The first.</param>
         /// <param name="second">The second.</param>
-        /// <returns>GSD for this two elements</returns>
+        /// <returns>GSD for this two elements.</returns>
         private static int BinaryGsd(int first, int second)
         {
+            first = Math.Abs(first);
+            second = Math.Abs(second);
+
             while (true)
             {
                 if (first == second)
@@ -183,7 +208,7 @@ namespace NET.S._2018.Dvorkin.Task2
 
                     else
                     {
-                        return BinaryGsdDeleg(first >> 1, second >> 1) << 1;
+                        return BinaryGsd(first >> 1, second >> 1) << 1;
                     }
                 }
 
