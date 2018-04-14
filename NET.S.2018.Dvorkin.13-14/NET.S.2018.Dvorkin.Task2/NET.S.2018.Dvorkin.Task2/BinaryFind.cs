@@ -14,15 +14,29 @@ namespace NET.S._2018.Dvorkin.Task2
         /// <typeparam name="T">Type of elements.</typeparam>
         /// <param name="array">The array.</param>
         /// <param name="elem">The elem.</param>
-        /// <returns>Index of necessary element.</returns>
+        /// <param name="comparison">The comparison.</param>
+        /// <returns>
+        /// Index of necessary element.
+        /// </returns>
         /// <exception cref="ArgumentException">array</exception>
         /// <exception cref="ArgumentNullException">elem</exception>
-        public static int BinaryFindSearch<T>(T[] array, T elem) where T : IComparable<T>
+        public static int BinaryFindSearch<T>(T[] array, T elem, Comparison<T> comparison = null)
         {
             Check(array, elem);
+            try
+            {
+                if (comparison == null)
+                {
+                    comparison = Comparer<T>.Default.Compare;
+                }
+            }
+            catch (InvalidOperationException)
+            {
 
-            Adapter<T> adapter = new Adapter<T>();
-            Func<T, T, int> compareFunc = adapter.Compare;
+                throw new ArgumentException($"{nameof(T)} is invalid type");
+            }
+
+            Func<T, T, int> compareFunc = comparison.Invoke;
 
             return Search(array, elem, compareFunc);
         }
@@ -113,7 +127,7 @@ namespace NET.S._2018.Dvorkin.Task2
                     first = mid + 1;
                 }
             }
-            
+
             if (compareFunc(array[last], elem) == 0)
             {
                 return last;
