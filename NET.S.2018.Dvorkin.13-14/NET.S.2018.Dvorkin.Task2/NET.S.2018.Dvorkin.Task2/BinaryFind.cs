@@ -36,9 +36,7 @@ namespace NET.S._2018.Dvorkin.Task2
                 throw new ArgumentException($"{nameof(T)} is invalid type");
             }
 
-            Func<T, T, int> compareFunc = comparison.Invoke;
-
-            return Search(array, elem, compareFunc);
+            return Search(array, elem, comparison);
         }
 
         /// <summary>
@@ -64,9 +62,9 @@ namespace NET.S._2018.Dvorkin.Task2
                 throw new ArgumentNullException($"{nameof(comparer)} is null");
             }
 
-            Func<T, T, int> compareFunc = comparer.Compare;
+            Comparison<T> comparison = comparer.Compare;
 
-            return Search(array, elem, compareFunc);
+            return Search(array, elem, comparison);
         }
 
         /// <summary>
@@ -105,10 +103,10 @@ namespace NET.S._2018.Dvorkin.Task2
         /// <typeparam name="T"></typeparam>
         /// <param name="array">The array.</param>
         /// <param name="elem">The elem.</param>
-        /// <param name="compareFunc">The comparator.</param>
+        /// <param name="comparison">The comparator.</param>
         /// <returns>Index of necessary element or -1 if there is no such element.</returns>
         /// <exception cref="ArgumentException">array</exception>
-        private static int Search<T>(T[] array, T elem, Func<T, T, int> compareFunc)
+        private static int Search<T>(T[] array, T elem, Comparison<T> comparison)
         {
             Array.Sort(array);
             int first = 0;
@@ -118,7 +116,7 @@ namespace NET.S._2018.Dvorkin.Task2
             {
                 int mid = first + (last - first) / 2;
 
-                if (compareFunc(array[mid], elem) == 0 || compareFunc(array[mid], elem) > 0)
+                if (comparison(array[mid], elem) == 0 || comparison(array[mid], elem) > 0)
                 {
                     last = mid;
                 }
@@ -128,7 +126,7 @@ namespace NET.S._2018.Dvorkin.Task2
                 }
             }
 
-            if (compareFunc(array[last], elem) == 0)
+            if (comparison(array[last], elem) == 0)
             {
                 return last;
             }
