@@ -9,7 +9,7 @@ Task1
 
 Task2
 
-Внести исправления в обобщенный класс-коллекцию Queue.
+Внести исправления в [обобщенный класс-коллекцию Queue](https://github.com/EugeneDvorkin/NET.S.2018.Dvorkin/tree/master/NET.S.2018.Dvorkin.15/NET.S.2018.Dvorkin.Task4).
 
 Task3
 
