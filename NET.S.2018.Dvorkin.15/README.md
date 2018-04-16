@@ -3,9 +3,9 @@ EPAM Training 2018 Spring
 
 Task1
 
-Внести исправления в обобщенные (методы бинарного поиска)[https://github.com/EugeneDvorkin/NET.S.2018.Dvorkin/tree/master/NET.S.2018.Dvorkin.13-14/NET.S.2018.Dvorkin.Task2],
+Внести исправления в обобщенные [методы бинарного поиска](https://github.com/EugeneDvorkin/NET.S.2018.Dvorkin/tree/master/NET.S.2018.Dvorkin.13-14/NET.S.2018.Dvorkin.Task2),
 метод-фильтр, метод-трансформер - реализовать как обобщенные методы расширения, 
-а также метод (нахождения n-первых чисел последовательности Фибоначчи)[https://github.com/EugeneDvorkin/NET.S.2018.Dvorkin/tree/master/NET.S.2018.Dvorkin.13-14/NET.S.2018.Dvorkin.Task3] - реализовать как генератор последовательности.
+а также метод [нахождения n-первых чисел последовательности Фибоначчи](https://github.com/EugeneDvorkin/NET.S.2018.Dvorkin/tree/master/NET.S.2018.Dvorkin.13-14/NET.S.2018.Dvorkin.Task3) - реализовать как генератор последовательности.
 
 Task2
 
