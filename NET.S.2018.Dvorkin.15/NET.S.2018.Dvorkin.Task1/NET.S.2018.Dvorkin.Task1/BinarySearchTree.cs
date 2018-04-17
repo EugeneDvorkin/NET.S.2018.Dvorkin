@@ -80,6 +80,21 @@ namespace NET.S._2018.Dvorkin.Task1
         public bool Contains(T element) => ContainsElement(root, element);
 
         /// <summary>
+        /// Adds the specified element.
+        /// </summary>
+        /// <param name="element">The element.</param>
+        /// <exception cref="ArgumentNullException">element</exception>
+        public void Add(T element)
+        {
+            if (element==null)
+            {
+                throw new ArgumentNullException($"{nameof(element)} is null");
+            }
+
+            root = AddElement(root, element);
+        }
+
+        /// <summary>
         /// Pre order way of representations.
         /// </summary>
         /// <returns>Representation of tree</returns>
