@@ -66,8 +66,20 @@ namespace NET.S._2018.Dvorkin.Task1
         /// <summary>
         /// Initializes a new instance of the <see cref="BinarySearchTree{T}"/> class.
         /// </summary>
-        public BinarySearchTree() : this((Comparison<T>)null)
+        public BinarySearchTree()
         {
+            this.root = null;
+            if (comparison == null)
+            {
+                try
+                {
+                    this.comparison = Comparer<T>.Default.Compare;
+                }
+                catch (ArgumentException)
+                {
+                    throw new ArgumentException($"{nameof(T)} doesn't implicit compare");
+                }
+            }
         }
 
         /// <summary>
@@ -92,6 +104,24 @@ namespace NET.S._2018.Dvorkin.Task1
             }
 
             root = AddElement(root, element);
+        }
+
+        /// <summary>
+        /// Adds the specified elements.
+        /// </summary>
+        /// <param name="elements">The elements.</param>
+        /// <exception cref="ArgumentNullException">elements</exception>
+        public void Add(IEnumerable<T> elements)
+        {
+            if (elements == null)
+            {
+                throw new ArgumentNullException($"{nameof(elements)} is null");
+            }
+
+            foreach (T element in elements)
+            {
+                Add(element);
+            }
         }
 
         /// <summary>
@@ -150,12 +180,12 @@ namespace NET.S._2018.Dvorkin.Task1
 
             if (comparison(element, node.Data) < 0)
             {
-                node.Left = new Node<T>(element);
+                node.Left = AddElement(node.Left, element);
             }
 
             if (comparison(element, node.Data) > 0)
             {
-                node.Right = new Node<T>(element);
+                node.Right = AddElement(node.Right,element);
             }
 
             return node;
