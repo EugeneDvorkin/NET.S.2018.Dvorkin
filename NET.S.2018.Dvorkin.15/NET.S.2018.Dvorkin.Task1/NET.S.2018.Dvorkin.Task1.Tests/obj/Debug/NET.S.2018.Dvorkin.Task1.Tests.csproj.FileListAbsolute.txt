@@ -1,0 +1,6 @@
+D:\EPAM\Day15\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1.Tests\bin\Debug\NET.S.2018.Dvorkin.Task1.Tests.dll
+D:\EPAM\Day15\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1.Tests\bin\Debug\NET.S.2018.Dvorkin.Task1.Tests.pdb
+D:\EPAM\Day15\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1.Tests\obj\Debug\NET.S.2018.Dvorkin.Task1.Tests.csprojResolveAssemblyReference.cache
+D:\EPAM\Day15\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1.Tests\obj\Debug\NET.S.2018.Dvorkin.Task1.Tests.csproj.CoreCompileInputs.cache
+D:\EPAM\Day15\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1.Tests\obj\Debug\NET.S.2018.Dvorkin.Task1.Tests.dll
+D:\EPAM\Day15\NET.S.2018.Dvorkin.Task1\NET.S.2018.Dvorkin.Task1.Tests\obj\Debug\NET.S.2018.Dvorkin.Task1.Tests.pdb
