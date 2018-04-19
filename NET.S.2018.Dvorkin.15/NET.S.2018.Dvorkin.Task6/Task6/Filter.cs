@@ -37,7 +37,7 @@ namespace Task6
                 throw new ArgumentNullException($"{nameof(logicPredicate)} is null");
             }
 
-            Predicate<T> predicate = logicPredicate.IsMatch;
+            Func<T, bool> predicate = logicPredicate.IsMatch;
 
             return Filter(filterArray, predicate);
         }
@@ -54,7 +54,7 @@ namespace Task6
         /// predicate is null.
         /// </exception>
         /// <exception cref="ArgumentException">filterArray</exception>
-        public static T[] FilterDigit<T>(this T[] filterArray, Predicate<T> predicate)
+        public static T[] FilterDigit<T>(this T[] filterArray, Func<T, bool> predicate)
         {
             if (filterArray == null)
             {
@@ -80,7 +80,7 @@ namespace Task6
         /// <param name="filterArray">The filter array.</param>
         /// <param name="predicate">The predicate.</param>
         /// <returns>Filtered array.</returns>
-        private static T[] Filter<T>(T[] filterArray, Predicate<T> predicate)
+        private static T[] Filter<T>(T[] filterArray, Func<T, bool> predicate)
         {
             List<T> result = new List<T>();
             foreach (var item in filterArray)
