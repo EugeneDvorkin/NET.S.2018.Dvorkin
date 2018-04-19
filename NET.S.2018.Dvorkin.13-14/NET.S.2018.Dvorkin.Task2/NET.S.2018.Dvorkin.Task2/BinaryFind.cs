@@ -20,7 +20,7 @@ namespace NET.S._2018.Dvorkin.Task2
         /// </returns>
         /// <exception cref="ArgumentException">array</exception>
         /// <exception cref="ArgumentNullException">elem</exception>
-        public static int BinaryFindSearch<T>(T[] array, T elem, Comparison<T> comparison = null)
+        public static int BinaryFindSearch<T>(this T[] array, T elem, Comparison<T> comparison = null)
         {
             Check(array, elem);
             try
@@ -53,7 +53,7 @@ namespace NET.S._2018.Dvorkin.Task2
         /// or
         /// comparer is null
         /// </exception>
-        public static int BinaryFindSearch<T>(T[] array, T elem, IComparer<T> comparer)
+        public static int BinaryFindSearch<T>(this T[] array, T elem, IComparer<T> comparer)
         {
             Check(array, elem);
 
