@@ -1,23 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 
 namespace NET.S._2018.Dvorkin.Task3
 {
     public static class Fibonacci
     {
         /// <summary>
-        /// Fibonaccis the sequence.
+        /// Fibonaches the generator.
         /// </summary>
         /// <param name="count">The count.</param>
-        /// <returns>IEnumerable list of Fibonacci Sequence for necessary count.</returns>
-        public static IEnumerable<int> FibonacciSequence(int count)
+        /// <returns>Fibonacci Sequence for necessary count.</returns>
+        /// <exception cref="ArgumentException">count</exception>
+        public static IEnumerable<BigInteger> FibonachGenerator(int count)
         {
             if (count <= 0)
             {
                 throw new ArgumentException($"{nameof(count)} is less than 0");
             }
 
-            ////List<int> result = new List<int>();
+            return FibonacciSequence(count);
+        }
+
+        /// <summary>
+        /// Fibonaccis the sequence.
+        /// </summary>
+        /// <param name="count">The count.</param>
+        /// <returns>Fibonacci Sequence for necessary count.</returns>
+        private static IEnumerable<BigInteger> FibonacciSequence(int count)
+        {
             for (int i = 0, prev = 1, cur = 1; i < count; i++)
             {
                 yield return prev;
