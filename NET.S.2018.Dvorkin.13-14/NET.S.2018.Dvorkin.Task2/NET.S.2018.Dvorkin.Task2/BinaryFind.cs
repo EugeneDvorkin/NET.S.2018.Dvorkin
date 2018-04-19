@@ -23,17 +23,18 @@ namespace NET.S._2018.Dvorkin.Task2
         public static int BinaryFindSearch<T>(this T[] array, T elem, Comparison<T> comparison = null)
         {
             Check(array, elem);
-            try
+
+            if (comparison == null)
             {
-                if (comparison == null)
+                if ((elem is IComparable) || (elem is IComparable<T>))
                 {
                     comparison = Comparer<T>.Default.Compare;
                 }
-            }
-            catch (InvalidOperationException)
-            {
 
-                throw new ArgumentException($"{nameof(T)} is invalid type");
+                else
+                {
+                    throw new ArgumentException($"{nameof(T)} is invalid type");
+                }
             }
 
             return Search(array, elem, comparison);
