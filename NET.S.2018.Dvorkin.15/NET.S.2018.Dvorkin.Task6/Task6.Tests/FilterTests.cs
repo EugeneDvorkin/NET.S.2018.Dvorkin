@@ -13,7 +13,7 @@ namespace Task6.Tests
             int[] filtredArray = { 2, 22, 232, 222, 123 };
             Predicate logic = new Predicate(2);
 
-            int[] actualArray = Filters<int>.FilterDigit(arrayForFilter, logic);
+            int[] actualArray = arrayForFilter.FilterDigit(logic);
 
             CollectionAssert.AreEqual(filtredArray, actualArray);
         }
@@ -25,7 +25,7 @@ namespace Task6.Tests
             int[] filtredArray = { -2, -22, -232, -222, -123 };
             Predicate logic = new Predicate(2);
 
-            int[] actualArray = Filters<int>.FilterDigit(arrayForFilter, logic);
+            int[] actualArray = arrayForFilter.FilterDigit(logic);
 
             CollectionAssert.AreEqual(filtredArray, actualArray);
         }
@@ -38,7 +38,7 @@ namespace Task6.Tests
             int[] filtredArray = { -2, -22, -232, -222, -123 };
             Predicate logic = new Predicate(10);
 
-            int[] actualArray = Filters<int>.FilterDigit(arrayForFilter, logic);
+            int[] actualArray = arrayForFilter.FilterDigit(logic);
 
             CollectionAssert.AreEqual(filtredArray, actualArray);
         }   
@@ -55,7 +55,7 @@ namespace Task6.Tests
             int flag = Convert.ToInt32(TestContext.DataRow["Filter"]);
             Predicate logic = new Predicate(flag);
 
-            int[] actualArray = Filters<int>.FilterDigit(arrayForFiltering, logic);
+            int[] actualArray = arrayForFiltering.FilterDigit(logic);
 
             CollectionAssert.AreEqual(filteredArray, actualArray);
         }

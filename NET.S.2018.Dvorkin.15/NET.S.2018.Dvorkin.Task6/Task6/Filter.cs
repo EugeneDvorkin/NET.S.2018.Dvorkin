@@ -6,7 +6,7 @@ namespace Task6
     /// <summary>
     /// Filtering array with digit key
     /// </summary>
-    public static class Filters<T>
+    public static class Filters
     {
         /// <summary>
         /// Filtering array with the digit
@@ -20,7 +20,7 @@ namespace Task6
         /// <exception cref="ArgumentException">digit
         /// or
         /// filterArray</exception>
-        public static T[] FilterDigit(T[] filterArray, IPredicate<T> logicPredicate)
+        public static T[] FilterDigit<T>(this T[] filterArray, IPredicate<T> logicPredicate)
         {
             if (filterArray == null)
             {
@@ -54,7 +54,7 @@ namespace Task6
         /// predicate is null.
         /// </exception>
         /// <exception cref="ArgumentException">filterArray</exception>
-        public static T[] FilterDigit(T[] filterArray, Predicate<T> predicate)
+        public static T[] FilterDigit<T>(this T[] filterArray, Predicate<T> predicate)
         {
             if (filterArray == null)
             {
@@ -80,7 +80,7 @@ namespace Task6
         /// <param name="filterArray">The filter array.</param>
         /// <param name="predicate">The predicate.</param>
         /// <returns>Filtered array.</returns>
-        private static T[] Filter(T[] filterArray, Predicate<T> predicate)
+        private static T[] Filter<T>(T[] filterArray, Predicate<T> predicate)
         {
             List<T> result = new List<T>();
             foreach (var item in filterArray)

@@ -16,11 +16,11 @@ namespace Task6.NUnitTests
             new object[]{ arrayForFilterWithNegat, filtredArrayWithNegate }
         };
 
-        [Test, TestCaseSource("ListForSort")]
+        [Test, TestCaseSource(nameof(ListForSort))]
         public void FilterDigit_ArrayFor10Elem_FiltredArray(int[] arrayForFilter, int[] filtredArray)
         {
             Predicate logic = new Predicate(2);
-            int[] actualArray = Filters<int>.FilterDigit(arrayForFilter, logic);
+            int[] actualArray = arrayForFilter.FilterDigit(logic);
 
             CollectionAssert.AreEqual(filtredArray, actualArray);
         }
@@ -29,7 +29,7 @@ namespace Task6.NUnitTests
         public void FilterDigit_ArraySomeIntElem_FiltredArray(int[] arrayForFilter, int[] filtredArray, int flag)
         {
             Predicate logic = new Predicate(flag);
-            int[] actualArray = Filters<int>.FilterDigit(arrayForFilter, logic);
+            int[] actualArray = arrayForFilter.FilterDigit(logic);
 
             CollectionAssert.AreEqual(filtredArray, actualArray);
         }
@@ -38,7 +38,7 @@ namespace Task6.NUnitTests
         public void FilterDigit_ArrayArgumentNullException_ArgumentNullException()
         {
             Predicate logic = new Predicate(9);
-            Assert.That(() => Filters<int>.FilterDigit(null, logic), Throws.ArgumentNullException);
+            Assert.That(() => Filters.FilterDigit(null, logic), Throws.ArgumentNullException);
         }
     }
 }
