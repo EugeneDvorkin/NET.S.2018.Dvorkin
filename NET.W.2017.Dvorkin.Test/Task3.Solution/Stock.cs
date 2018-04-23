@@ -12,12 +12,12 @@ namespace Task3
         public void Market()
         {
             Random rnd = new Random();
-            OnUpdateManager(new StockInfoEventArgs(rnd.Next(20, 40), rnd.Next(20, 40)));            
+            OnUpdateStock(new StockInfoEventArgs(rnd.Next(20, 40), rnd.Next(20, 40)));            
         }
 
         public event EventHandler<StockInfoEventArgs> Manager = delegate { };        
 
-        private void OnUpdateManager(StockInfoEventArgs e)
+        private void OnUpdateStock(StockInfoEventArgs e)
         {
             EventHandler<StockInfoEventArgs> temp = Manager;
             temp?.Invoke(this, e);

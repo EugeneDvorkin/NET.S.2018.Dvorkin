@@ -9,11 +9,11 @@ namespace Task3.Console
     class Program
     {
         static void Main(string[] args)
-        {            
+        {
             Stock stock = new Stock();
-            Bank bank=new Bank("1", stock);
-            Broker broker=new Broker("1", stock);
-            
+            Bank bank = new Bank("1", stock);
+            Broker broker = new Broker("1", stock);
+
             stock.Market();
         }
     }
