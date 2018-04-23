@@ -17,7 +17,22 @@ namespace Task4
                 throw new ArgumentNullException($"{nameof(method)} is null");
             }
 
-            Func<List<double>, double> func = method.Method;
+            Func<IEnumerable<double>, double> func = method.Method;
+
+            return func(values);
+        }
+
+        public static double CalculateAverage(List<double> values, Func<IEnumerable<double>, double> func)
+        {
+            if (values == null)
+            {
+                throw new ArgumentNullException(nameof(values));
+            }
+
+            if (func == null)
+            {
+                throw new ArgumentNullException($"{nameof(func)} is null");
+            }
 
             return func(values);
         }
