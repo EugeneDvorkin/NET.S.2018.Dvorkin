@@ -10,3 +10,9 @@ C:\Users\MIB\Desktop\23.11.2017\Task1.Solution\obj\Debug\Task1.Solution.csprojRe
 C:\Users\MIB\Desktop\23.11.2017\Task1.Solution\obj\Debug\Task1.Solution.csproj.CoreCompileInputs.cache
 C:\Users\MIB\Desktop\23.11.2017\Task1.Solution\obj\Debug\Task1.Solution.dll
 C:\Users\MIB\Desktop\23.11.2017\Task1.Solution\obj\Debug\Task1.Solution.pdb
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task1.Solution\bin\Debug\Task1.Solution.dll
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task1.Solution\bin\Debug\Task1.Solution.pdb
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task1.Solution\obj\Debug\Task1.Solution.csprojResolveAssemblyReference.cache
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task1.Solution\obj\Debug\Task1.Solution.csproj.CoreCompileInputs.cache
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task1.Solution\obj\Debug\Task1.Solution.dll
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task1.Solution\obj\Debug\Task1.Solution.pdb

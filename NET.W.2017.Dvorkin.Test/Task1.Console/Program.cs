@@ -10,6 +10,11 @@ namespace Task1.Console
     {
         static void Main(string[] args)
         {
+            IRepository repository=new SqlRepository();
+            PasswordCheckerService service= new PasswordCheckerService(repository);
+            //string password = "1234567QWER";
+            string password = string.Empty;
+            System.Console.WriteLine(service.VerifyPassword(password));
         }
     }
 }

@@ -1,0 +1,10 @@
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task1.Console\bin\Debug\Task1.Console.exe.config
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task1.Console\bin\Debug\Task1.Console.exe
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task1.Console\bin\Debug\Task1.Console.pdb
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task1.Console\bin\Debug\Task1.Solution.dll
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task1.Console\bin\Debug\Task1.Solution.pdb
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task1.Console\obj\Debug\Task1.Console.csprojResolveAssemblyReference.cache
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task1.Console\obj\Debug\Task1.Console.csproj.CoreCompileInputs.cache
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task1.Console\obj\Debug\Task1.Console.csproj.CopyComplete
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task1.Console\obj\Debug\Task1.Console.exe
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task1.Console\obj\Debug\Task1.Console.pdb
