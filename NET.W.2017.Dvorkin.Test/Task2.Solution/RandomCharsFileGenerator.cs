@@ -10,11 +10,6 @@ namespace Task_2
 
         public override string FileExtension => ".txt";
 
-        //public override void GenerateFiles(int filesCount, int contentLength)
-        //{
-            
-        //}
-
         protected override byte[] GenerateFileContent(int contentLength)
         {
             if (contentLength < 0)

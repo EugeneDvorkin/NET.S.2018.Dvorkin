@@ -15,3 +15,4 @@ d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task2.Solution\bin
 d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task2.Solution\obj\Debug\Task2.Solution.csproj.CoreCompileInputs.cache
 d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task2.Solution\obj\Debug\Task2.Solution.dll
 d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task2.Solution\obj\Debug\Task2.Solution.pdb
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task2.Solution\obj\Debug\Task2.Solution.csprojResolveAssemblyReference.cache
