@@ -9,24 +9,24 @@ namespace Task1
     {
         private IRepository repository;
 
-        private List<ICheck> check = new List<ICheck>();
+        //private List<ICheck> check = new List<ICheck>();
 
         public PasswordCheckerService(IRepository repository)
         {
             this.repository = repository;
         }
 
-        public void AddCheck(ICheck item)
-        {
-            if (item == null)
-            {
-                throw new ArgumentException($"{nameof(item)} is null");
-            }
+        //public void AddCheck(ICheck item)
+        //{
+        //    if (item == null)
+        //    {
+        //        throw new ArgumentException($"{nameof(item)} is null");
+        //    }
 
-            check.Add(item);
-        }
+        //    check.Add(item);
+        //}
 
-        public Tuple<bool, string> VerifyPassword(string password)
+        public Tuple<bool, string> VerifyPassword(string password, List<ICheck> check)
         {
             if (password == null)
                 throw new ArgumentException($"{password} is null arg");
