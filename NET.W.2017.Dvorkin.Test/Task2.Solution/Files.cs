@@ -8,16 +8,6 @@ namespace Task_2
         public abstract string WorkingDirectory { get; }
         public abstract string FileExtension { get; }
 
-        private void WriteBytesToFile(string fileName, byte[] content)
-        {
-            if (!Directory.Exists(WorkingDirectory))
-            {
-                Directory.CreateDirectory(WorkingDirectory);
-            }
-
-            File.WriteAllBytes($"{WorkingDirectory}//{fileName}", content);
-        }
-
         public void GenerateFiles(int filesCount, int contentLength)
         {
             for (var i = 0; i < filesCount; ++i)
@@ -28,6 +18,16 @@ namespace Task_2
 
                 WriteBytesToFile(generatedFileName, generatedFileContent);
             }
+        }
+
+        private void WriteBytesToFile(string fileName, byte[] content)
+        {
+            if (!Directory.Exists(WorkingDirectory))
+            {
+                Directory.CreateDirectory(WorkingDirectory);
+            }
+
+            File.WriteAllBytes($"{WorkingDirectory}//{fileName}", content);
         }
 
         protected abstract byte[] GenerateFileContent(int contentLength);
