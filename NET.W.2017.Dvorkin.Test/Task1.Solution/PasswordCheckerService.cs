@@ -26,15 +26,10 @@ namespace Task1
         //    check.Add(item);
         //}
 
-        public Tuple<bool, string> VerifyPassword(string password, List<ICheck> check)
+        public Tuple<bool, string> VerifyPassword(string password, IEnumerable<ICheck> check)
         {
             if (password == null)
                 throw new ArgumentException($"{password} is null arg");
-
-            if (check.Count == 0)
-            {
-                throw new ArgumentException($"There is no validators");
-            }
 
             foreach (var item in check)
             {
