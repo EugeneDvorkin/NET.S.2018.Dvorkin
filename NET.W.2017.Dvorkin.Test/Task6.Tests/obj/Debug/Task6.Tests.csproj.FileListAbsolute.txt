@@ -19,3 +19,14 @@ d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task6.Tests\obj\De
 d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task6.Tests\obj\Debug\Task6.Tests.csproj.CopyComplete
 d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task6.Tests\obj\Debug\Task6.Tests.dll
 d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task6.Tests\obj\Debug\Task6.Tests.pdb
+e:\GitProjects\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task6.Tests\bin\Debug\Task6.Tests.dll
+e:\GitProjects\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task6.Tests\bin\Debug\Task6.Tests.pdb
+e:\GitProjects\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task6.Tests\bin\Debug\nunit.framework.dll
+e:\GitProjects\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task6.Tests\bin\Debug\Test6.Solution.dll
+e:\GitProjects\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task6.Tests\bin\Debug\Test6.Solution.pdb
+e:\GitProjects\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task6.Tests\bin\Debug\nunit.framework.xml
+e:\GitProjects\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task6.Tests\obj\Debug\Task6.Tests.csprojResolveAssemblyReference.cache
+e:\GitProjects\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task6.Tests\obj\Debug\Task6.Tests.csproj.CoreCompileInputs.cache
+e:\GitProjects\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task6.Tests\obj\Debug\Task6.Tests.csproj.CopyComplete
+e:\GitProjects\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task6.Tests\obj\Debug\Task6.Tests.dll
+e:\GitProjects\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task6.Tests\obj\Debug\Task6.Tests.pdb

@@ -9,3 +9,9 @@ d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Test6.Solution\bin
 d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Test6.Solution\obj\Debug\Test6.Solution.csproj.CoreCompileInputs.cache
 d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Test6.Solution\obj\Debug\Test6.Solution.dll
 d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Test6.Solution\obj\Debug\Test6.Solution.pdb
+e:\GitProjects\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Test6.Solution\bin\Debug\Test6.Solution.dll
+e:\GitProjects\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Test6.Solution\bin\Debug\Test6.Solution.pdb
+e:\GitProjects\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Test6.Solution\obj\Debug\Test6.Solution.csprojResolveAssemblyReference.cache
+e:\GitProjects\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Test6.Solution\obj\Debug\Test6.Solution.csproj.CoreCompileInputs.cache
+e:\GitProjects\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Test6.Solution\obj\Debug\Test6.Solution.dll
+e:\GitProjects\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Test6.Solution\obj\Debug\Test6.Solution.pdb

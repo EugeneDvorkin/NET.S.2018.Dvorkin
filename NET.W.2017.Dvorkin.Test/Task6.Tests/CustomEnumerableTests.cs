@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using NUnit.Framework;
+using Test6.Solution;
 
 namespace Task6.Tests
 {
@@ -16,7 +12,9 @@ namespace Task6.Tests
         {
             int[] expected = {1, 1, 2, 3, 5, 8, 13, 21, 34, 55};
 
-            Assert.Inconclusive();
+            var actual = Generators<int>.Generator(1, 1, 10, (f, s) => (s + f));
+
+            CollectionAssert.AreEqual(expected,actual);
         }
 
         [Test]
@@ -24,7 +22,9 @@ namespace Task6.Tests
         {
             int[] expected = { 1, 2, 4, 8, 16, 32, 64, 128, 256, 512 };
 
-            Assert.Inconclusive();
+            var actual = Generators<int>.Generator(1, 2, 10, (f, s) => (6 * s - 8 * f));
+
+            CollectionAssert.AreEqual(expected, actual);
         }
 
         [Test]
@@ -32,7 +32,14 @@ namespace Task6.Tests
         {
             double[] expected = { 1, 2, 2.5, 3.3, 4.05757575757576, 4.87086926018965, 5.70389834408211, 6.55785277425587, 7.42763417076325, 8.31053343902137 };
 
-            Assert.Inconclusive();
+            var actual = Generators<double>.Generator(1.0, 2.0, 10, (f, s) => (s + f / s)).ToArray();
+
+            for (int i = 0; i < 10; i++)
+            {
+                Assert.AreEqual(expected[i], actual[i], 0.00001);
+            }
         }
+
+
     }
 }
