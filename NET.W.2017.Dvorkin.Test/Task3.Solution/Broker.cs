@@ -7,15 +7,13 @@ using System.Threading.Tasks;
 namespace Task3
 {
     public class Broker
-    {
-        
-
+    {  
         public string Name { get; set; }
 
-        public Broker(string name, Stock manager)
+        public Broker(string name, Stock stock)
         {
             this.Name = name;
-            manager.Manager += Update;
+            stock.Manager += Update;
         }
 
         public void Update(object sender,StockInfoEventArgs info)
