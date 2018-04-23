@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Task1.Console
 {
@@ -12,9 +8,12 @@ namespace Task1.Console
         {
             IRepository repository=new SqlRepository();
             PasswordCheckerService service= new PasswordCheckerService(repository);
+            List<ICheck> check = new List<ICheck>();
+            check.Add(new DefaultCheck());
             //string password = "1234567QWER";
             string password = string.Empty;
-            //System.Console.WriteLine(service.VerifyPassword(password));
+            service.VerifyPassword(password, check);
+            System.Console.WriteLine(service.VerifyPassword(password, check));
         }
     }
 }

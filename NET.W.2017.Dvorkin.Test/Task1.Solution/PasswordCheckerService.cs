@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
 
 namespace Task1
 {
@@ -9,22 +7,10 @@ namespace Task1
     {
         private IRepository repository;
 
-        //private List<ICheck> check = new List<ICheck>();
-
         public PasswordCheckerService(IRepository repository)
         {
             this.repository = repository;
         }
-
-        //public void AddCheck(ICheck item)
-        //{
-        //    if (item == null)
-        //    {
-        //        throw new ArgumentException($"{nameof(item)} is null");
-        //    }
-
-        //    check.Add(item);
-        //}
 
         public Tuple<bool, string> VerifyPassword(string password, IEnumerable<ICheck> check)
         {

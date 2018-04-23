@@ -8,3 +8,14 @@ C:\Users\MIB\Desktop\23.11.2017\Task6.Tests\obj\Debug\Task6.Tests.dll
 C:\Users\MIB\Desktop\23.11.2017\Task6.Tests\obj\Debug\Task6.Tests.pdb
 C:\Users\MIB\Desktop\23.11.2017\Task6.Tests\bin\Debug\Test6.Solution.dll
 C:\Users\MIB\Desktop\23.11.2017\Task6.Tests\bin\Debug\Test6.Solution.pdb
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task6.Tests\bin\Debug\Task6.Tests.dll
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task6.Tests\bin\Debug\Task6.Tests.pdb
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task6.Tests\bin\Debug\nunit.framework.dll
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task6.Tests\bin\Debug\Test6.Solution.dll
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task6.Tests\bin\Debug\Test6.Solution.pdb
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task6.Tests\bin\Debug\nunit.framework.xml
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task6.Tests\obj\Debug\Task6.Tests.csprojResolveAssemblyReference.cache
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task6.Tests\obj\Debug\Task6.Tests.csproj.CoreCompileInputs.cache
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task6.Tests\obj\Debug\Task6.Tests.csproj.CopyComplete
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task6.Tests\obj\Debug\Task6.Tests.dll
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task6.Tests\obj\Debug\Task6.Tests.pdb

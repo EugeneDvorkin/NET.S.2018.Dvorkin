@@ -17,3 +17,14 @@ C:\Users\MIB\Desktop\23.11.2017\Task5.Console\bin\Debug\Task5.Console.pdb
 C:\Users\MIB\Desktop\23.11.2017\Task5.Console\bin\Debug\Task5.dll
 C:\Users\MIB\Desktop\23.11.2017\Task5.Console\bin\Debug\Task5.pdb
 C:\Users\MIB\Desktop\23.11.2017\Task5.Console\bin\Debug\Task5.dll.config
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task5.Console\bin\Debug\Task5.Console.exe.config
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task5.Console\bin\Debug\Task5.Console.exe
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task5.Console\bin\Debug\Task5.Console.pdb
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task5.Console\bin\Debug\Task5.dll
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task5.Console\bin\Debug\Task5.pdb
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task5.Console\bin\Debug\Task5.dll.config
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task5.Console\obj\Debug\Task5.Console.csprojResolveAssemblyReference.cache
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task5.Console\obj\Debug\Task5.Console.csproj.CoreCompileInputs.cache
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task5.Console\obj\Debug\Task5.Console.csproj.CopyComplete
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task5.Console\obj\Debug\Task5.Console.exe
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task5.Console\obj\Debug\Task5.Console.pdb
