@@ -6,7 +6,6 @@ C:\Users\MIB\Desktop\23.11.2017\Test6.Solution\obj\Debug\Test6.Solution.dll
 C:\Users\MIB\Desktop\23.11.2017\Test6.Solution\obj\Debug\Test6.Solution.pdb
 d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Test6.Solution\bin\Debug\Test6.Solution.dll
 d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Test6.Solution\bin\Debug\Test6.Solution.pdb
-d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Test6.Solution\obj\Debug\Test6.Solution.csprojResolveAssemblyReference.cache
 d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Test6.Solution\obj\Debug\Test6.Solution.csproj.CoreCompileInputs.cache
 d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Test6.Solution\obj\Debug\Test6.Solution.dll
 d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Test6.Solution\obj\Debug\Test6.Solution.pdb
