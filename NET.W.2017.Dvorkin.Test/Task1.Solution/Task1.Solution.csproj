@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CheckingException.cs" />
     <Compile Include="DefaultCheck.cs" />
     <Compile Include="ICheck.cs" />
     <Compile Include="IRepository.cs" />

@@ -3,13 +3,10 @@ using System.Linq;
 
 namespace Task1
 {
-    public class DefaultCheck:ICheck
+    public class DefaultCheck : ICheck
     {
         public Tuple<bool, string> Check(string password)
         {
-            if (password == string.Empty)
-                return Tuple.Create(false, $"{password} is empty ");
-
             // check if length more than 7 chars 
             if (password.Length <= 7)
                 return Tuple.Create(false, $"{password} length too short");
