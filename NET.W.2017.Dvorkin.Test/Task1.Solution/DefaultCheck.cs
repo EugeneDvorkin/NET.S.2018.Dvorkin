@@ -5,30 +5,28 @@ namespace Task1
 {
     public class DefaultCheck:ICheck
     {
-        public bool Check(string password)
+        public Tuple<bool, string> Check(string password)
         {
-            if (password == null)
-                throw new ArgumentException($"{password} is null arg");
-
             if (password == string.Empty)
-                throw new ArgumentException($"{password} is empty ");
+                return Tuple.Create(false, $"{password} is empty ");
 
             // check if length more than 7 chars 
             if (password.Length <= 7)
-                throw new ArgumentException($"{password} length too short");
+                return Tuple.Create(false, $"{password} length too short");
 
             // check if length more than 10 chars for admins
             if (password.Length >= 15)
-                throw new ArgumentException($"{password} length too long");
+                return Tuple.Create(false, $"{password} length too long");
 
             // check if password contains at least one alphabetical character 
             if (!password.Any(char.IsLetter))
-                throw new ArgumentException($"{password} hasn't alphanumerical chars");
+                return Tuple.Create(false, $"{password} hasn't alphanumerical chars");
 
             // check if password contains at least one digit character 
             if (!password.Any(char.IsNumber))
-                throw new ArgumentException($"{password} hasn't digits");
-            return true;
+                return Tuple.Create(false, $"{password} hasn't digits");
+
+            return Tuple.Create(true, "Password is Ok. User was created");
         }
     }
 }

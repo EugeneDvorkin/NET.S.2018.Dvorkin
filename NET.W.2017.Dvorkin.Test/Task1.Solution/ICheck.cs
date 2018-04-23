@@ -1,7 +1,9 @@
-﻿namespace Task1
+﻿using System;
+
+namespace Task1
 {
     public interface ICheck
     {
-        bool Check(string password);
+        Tuple<bool, string> Check(string password);
     }
 }

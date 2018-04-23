@@ -22,18 +22,20 @@ namespace Task1
 
         public Tuple<bool, string> VerifyPassword(string password)
         {
-            try
-            {
-                check.Check(password);
-            }
-            catch (ArgumentException e)
-            {
-                throw e;
-            }
+            if (password == null)
+                throw new ArgumentException($"{password} is null arg");
 
-            repository.Create(password);
+            Tuple<bool, string> result = check.Check(password);
 
-            return Tuple.Create(true, "Password is Ok. User was created");
+            if (result.Item1)
+            {
+                repository.Create(password);
+                return result;
+            }
+            else
+            {
+                return result;
+            }
         }
     }
 }
