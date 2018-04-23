@@ -4,3 +4,13 @@ C:\Users\MIB\Desktop\23.11.2017\Task3.Console\bin\Debug\Task3.Console.pdb
 C:\Users\MIB\Desktop\23.11.2017\Task3.Console\obj\Debug\Task3.Console.csproj.CoreCompileInputs.cache
 C:\Users\MIB\Desktop\23.11.2017\Task3.Console\obj\Debug\Task3.Console.exe
 C:\Users\MIB\Desktop\23.11.2017\Task3.Console\obj\Debug\Task3.Console.pdb
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task3.Console\bin\Debug\Task3.Console.exe.config
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task3.Console\bin\Debug\Task3.Console.exe
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task3.Console\bin\Debug\Task3.Console.pdb
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task3.Console\bin\Debug\Task3.Solution.dll
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task3.Console\bin\Debug\Task3.Solution.pdb
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task3.Console\obj\Debug\Task3.Console.csprojResolveAssemblyReference.cache
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task3.Console\obj\Debug\Task3.Console.csproj.CoreCompileInputs.cache
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task3.Console\obj\Debug\Task3.Console.csproj.CopyComplete
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task3.Console\obj\Debug\Task3.Console.exe
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task3.Console\obj\Debug\Task3.Console.pdb
