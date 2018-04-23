@@ -8,8 +8,8 @@ namespace Task2.Tests
         {
             RandomBytesFileGenerator bytes = new RandomBytesFileGenerator();
             bytes.GenerateFiles(1,15);
-            //RandomCharsFileGenerator chars=new RandomCharsFileGenerator();
-            //chars.GenerateFiles(1,15);
+            RandomCharsFileGenerator chars=new RandomCharsFileGenerator();
+            chars.GenerateFiles(1,15);
         }
     }
 }

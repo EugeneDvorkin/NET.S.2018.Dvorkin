@@ -14,12 +14,28 @@ namespace Task_2
         {
             for (var i = 0; i < filesCount; ++i)
             {
-                var generatedFileContent = Generator.GenerateFileContentByte(contentLength);
+                var generatedFileContent = GenerateFileContent(contentLength);
 
                 var generatedFileName = $"{Guid.NewGuid()}{FileExtension}";
 
                 WriteBytesToFile(WorkingDirectory, generatedFileName, generatedFileContent);
             }
+        }
+
+        internal override byte[] GenerateFileContent(int contentLength)
+        {
+            if (contentLength < 0)
+            {
+                throw new ArgumentException($"{nameof(contentLength)} less than 0");
+            }
+
+            var random = new Random();
+
+            var fileContent = new byte[contentLength];
+
+            random.NextBytes(fileContent);
+
+            return fileContent;
         }
     }
 }
