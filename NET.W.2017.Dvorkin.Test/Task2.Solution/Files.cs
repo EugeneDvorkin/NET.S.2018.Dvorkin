@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 
 namespace Task_2
 {
@@ -15,6 +16,18 @@ namespace Task_2
             }
 
             File.WriteAllBytes($"{WorkingDirectory}//{fileName}", content);
+        }
+
+        internal void GenerateFile(string workingDirectory, string fileExtension, int filesCount, int contentLength)
+        {
+            for (var i = 0; i < filesCount; ++i)
+            {
+                var generatedFileContent = GenerateFileContent(contentLength);
+
+                var generatedFileName = $"{Guid.NewGuid()}{fileExtension}";
+
+                WriteBytesToFile(workingDirectory, generatedFileName, generatedFileContent);
+            }
         }
 
         internal abstract byte[] GenerateFileContent(int contentLength);

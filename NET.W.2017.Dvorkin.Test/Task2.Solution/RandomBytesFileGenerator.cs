@@ -10,14 +10,7 @@ namespace Task_2
 
         public void GenerateFiles(int filesCount, int contentLength)
         {
-            for (var i = 0; i < filesCount; ++i)
-            {
-                var generatedFileContent = GenerateFileContent(contentLength);
-
-                var generatedFileName = $"{Guid.NewGuid()}{FileExtension}";
-
-                WriteBytesToFile(WorkingDirectory, generatedFileName, generatedFileContent);
-            }
+            GenerateFile(WorkingDirectory, FileExtension, filesCount, contentLength);
         }
 
         internal override byte[] GenerateFileContent(int contentLength)
