@@ -8,3 +8,8 @@ C:\Users\MIB\Desktop\23.11.2017\Task 2\bin\Debug\Task 2.pdb
 C:\Users\MIB\Desktop\23.11.2017\Task 2\obj\Debug\Task2.csproj.CoreCompileInputs.cache
 C:\Users\MIB\Desktop\23.11.2017\Task 2\obj\Debug\Task 2.dll
 C:\Users\MIB\Desktop\23.11.2017\Task 2\obj\Debug\Task 2.pdb
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task2\bin\Debug\Task 2.dll
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task2\bin\Debug\Task 2.pdb
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task2\obj\Debug\Task2.csproj.CoreCompileInputs.cache
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task2\obj\Debug\Task 2.dll
+d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task2\obj\Debug\Task 2.pdb

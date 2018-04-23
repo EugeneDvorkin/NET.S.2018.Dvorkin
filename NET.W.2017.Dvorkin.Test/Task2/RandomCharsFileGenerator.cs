@@ -11,17 +11,17 @@ namespace Task_2
 
         public string FileExtension => ".txt";
 
-        public void GenerateFiles(int filesCount, int contentLength)
-        {
-            for (var i = 0; i < filesCount; ++i)
-            {
-                var generatedFileContent = this.GenerateFileContent(contentLength);
+        //public void GenerateFiles(int filesCount, int contentLength)
+        //{
+        //    for (var i = 0; i < filesCount; ++i)
+        //    {
+        //        var generatedFileContent = this.GenerateFileContent(contentLength);
 
-                var generatedFileName = $"{Guid.NewGuid()}{this.FileExtension}";
+        //        var generatedFileName = $"{Guid.NewGuid()}{this.FileExtension}";
 
-                this.WriteBytesToFile(generatedFileName, generatedFileContent);
-            }
-        }
+        //        this.WriteBytesToFile(generatedFileName, generatedFileContent);
+        //    }
+        //}
 
         private byte[] GenerateFileContent(int contentLength)
         {
