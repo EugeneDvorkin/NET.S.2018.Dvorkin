@@ -15,7 +15,7 @@ namespace Task_2
             GenerateFile(WorkingDirectory, FileExtension, filesCount, contentLength);
         }
 
-        internal override byte[] GenerateFileContent(int contentLength)
+        protected override byte[] GenerateFileContent(int contentLength)
         {
             if (contentLength < 0)
             {

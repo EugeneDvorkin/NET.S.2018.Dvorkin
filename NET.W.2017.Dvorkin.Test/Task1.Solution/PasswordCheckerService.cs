@@ -43,6 +43,7 @@ namespace Task1
                     return item.Check(password);
                 }
             }
+
             repository.Create(password);
 
             return Tuple.Create(true, "Password is Ok. User was created");

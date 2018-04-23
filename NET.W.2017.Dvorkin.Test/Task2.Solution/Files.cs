@@ -8,7 +8,7 @@ namespace Task_2
         //public string WorkingDirectory;
         //public string FileExtension;
 
-        internal void WriteBytesToFile(string WorkingDirectory,string fileName, byte[] content)
+        private void WriteBytesToFile(string WorkingDirectory,string fileName, byte[] content)
         {
             if (!Directory.Exists(WorkingDirectory))
             {
@@ -30,6 +30,6 @@ namespace Task_2
             }
         }
 
-        internal abstract byte[] GenerateFileContent(int contentLength);
+        protected abstract byte[] GenerateFileContent(int contentLength);
     }
 }
