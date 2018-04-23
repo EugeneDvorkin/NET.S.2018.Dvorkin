@@ -9,7 +9,7 @@ namespace Task1
     {
         private IRepository repository;
 
-        private List<ICheck> check;
+        private List<ICheck> check=new List<ICheck>();
 
         public PasswordCheckerService(IRepository repository)
         {
@@ -31,6 +31,10 @@ namespace Task1
             if (password == null)
                 throw new ArgumentException($"{password} is null arg");
 
+            if (check.Count==0)
+            {
+                throw new ArgumentException($"There is no validators");
+            }
             foreach (var item in check)
             {
                 if (item.Check(password).Item1 == false)
@@ -44,18 +48,5 @@ namespace Task1
 
 
         }
-
-        //private Tuple<bool, string> Checker(string password)
-        //{
-        //    foreach (var check in checkList)
-        //    {
-        //        if (check.Item1 == false)
-        //        {
-        //            return check;
-        //        }
-        //    }
-
-        //    return Tuple.Create(true, "Password is Ok. User was created");
-        //}
     }
 }
