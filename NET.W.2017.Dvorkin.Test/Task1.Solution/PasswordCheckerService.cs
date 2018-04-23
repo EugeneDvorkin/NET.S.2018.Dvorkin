@@ -17,7 +17,7 @@ namespace Task1
         public PasswordCheckerService(IRepository repository)
         {
             this.repository = repository;
-            this.check = new Checking();
+            this.check = new DefaultCheck();
         }
 
         public Tuple<bool, string> VerifyPassword(string password)

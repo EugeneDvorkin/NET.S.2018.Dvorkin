@@ -40,7 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Checking.cs" />
+    <Compile Include="CheckingException.cs" />
+    <Compile Include="DefaultCheck.cs" />
     <Compile Include="ICheck.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="PasswordCheckerService.cs" />

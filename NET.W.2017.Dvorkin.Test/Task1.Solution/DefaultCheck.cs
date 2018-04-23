@@ -3,19 +3,8 @@ using System.Linq;
 
 namespace Task1
 {
-    public class Checking : Exception, ICheck
+    public class DefaultCheck:ICheck
     {
-        private Exception e;
-        private string message;
-        public Checking(Exception e, string message)
-        {
-            this.e = e;
-            this.message = message;
-        }
-
-        public Checking()
-        { }
-
         public bool Check(string password)
         {
             if (password == null)
