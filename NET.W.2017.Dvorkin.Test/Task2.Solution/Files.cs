@@ -5,8 +5,8 @@ namespace Task_2
 {
     public abstract class Files
     {
-        //public string WorkingDirectory;
-        //public string FileExtension;
+        public abstract string WorkingDirectory { get; }
+        public abstract string FileExtension { get; }
 
         private void WriteBytesToFile(string WorkingDirectory,string fileName, byte[] content)
         {
@@ -18,15 +18,15 @@ namespace Task_2
             File.WriteAllBytes($"{WorkingDirectory}//{fileName}", content);
         }
 
-        internal void GenerateFile(string workingDirectory, string fileExtension, int filesCount, int contentLength)
+        public void GenerateFiles(int filesCount, int contentLength)
         {
             for (var i = 0; i < filesCount; ++i)
             {
                 var generatedFileContent = GenerateFileContent(contentLength);
 
-                var generatedFileName = $"{Guid.NewGuid()}{fileExtension}";
+                var generatedFileName = $"{Guid.NewGuid()}{FileExtension}";
 
-                WriteBytesToFile(workingDirectory, generatedFileName, generatedFileContent);
+                WriteBytesToFile(WorkingDirectory, generatedFileName, generatedFileContent);
             }
         }
 

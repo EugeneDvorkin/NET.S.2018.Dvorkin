@@ -6,14 +6,14 @@ namespace Task_2
 {
     public class RandomCharsFileGenerator : Files
     {
-        public string WorkingDirectory => "Files with random chars";
+        public override string WorkingDirectory => "Files with random chars";
 
-        public string FileExtension => ".txt";
+        public override string FileExtension => ".txt";
 
-        public void GenerateFiles(int filesCount, int contentLength)
-        {
-            GenerateFile(WorkingDirectory, FileExtension, filesCount, contentLength);
-        }
+        //public override void GenerateFiles(int filesCount, int contentLength)
+        //{
+            
+        //}
 
         protected override byte[] GenerateFileContent(int contentLength)
         {

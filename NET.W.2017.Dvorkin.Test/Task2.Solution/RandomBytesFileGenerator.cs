@@ -4,14 +4,14 @@ namespace Task_2
 {
     public class RandomBytesFileGenerator : Files
     {
-        public string WorkingDirectory => "Files with random bytes";
+        public override string WorkingDirectory => "Files with random bytes";
 
-        public string FileExtension => ".bytes";
+        public override string FileExtension => ".bytes";
 
-        public void GenerateFiles(int filesCount, int contentLength)
-        {
-            GenerateFile(WorkingDirectory, FileExtension, filesCount, contentLength);
-        }
+        //public override void GenerateFiles(int filesCount, int contentLength)
+        //{
+            
+        //}
 
         protected override byte[] GenerateFileContent(int contentLength)
         {
