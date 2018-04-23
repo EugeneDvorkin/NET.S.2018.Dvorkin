@@ -5,9 +5,9 @@ namespace Task4.Solution
 {
     public class MeanCalc : ICalculate
     {
-        public double Method(List<double> values)
+        public double Method(IEnumerable<double> values)
         {
-            return values.Sum() / values.Count;
+            return values.Sum() / values.Count();
         }
     }
 }

@@ -5,7 +5,7 @@ namespace Task4.Solution
 {
     public class MedianCalc : ICalculate
     {
-        public double Method(List<double> values)
+        public double Method(IEnumerable<double> values)
         {
             var sortedValues = values.OrderBy(x => x).ToList();
 

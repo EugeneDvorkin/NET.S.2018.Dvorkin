@@ -4,6 +4,6 @@ namespace Task4
 {
     public interface ICalculate
     {
-        double Method(List<double> values);
+        double Method(IEnumerable<double> values);
     }
 }
