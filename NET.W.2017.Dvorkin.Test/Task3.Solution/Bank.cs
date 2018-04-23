@@ -6,7 +6,7 @@ namespace Task3
     {
         public string Name { get; set; }
 
-        public Bank(string name, BankManager manager)  
+        public Bank(string name, Stock manager)  
         {
             this.Name = name;
             manager.Manager += Update;

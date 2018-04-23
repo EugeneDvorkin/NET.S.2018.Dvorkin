@@ -12,7 +12,7 @@ namespace Task3
 
         public string Name { get; set; }
 
-        public Broker(string name, BankManager manager)
+        public Broker(string name, Stock manager)
         {
             this.Name = name;
             manager.Manager += Update;
@@ -26,7 +26,7 @@ namespace Task3
                 Console.WriteLine("Брокер {0} покупает доллары;  Курс доллара: {1}", this.Name, info.USD);
         }
 
-        public void StopTrade(BankManager manager)
+        public void StopTrade(Stock manager)
         {
             manager.Manager -= Update;
         }
