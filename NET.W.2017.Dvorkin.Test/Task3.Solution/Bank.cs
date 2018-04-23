@@ -6,10 +6,10 @@ namespace Task3
     {
         public string Name { get; set; }
 
-        public Bank(string name, Stock manager)  
+        public Bank(string name, Stock stock)  
         {
             this.Name = name;
-            manager.Manager += Update;
+            stock.Manager += Update;
         }
 
         public void Update(object info, StockInfoEventArgs e)
