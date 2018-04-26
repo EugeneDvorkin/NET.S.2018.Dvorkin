@@ -1,4 +1,6 @@
-﻿namespace Task5
+﻿using Task5.Solution;
+
+namespace Task5
 {
     public abstract class DocumentPart
     {
@@ -9,5 +11,10 @@
         public abstract string ToPlainText();
 
         public abstract string ToLaTeX();
+
+        public void Converter(Visitor visitor)
+        {
+            visitor.TypeVisit(this);
+        }
     }
 }
