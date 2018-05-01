@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<urlAddresses xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <urlAdress>
+    <name>github.com</name>
+    <uri>
+      <segment>AnzhelikaKravchuk</segment>
+    </uri>
+    <parameters>
+      <parameter value="repositories" key="tab" />
+    </parameters>
+  </urlAdress>
+  <urlAdress>
+    <name>github.com</name>
+    <uri>
+      <segment>AnzhelikaKravchuk</segment>
+    </uri>
+    <uri>
+      <segment>2017-2018.MMF.BSU</segment>
+    </uri>
+    <parameters />
+  </urlAdress>
+  <urlAdress>
+    <name>habrahabr.ru</name>
+    <uri>
+      <segment>company</segment>
+    </uri>
+    <uri>
+      <segment>it-grad</segment>
+    </uri>
+    <uri>
+      <segment>blog</segment>
+    </uri>
+    <uri>
+      <segment>341486</segment>
+    </uri>
+    <parameters />
+  </urlAdress>
+</urlAddresses>
