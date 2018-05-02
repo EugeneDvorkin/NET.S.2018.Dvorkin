@@ -1,0 +1,6 @@
+F:\EPAM\LabExam-master\Solution\bin\Debug\Solution.dll
+F:\EPAM\LabExam-master\Solution\bin\Debug\Solution.pdb
+F:\EPAM\LabExam-master\Solution\obj\Debug\Solution.csprojResolveAssemblyReference.cache
+F:\EPAM\LabExam-master\Solution\obj\Debug\Solution.csproj.CoreCompileInputs.cache
+F:\EPAM\LabExam-master\Solution\obj\Debug\Solution.dll
+F:\EPAM\LabExam-master\Solution\obj\Debug\Solution.pdb

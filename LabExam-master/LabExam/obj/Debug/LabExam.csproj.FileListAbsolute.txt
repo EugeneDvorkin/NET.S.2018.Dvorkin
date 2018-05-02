@@ -1,0 +1,14 @@
+D:\LabExam-master\LabExam\bin\Debug\LabExam.exe.config
+D:\LabExam-master\LabExam\bin\Debug\LabExam.exe
+D:\LabExam-master\LabExam\bin\Debug\LabExam.pdb
+D:\LabExam-master\LabExam\obj\Debug\LabExam.csprojResolveAssemblyReference.cache
+D:\LabExam-master\LabExam\obj\Debug\LabExam.csproj.CoreCompileInputs.cache
+D:\LabExam-master\LabExam\obj\Debug\LabExam.exe
+D:\LabExam-master\LabExam\obj\Debug\LabExam.pdb
+f:\EPAM\LabExam-master\LabExam\bin\Debug\LabExam.exe.config
+f:\EPAM\LabExam-master\LabExam\bin\Debug\LabExam.exe
+f:\EPAM\LabExam-master\LabExam\bin\Debug\LabExam.pdb
+f:\EPAM\LabExam-master\LabExam\obj\Debug\LabExam.csprojResolveAssemblyReference.cache
+f:\EPAM\LabExam-master\LabExam\obj\Debug\LabExam.csproj.CoreCompileInputs.cache
+f:\EPAM\LabExam-master\LabExam\obj\Debug\LabExam.exe
+f:\EPAM\LabExam-master\LabExam\obj\Debug\LabExam.pdb
