@@ -6,7 +6,7 @@ namespace Solution
     //метод печати перенесен в базовый класс т.к. он одинаков для всех принтеров.
     public class CanonPrinter : Printer
     {
-        public CanonPrinter(PrinterManager manager) : base("Canon", "123x", manager)
+        public CanonPrinter() : base("Canon", "123x")
         {
         }
 

@@ -7,7 +7,10 @@ namespace Solution
     {
         public void Log(string s)
         {
-            File.AppendText("log.txt").Write(s);
+            using (StreamWriter f = File.AppendText("log.txt"))
+            {
+                f.Write(s);
+            }
         }
     }
 }

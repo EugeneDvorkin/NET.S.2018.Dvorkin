@@ -1,27 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Solution
 {
     //класс, обеспечивающий основную работу с принтерами(добавление принтеров с список, взаимодействие с файлами...)
-    public class PrinterManager
+    public sealed class PrinterManager
     {
         private List<Printer> printers;
         private ILog logger;
 
-        public event EventHandler<PrinterEventArg> Printed = delegate { };
-
+        private static readonly Lazy<PrinterManager> instance =
+            new Lazy<PrinterManager>(() => new PrinterManager(), LazyThreadSafetyMode.PublicationOnly);
         //
-        public PrinterManager() : this(new Logger())
+        private PrinterManager()
         {
         }
 
-        public PrinterManager(ILog logger)
+        public ILog Logger
         {
-            printers = new List<Printer>() { new EpsonPrinter(this), new CanonPrinter(this) };
-            this.logger = logger;
+            get => logger;
+            set
+            {
+                if (ReferenceEquals(value, null))
+                {
+                    throw new ArgumentNullException($"{nameof(value)} is null");
+                }
+
+                if (value.GetType() != typeof(ILog))
+                {
+                    throw new ArgumentException($"{nameof(value)} is wrong type");
+                }
+
+                logger = value;
+            }
+        }
+
+        public static PrinterManager Instance
+        {
+            get => instance.Value;
         }
 
         public List<Printer> Printers
@@ -34,7 +53,10 @@ namespace Solution
         {
             if (CheckPrinter(name, model))
             {
-                Printers.Add(new Printer(name, model, this));
+                Printer temp = new Printer(name, model);
+                temp.StartPrint += StartPrint;
+                temp.EndPrint += EndPrint;
+                Printers.Add(temp);
             }
             else
             {
@@ -45,25 +67,43 @@ namespace Solution
         //печать и логгирование 
         public void Print(Printer p1, string log)
         {
-            logger.Log(log);
-            logger.Log("Print started");
-            FileStream f = OpenFile();
-            p1.Print(f);
-            logger.Log("Print finished");
-            f.Dispose();
-            OnPrinted(new PrinterEventArg(p1.Name, p1.Model));
-        }
+            if (printers.Contains(p1))
+            {
+                logger.Log(log);
+                logger.Log("Print started");
+                using (FileStream f = OpenFile())
+                {
+                    p1.Print(f);
+                    logger.Log("Print finished");
+                }
+            }
+            else
+            {
+                throw new ArgumentException($"{nameof(p1)} is wrong printer");
+            }
 
+        }
 
         //выделенный метод для открытия файла
         private FileStream OpenFile()
         {
-            OpenFileDialog o = new OpenFileDialog();
-            o.ShowDialog();
-            FileStream f = File.OpenRead(o.FileName);
-            return f;
+            using (OpenFileDialog o = new OpenFileDialog())
+            {
+                o.ShowDialog();
+                FileStream f = File.OpenRead(o.FileName);
+                return f;
+            }
         }
 
+        private void StartPrint(object sender, PrinterEventArg e)
+        {
+            Logger.Log($"{nameof(e.Model)} {nameof(e.Name)} started print {DateTime.Now}");
+        }
+
+        private void EndPrint(object sender, PrinterEventArg e)
+        {
+            Logger.Log($"{nameof(e.Model)} {nameof(e.Name)} ended print {DateTime.Now}");
+        }
 
         //метод по проверки принтера с таким именем и моделью
         private bool CheckPrinter(string name, string model)
@@ -77,14 +117,6 @@ namespace Solution
             }
 
             return true;
-        }
-
-
-        //метод, запускающий обработчик собития
-        private void OnPrinted(PrinterEventArg e)
-        {
-            EventHandler<PrinterEventArg> temp = Printed;
-            temp?.Invoke(this, e);
         }
     }
 }

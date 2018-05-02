@@ -6,7 +6,7 @@ namespace Solution
     //метод печати перенесен в базовый класс т.к. он одинаков для всех принтеров.
     public class EpsonPrinter : Printer
     {
-        public EpsonPrinter(PrinterManager manager) : base("Epson", "231", manager)
+        public EpsonPrinter() : base("Epson", "231")
         {
         }
 
