@@ -105,11 +105,8 @@ namespace NET.S._2018.Dvorkin.Task.v._2
                 throw new ArgumentNullException($"{nameof(path)} is null");
             }
 
-            using (StreamWriter stream = new StreamWriter(path, false))
-            {
-                XElement root = parser.Parse(list);
-                stream.Write(root);
-            }
+            XDocument document = new XDocument(parser.Parse(list));
+            document.Save(path);
         }
     }
 }
