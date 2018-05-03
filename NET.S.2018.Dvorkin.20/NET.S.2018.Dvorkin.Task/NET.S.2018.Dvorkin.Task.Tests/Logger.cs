@@ -1,5 +1,7 @@
 ﻿using System;
+using NET.S._2018.Dvorkin.Task.v._2.Interfaces;
 using NLog;
+using LogLevel = NET.S._2018.Dvorkin.Task.v._2.Interfaces.LogLevel;
 
 namespace NET.S._2018.Dvorkin.Task.Tests
 {

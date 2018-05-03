@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET.S.2018.Dvorkin.Task", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET.S.2018.Dvorkin.Task.Tests", "NET.S.2018.Dvorkin.Task.Tests\NET.S.2018.Dvorkin.Task.Tests.csproj", "{64304FB5-C3E3-4630-B1F9-FF43B1234DE1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET.S.2018.Dvorkin.Task.v.2", "NET.S.2018.Dvorkin.Task.v.2\NET.S.2018.Dvorkin.Task.v.2.csproj", "{524A5BD6-CED9-4E55-8895-CAD7AEF7B610}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{64304FB5-C3E3-4630-B1F9-FF43B1234DE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64304FB5-C3E3-4630-B1F9-FF43B1234DE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64304FB5-C3E3-4630-B1F9-FF43B1234DE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{524A5BD6-CED9-4E55-8895-CAD7AEF7B610}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{524A5BD6-CED9-4E55-8895-CAD7AEF7B610}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{524A5BD6-CED9-4E55-8895-CAD7AEF7B610}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{524A5BD6-CED9-4E55-8895-CAD7AEF7B610}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

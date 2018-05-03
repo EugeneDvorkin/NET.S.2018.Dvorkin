@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Xml.Serialization;
 
 namespace NET.S._2018.Dvorkin.Task.Model
@@ -13,20 +12,11 @@ namespace NET.S._2018.Dvorkin.Task.Model
         public string Host { get; set; }
 
         [XmlElement("uri")]
-        public List<Segment> Segments { get; set; }
+        public List<string> Segments { get; set; }
 
         [XmlArray("parameters")]
         [XmlArrayItem("parameter")]
         public List<Parameter> Parameters { get; set; }
-    }
-
-    /// <summary>
-    /// Contains definitions of each URI's Segment.
-    /// </summary>
-    public class Segment
-    {
-        [XmlElement("segment")]
-        public string Path { get; set; }
     }
 
     /// <summary>

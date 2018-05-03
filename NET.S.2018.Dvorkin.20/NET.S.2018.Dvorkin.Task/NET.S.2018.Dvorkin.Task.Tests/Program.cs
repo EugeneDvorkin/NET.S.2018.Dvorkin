@@ -1,5 +1,10 @@
-﻿using NET.S._2018.Dvorkin.Task.Model;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using NET.S._2018.Dvorkin.Task.Tests.DI;
+using NET.S._2018.Dvorkin.Task.v._2;
+using NET.S._2018.Dvorkin.Task.v._2.Implementations;
+using NET.S._2018.Dvorkin.Task.v._2.Interfaces;
 using Ninject;
 
 namespace NET.S._2018.Dvorkin.Task.Tests
@@ -10,14 +15,13 @@ namespace NET.S._2018.Dvorkin.Task.Tests
         private static readonly string pathXML = "URL_Adress.xml";
         static void Main(string[] args)
         {
-            IKernel kernel = new StandardKernel(new Kernel());
+            IKernel kernel= new StandardKernel(new Kernel());
             IRead read = kernel.Get<Read>();
-            ILog logger = kernel.Get<Logger>();
-            ICreat uriCreat = kernel.Get<UriCreat>();
-            Adresses adresses = uriCreat.ReadUri(read, pathTXT, logger);
-
-            XmlCreat creat = new XmlCreat(adresses, pathXML);
-            creat.WriteXML();
+            ICreat<Uri> creat = kernel.Get<Creat>();
+            IParser<Uri> parser = kernel.Get<Parser>();
+            List<Uri> uris = creat.Read(read, pathTXT).ToList();
+            XmlCreate<Uri> xmlCreate = new XmlCreate<Uri>(pathXML);
+            xmlCreate.WriteXml(parser, uris);
         }
     }
 }

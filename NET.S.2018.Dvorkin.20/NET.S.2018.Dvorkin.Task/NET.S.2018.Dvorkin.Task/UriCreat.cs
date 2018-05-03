@@ -105,7 +105,7 @@ namespace NET.S._2018.Dvorkin.Task
         /// </summary>
         /// <param name="uri">The URI.</param>
         /// <returns></returns>
-        private IEnumerable<Segment> Segments(Uri uri)
+        private IEnumerable<string> Segments(Uri uri)
         {
             foreach (string segment in uri.Segments)
             {
@@ -114,7 +114,7 @@ namespace NET.S._2018.Dvorkin.Task
                     continue;
                 }
 
-                yield return new Segment { Path = segment.Trim('/') };
+                yield return segment.Trim('/');
             }
         }
     }
