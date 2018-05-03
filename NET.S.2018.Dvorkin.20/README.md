@@ -1,4 +1,4 @@
-# NET.S.2018.Dvorkin
+﻿# NET.S.2018.Dvorkin
 EPAM Training 2018 Spring
 
 В текстовом файле построчно хранится информация об URL-адресах
