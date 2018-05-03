@@ -1,9 +1,9 @@
-﻿# NET.S.2018.Dvorkin
+# NET.S.2018.Dvorkin
 EPAM Training 2018 Spring
 
 В текстовом файле построчно хранится информация об URL-адресах
 
-[https://github.com/AnzhelikaKravchuk/Training.-Spring-2018/blob/master/Pictures/Scheme.png]
+![Image alt](https://github.com/AnzhelikaKravchuk/Training.-Spring-2018/blob/master/Pictures/Scheme.png)
 
 где сегмент parameters - это набор пар вида key=value, при этом сегменты URL?path и parameters или сегмент parameters могут отсутствовать. Разработать систему типов (руководствоваться принципами SOLID) для экспорта данных, полученных на основе разбора информации текстового файла, в XML-документ по следующему правилу, например, для текстового файла с URL-адресами
 
