@@ -4,3 +4,9 @@ F:\EPAM\LabExam-master\Solution\obj\Debug\Solution.csprojResolveAssemblyReferenc
 F:\EPAM\LabExam-master\Solution\obj\Debug\Solution.csproj.CoreCompileInputs.cache
 F:\EPAM\LabExam-master\Solution\obj\Debug\Solution.dll
 F:\EPAM\LabExam-master\Solution\obj\Debug\Solution.pdb
+f:\LabExam-master\Solution\bin\Debug\Solution.dll
+f:\LabExam-master\Solution\bin\Debug\Solution.pdb
+f:\LabExam-master\Solution\obj\Debug\Solution.csprojResolveAssemblyReference.cache
+f:\LabExam-master\Solution\obj\Debug\Solution.csproj.CoreCompileInputs.cache
+f:\LabExam-master\Solution\obj\Debug\Solution.dll
+f:\LabExam-master\Solution\obj\Debug\Solution.pdb

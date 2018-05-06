@@ -4,15 +4,28 @@ using System.IO;
 namespace Solution
 {
     //метод печати перенесен в базовый класс т.к. он одинаков для всех принтеров.
-    public class CanonPrinter : Printer
+    internal class CanonPrinter : Printer
     {
         public CanonPrinter() : base("Canon", "123x")
         {
         }
 
-        //свойсва сделаны виртуальными, что бы при полиморфном вывзове подставлялись необходимые значения
-        public override string Name => "Canon";
+        public CanonPrinter(string model) : base("Canon", model)
+        {
+        }
 
-        public override string Model => "123x";
+        //свойсва сделаны виртуальными, что бы при полиморфном вывзове подставлялись необходимые значения
+        public override string Name { get; protected set; }
+
+        public override string Model { get; protected set; }
+
+        protected override void PrintingType(Stream stream)
+        {
+            for (int i = 0; i < stream.Length; i++)
+            {
+                // simulate printing
+                Console.WriteLine(stream.ReadByte());
+            }
+        }
     }
 }

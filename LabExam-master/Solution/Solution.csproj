@@ -48,7 +48,9 @@
     <Compile Include="Interfaces\ILog.cs" />
     <Compile Include="Models\Printer.cs" />
     <Compile Include="PrinterEventArg.cs" />
+    <Compile Include="PrinterFactory.cs" />
     <Compile Include="PrinterManager.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -6,11 +6,11 @@ namespace Solution
     //базовый класс для принтеров. В случае, если при добавлении нового принтера будут вноситься изменения
     //в проект/его архитектуру(будут добавляться новые классы для каждого принтера) класс можно сделать абстрактным
     //
-    public class Printer : IPrint,IEquatable<Printer>
+    public abstract class Printer : IEquatable<Printer>
     {
-        public virtual string Name { get; }
+        public abstract string Name { get; protected set; }
 
-        public virtual string Model { get; }
+        public abstract string Model { get; protected set; }
 
         public Printer(string name, string model)
         {
@@ -23,16 +23,14 @@ namespace Solution
         public event EventHandler<PrinterEventArg> EndPrint = delegate { };
 
         //общий метод печати для всех принтеров
-        public void Print(FileStream fs)
+        public void Print(Stream stream)
         {
             OnStartPrint(new PrinterEventArg(this.Name, this.Model));
-            for (int i = 0; i < fs.Length; i++)
-            {
-                // simulate printing
-                Console.WriteLine(fs.ReadByte());
-            }
-            OnEndPrint(new PrinterEventArg(this.Name,this.Model));
+            PrintingType(stream);
+            OnEndPrint(new PrinterEventArg(this.Name, this.Model));
         }
+
+        protected abstract void PrintingType(Stream stream);
 
         //метод, запускающий обработчик собития
         private void OnStartPrint(PrinterEventArg e)
@@ -59,7 +57,7 @@ namespace Solution
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
             if (obj.GetType() != this.GetType()) return false;
-            return Equals((Printer) obj);
+            return Equals((Printer)obj);
         }
 
         public override int GetHashCode()

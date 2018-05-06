@@ -53,7 +53,7 @@ namespace Solution
         {
             if (CheckPrinter(name, model))
             {
-                Printer temp = new Printer(name, model);
+                var temp = PrinterFactory.CreatPrinter(name, model);
                 temp.StartPrint += StartPrint;
                 temp.EndPrint += EndPrint;
                 Printers.Add(temp);
@@ -65,23 +65,22 @@ namespace Solution
         }
 
         //печать и логгирование 
-        public void Print(Printer p1, string log)
+        public void Print(Printer printer, string log)
         {
-            if (printers.Contains(p1))
+            if (printers.Contains(printer))
             {
                 logger.Log(log);
                 logger.Log("Print started");
                 using (FileStream f = OpenFile())
                 {
-                    p1.Print(f);
+                    printer.Print(f);
                     logger.Log("Print finished");
                 }
             }
             else
             {
-                throw new ArgumentException($"{nameof(p1)} is wrong printer");
+                throw new ArgumentException($"{nameof(printer)} is wrong printer");
             }
-
         }
 
         //выделенный метод для открытия файла
