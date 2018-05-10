@@ -1,0 +1,6 @@
+D:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\Bll.Interface\bin\Debug\Bll.Interface.dll
+D:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\Bll.Interface\bin\Debug\Bll.Interface.pdb
+D:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\Bll.Interface\obj\Debug\Bll.Interface.csprojAssemblyReference.cache
+D:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\Bll.Interface\obj\Debug\Bll.Interface.csproj.CoreCompileInputs.cache
+D:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\Bll.Interface\obj\Debug\Bll.Interface.dll
+D:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\Bll.Interface\obj\Debug\Bll.Interface.pdb

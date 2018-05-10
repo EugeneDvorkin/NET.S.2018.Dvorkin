@@ -1,0 +1,12 @@
+F:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Interface\bin\Debug\DAL.Interface.dll
+F:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Interface\bin\Debug\DAL.Interface.pdb
+F:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Interface\obj\Debug\DAL.Interface.csprojAssemblyReference.cache
+F:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Interface\obj\Debug\DAL.Interface.csproj.CoreCompileInputs.cache
+F:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Interface\obj\Debug\DAL.Interface.dll
+F:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Interface\obj\Debug\DAL.Interface.pdb
+d:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Interface\bin\Debug\DAL.Interface.dll
+d:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Interface\bin\Debug\DAL.Interface.pdb
+d:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Interface\obj\Debug\DAL.Interface.csprojAssemblyReference.cache
+d:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Interface\obj\Debug\DAL.Interface.csproj.CoreCompileInputs.cache
+d:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Interface\obj\Debug\DAL.Interface.dll
+d:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Interface\obj\Debug\DAL.Interface.pdb
