@@ -1,0 +1,11 @@
+E:\EPAM\NET.S.2018.Dvorkin.21\NET.S.2018.Dvorkin.Task1\BLL\bin\Debug\BLL.dll
+E:\EPAM\NET.S.2018.Dvorkin.21\NET.S.2018.Dvorkin.Task1\BLL\bin\Debug\BLL.pdb
+E:\EPAM\NET.S.2018.Dvorkin.21\NET.S.2018.Dvorkin.Task1\BLL\bin\Debug\Bll.Interface.dll
+E:\EPAM\NET.S.2018.Dvorkin.21\NET.S.2018.Dvorkin.Task1\BLL\bin\Debug\DAL.Interface.dll
+E:\EPAM\NET.S.2018.Dvorkin.21\NET.S.2018.Dvorkin.Task1\BLL\bin\Debug\Bll.Interface.pdb
+E:\EPAM\NET.S.2018.Dvorkin.21\NET.S.2018.Dvorkin.Task1\BLL\bin\Debug\DAL.Interface.pdb
+E:\EPAM\NET.S.2018.Dvorkin.21\NET.S.2018.Dvorkin.Task1\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+E:\EPAM\NET.S.2018.Dvorkin.21\NET.S.2018.Dvorkin.Task1\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+E:\EPAM\NET.S.2018.Dvorkin.21\NET.S.2018.Dvorkin.Task1\BLL\obj\Debug\BLL.csproj.CopyComplete
+E:\EPAM\NET.S.2018.Dvorkin.21\NET.S.2018.Dvorkin.Task1\BLL\obj\Debug\BLL.dll
+E:\EPAM\NET.S.2018.Dvorkin.21\NET.S.2018.Dvorkin.Task1\BLL\obj\Debug\BLL.pdb

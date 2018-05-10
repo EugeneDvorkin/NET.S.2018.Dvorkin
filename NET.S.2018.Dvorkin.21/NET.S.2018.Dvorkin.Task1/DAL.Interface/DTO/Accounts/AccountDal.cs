@@ -148,20 +148,23 @@ namespace DAL.Interface.DTO
         /// Calculates the benefits points deposit.
         /// </summary>
         /// <param name="count">The count.</param>
-        protected abstract void CalculatePointDeposit(decimal count);
+        /// <param name="calculate">The calculate.</param>
+        protected abstract void CalculatePointDeposit(decimal count, ICalculate calculate);
 
         /// <summary>
         /// Calculates the benefits point withdraw.
         /// </summary>
         /// <param name="count">The count.</param>
-        protected abstract void CalculatePointWithdraw(decimal count);
+        /// <param name="calculate">The calculate.</param>
+        protected abstract void CalculatePointWithdraw(decimal count, ICalculate calculate);
 
         /// <summary>
         /// Deposits the specified accountDal balance.
         /// </summary>
         /// <param name="count">The deposit.</param>
+        /// <param name="calculate">The calculate.</param>
         /// <exception cref="System.ArgumentException">deposit</exception>
-        public void Deposit(decimal count)
+        public void Deposit(decimal count, ICalculate calculate)
         {
             if (Check(this))
             {
@@ -171,7 +174,7 @@ namespace DAL.Interface.DTO
                 }
 
                 this.Balance = Balance + count;
-                CalculatePointDeposit(count);
+                CalculatePointDeposit(count, calculate);
             }
             else
             {
@@ -183,12 +186,11 @@ namespace DAL.Interface.DTO
         /// Withdraws the specified accountDal balance.
         /// </summary>
         /// <param name="count">The count.</param>
-        /// <exception cref="System.ArgumentException">
-        /// count is less than 0
+        /// <param name="calculate">The calculate.</param>
+        /// <exception cref="System.ArgumentException">count is less than 0
         /// or
-        /// count is more than balance.
-        /// </exception>
-        public void Withdraw(decimal count)
+        /// count is more than balance.</exception>
+        public void Withdraw(decimal count, ICalculate calculate)
         {
             if (Check(this))
             {
@@ -203,7 +205,7 @@ namespace DAL.Interface.DTO
                 }
 
                 this.Balance = Balance - count;
-                CalculatePointWithdraw(count);
+                CalculatePointWithdraw(count, calculate);
             }
             else
             {

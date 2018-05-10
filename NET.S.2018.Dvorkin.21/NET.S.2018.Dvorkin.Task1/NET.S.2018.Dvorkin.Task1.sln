@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ORM", "ORM\ORM.csproj", "{C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bll.Interface", "Bll.Interface\Bll.Interface.csproj", "{1C8801D6-9091-494B-B12E-1F2AABB1E177}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{98C96E93-A265-4194-9047-7F388046B77A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{1C8801D6-9091-494B-B12E-1F2AABB1E177}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C8801D6-9091-494B-B12E-1F2AABB1E177}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C8801D6-9091-494B-B12E-1F2AABB1E177}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98C96E93-A265-4194-9047-7F388046B77A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98C96E93-A265-4194-9047-7F388046B77A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98C96E93-A265-4194-9047-7F388046B77A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98C96E93-A265-4194-9047-7F388046B77A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

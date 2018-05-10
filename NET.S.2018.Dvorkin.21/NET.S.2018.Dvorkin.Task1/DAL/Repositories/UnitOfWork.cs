@@ -7,7 +7,7 @@ namespace DAL.Repositories
     public class UnitOfWork : IUnitOfWork
     {
         private AccountRepository accountRepository;
-        private PersoneRepository personeRepository;
+        private PersonRepository personRepository;
 
         public UnitOfWork(BankEntities context)
         {
@@ -23,7 +23,7 @@ namespace DAL.Repositories
 
         public IRepository<PersonalInfo> PersoneRepository
         {
-            get => personeRepository ?? new PersoneRepository(Context);
+            get => personRepository ?? new PersonRepository(Context);
         }
 
         public void Dispose()

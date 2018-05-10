@@ -11,7 +11,6 @@ namespace DAL.Interface.DTO
     {
         private const int coefWindrawPoint = 1;
         private const int coefDepositPoint = 1;
-        private readonly ICalculate calculate;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BaseAccountDal"/> class.
@@ -21,9 +20,8 @@ namespace DAL.Interface.DTO
         /// <param name="balance">The balance.</param>
         /// <param name="calculate">The calculate.</param>
         /// <exception cref="System.ArgumentNullException">calculate</exception>
-        public BaseAccountDal(int id, PersonalInfo personalInfo, int number, decimal balance, ICalculate calculate) : base(id, personalInfo, number, balance, 100, DTO.Type.Base)
+        public BaseAccountDal(int id, PersonalInfo personalInfo, int number, decimal balance) : base(id, personalInfo, number, balance, 100, DTO.Type.Base)
         {
-            this.calculate = calculate ?? throw new ArgumentNullException($"{nameof(calculate)} is null");
         }
 
         /// <summary>
@@ -37,7 +35,8 @@ namespace DAL.Interface.DTO
         /// Calculates the benefits points deposit.
         /// </summary>
         /// <param name="count">The count.</param>
-        protected override void CalculatePointDeposit(decimal count)
+        /// <param name="calculate">The calculate.</param>
+        protected override void CalculatePointDeposit(decimal count, ICalculate calculate)
         {
             this.Point = calculate.CalculateDeposit(count, coefDepositPoint, this.Point);
         }
@@ -46,7 +45,8 @@ namespace DAL.Interface.DTO
         /// Calculates the benefits point withdraw.
         /// </summary>
         /// <param name="count">The count.</param>
-        protected override void CalculatePointWithdraw(decimal count)
+        /// <param name="calculate">The calculate.</param>
+        protected override void CalculatePointWithdraw(decimal count, ICalculate calculate)
         {
             int point = calculate.CalculateWithdraw(count, coefWindrawPoint, this.Point);
 

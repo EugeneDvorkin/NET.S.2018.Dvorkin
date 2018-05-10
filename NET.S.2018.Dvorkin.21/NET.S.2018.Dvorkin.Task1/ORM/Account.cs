@@ -19,7 +19,7 @@ namespace ORM
         public int Points { get; set; }
         public bool Valid { get; set; }
         public int TypeId { get; set; }
-        public int PersoneId { get; set; }
+        public int PersonId { get; set; }
         public int Id { get; set; }
     
         public virtual AccountType AccountType { get; set; }

@@ -29,7 +29,7 @@ namespace DAL.Repositories
                 Balance = dal.Balance,
                 Number = dal.Number,
                 Points = dal.Point,
-                PersoneId = dal.PersonalInfo.Id,
+                PersonId = dal.PersonalInfo.Id,
                 Valid = dal.Valid
             };
             context.Accounts.Add(temp);
@@ -49,7 +49,7 @@ namespace DAL.Repositories
             }
 
             context.Accounts.FirstOrDefault(item => item.Id == dal.Id).Id = dal.Id;
-            context.Accounts.FirstOrDefault(item => item.Id == dal.Id).PersoneId = dal.PersonalInfo.Id;
+            context.Accounts.FirstOrDefault(item => item.Id == dal.Id).PersonId = dal.PersonalInfo.Id;
             context.Accounts.FirstOrDefault(item => item.Id == dal.Id).Number = dal.Number;
             context.Accounts.FirstOrDefault(item => item.Id == dal.Id).AccountType.Id = (int) dal.Type;
             context.Accounts.FirstOrDefault(item => item.Id == dal.Id).Balance = dal.Balance;
@@ -81,11 +81,11 @@ namespace DAL.Repositories
                 throw new ArgumentNullException($"{nameof(id)} doesn't contains in the database");
             }
 
-            AccountDal result = FactoryAccounts.CreateAccount(temp.AccountType.Name);
+            AccountDal result = FactoryAccounts.CreateAccount(temp.AccountType.Id);
             result.Id = temp.Id;
             result.Number = temp.Number;
             result.Balance = temp.Balance;
-            result.PersonalInfo.Id = temp.PersoneId;
+            result.PersonalInfo.Id = temp.PersonId;
             result.Point = temp.Points;
             result.Valid = temp.Valid;
             return result;
@@ -95,11 +95,11 @@ namespace DAL.Repositories
         {
             foreach (Account account in context.Accounts)
             {
-                AccountDal temp = FactoryAccounts.CreateAccount(account.AccountType.Name);
+                AccountDal temp = FactoryAccounts.CreateAccount(account.AccountType.Id);
                 temp.Id = account.Id;
                 temp.Number = account.Number;
                 temp.Balance = account.Balance;
-                temp.PersonalInfo.Id = account.PersoneId;
+                temp.PersonalInfo.Id = account.PersonId;
                 temp.Point = account.Points;
                 temp.Valid = account.Valid;
                 yield return temp;

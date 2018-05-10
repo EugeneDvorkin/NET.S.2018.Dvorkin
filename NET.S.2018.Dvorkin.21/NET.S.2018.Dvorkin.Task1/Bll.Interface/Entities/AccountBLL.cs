@@ -12,7 +12,7 @@ namespace Bll.Interface.Entities
         private int number;
         private decimal balance;
         private int point;
-        private int _typeIdId;
+        private int typeIdId;
         private bool valid;
 
         /// <summary>
@@ -24,7 +24,7 @@ namespace Bll.Interface.Entities
         /// <param name="balance">The balance.</param>
         /// <param name="point">The point.</param>
         /// <param name="typeId">The type identifier.</param>
-        internal AccountBll(int id, int personalId, int number, decimal balance, int point, int typeId)
+        public AccountBll(int id, int personalId, int number, decimal balance, int point, int typeId)
         {
             this.Id = id;
             this.PersoneId = personalId;
@@ -33,6 +33,13 @@ namespace Bll.Interface.Entities
             this.Balance = balance;
             this.Point = point;
             this.TypeId = typeId;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AccountBll"/> class.
+        /// </summary>
+        public AccountBll()
+        {
         }
 
         /// <summary>
@@ -49,10 +56,10 @@ namespace Bll.Interface.Entities
         }
 
         /// <summary>
-        /// Gets or sets the persone identifier.
+        /// Gets or sets the person identifier.
         /// </summary>
         /// <value>
-        /// The persone identifier.
+        /// The person identifier.
         /// </value>
         /// <exception cref="System.ArgumentException">value</exception>
         public int PersoneId
@@ -130,8 +137,8 @@ namespace Bll.Interface.Entities
         /// <exception cref="System.ArgumentException">value</exception>
         public int TypeId
         {
-            get => _typeIdId;
-            set =>_typeIdId=value<0? throw new ArgumentException($"There is wrong {nameof(value)}") : value;
+            get => typeIdId;
+            set =>typeIdId=value<0? throw new ArgumentException($"There is wrong {nameof(value)}") : value;
         }
     }
 }
