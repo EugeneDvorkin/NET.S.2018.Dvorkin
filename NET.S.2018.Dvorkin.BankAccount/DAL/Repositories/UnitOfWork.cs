@@ -36,7 +36,7 @@ namespace DAL.Repositories
         /// <value>
         /// The account repository.
         /// </value>
-        public IRepository<AccountDal> AccRepository
+        public IAccountRepository AccRepository
         {
             get => accountRepository ?? new AccountRepository(Context);
         }
@@ -47,7 +47,7 @@ namespace DAL.Repositories
         /// <value>
         /// The person repository.
         /// </value>
-        public IRepository<PersonDal> PersonRepository
+        public IPersonRepository PersonRepository
         {
             get => personRepository ?? new PersonRepository(Context);
         }
