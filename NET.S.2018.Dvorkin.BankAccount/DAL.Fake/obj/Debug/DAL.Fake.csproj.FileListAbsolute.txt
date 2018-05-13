@@ -1,0 +1,9 @@
+E:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Fake\bin\Debug\DAL.Fake.dll
+E:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Fake\bin\Debug\DAL.Fake.pdb
+E:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Fake\bin\Debug\DAL.Interface.dll
+E:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Fake\bin\Debug\DAL.Interface.pdb
+E:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Fake\obj\Debug\DAL.Fake.csprojAssemblyReference.cache
+E:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Fake\obj\Debug\DAL.Fake.csproj.CoreCompileInputs.cache
+E:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Fake\obj\Debug\DAL.Fake.csproj.CopyComplete
+E:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Fake\obj\Debug\DAL.Fake.dll
+E:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Fake\obj\Debug\DAL.Fake.pdb
