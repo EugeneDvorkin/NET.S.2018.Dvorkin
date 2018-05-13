@@ -1,5 +1,8 @@
 ﻿namespace Bll.Interface.Entities
 {
+    /// <summary>
+    /// Types of accounts.
+    /// </summary>
     public enum TypeBll
     {
         Base = 1,

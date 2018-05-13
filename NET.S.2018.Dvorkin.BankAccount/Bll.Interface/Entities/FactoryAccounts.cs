@@ -16,26 +16,26 @@ namespace Bll.Interface.Entities
         /// <exception cref="ArgumentException">accountType</exception>
         public static AccountBll CreateAccount(int accountType)
         {
-            if (accountType < 1)
+            if (!Enum.IsDefined(typeof(TypeBll), accountType))
             {
                 throw new ArgumentNullException($"{nameof(accountType)} is null");
             }
 
-            switch (accountType)
+            switch ((TypeBll)accountType)
             {
-                case (1):
+                case (TypeBll.Base):
                 {
                     return new BaseBll();
                 }
-                case (2):
+                case (TypeBll.Silver):
                 {
                     return new SilverBll();
                 }
-                case (3):
+                case (TypeBll.Gold):
                 {
                     return new GoldBll();
                 }
-                case (4):
+                case (TypeBll.Platinum):
                 {
                     return new PlatinumBll();
                 }

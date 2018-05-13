@@ -18,7 +18,6 @@ namespace BLL.Service
         /// </summary>
         private NumberService()
         {
-
         }
 
         /// <summary>

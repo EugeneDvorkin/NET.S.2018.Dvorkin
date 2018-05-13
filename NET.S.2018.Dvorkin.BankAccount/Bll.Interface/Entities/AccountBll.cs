@@ -19,7 +19,6 @@ namespace Bll.Interface.Entities
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountBll"/> class.
         /// </summary>
-        /// <param name="id">The identifier.</param>
         /// <param name="personalId">The personal identifier.</param>
         /// <param name="number">The number.</param>
         /// <param name="balance">The balance.</param>

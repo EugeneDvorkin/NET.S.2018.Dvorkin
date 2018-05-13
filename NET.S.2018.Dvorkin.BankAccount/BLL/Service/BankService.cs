@@ -141,7 +141,7 @@ namespace BLL.Service
         /// Finds the specified account.
         /// </summary>
         /// <param name="number">The number.</param>
-        /// <returns></returns>
+        /// <returns>Current account for predicate.</returns>
         /// <exception cref="ArgumentNullException">number</exception>
         public AccountBll Find(int number)
         {
