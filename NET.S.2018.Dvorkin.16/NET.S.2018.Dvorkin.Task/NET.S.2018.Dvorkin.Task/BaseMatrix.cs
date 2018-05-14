@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace NET.S._2018.Dvorkin.Task
 {
@@ -6,49 +9,60 @@ namespace NET.S._2018.Dvorkin.Task
     /// Contains definitions of the base matrix.
     /// </summary>
     /// <typeparam name="T">Type of elements.</typeparam>
-    public abstract class BaseMatrix<T>
+    public abstract class BaseMatrix<T> : IEnumerable<T>
     {
-        private int row;
-
-        private T[,] matrix;
+        private int size;
+        private const int defaultsize = 3;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BaseMatrix{T}" /> class.
         /// </summary>
         /// <param name="size">The size.</param>
-        /// <param name="manager">The manager.</param>
         /// <exception cref="ArgumentException">size</exception>
         protected BaseMatrix(int size)
         {
-            if (size < 0)
+            if (size < 1)
             {
                 throw new ArgumentException($"{nameof(size)} is incorrect");
             }
 
-            Matrix = new T[size, size];
-            Row = size;
+            Size = size;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BaseMatrix{T}" /> class.
+        /// Initializes a new instance of the <see cref="BaseMatrix{T}"/> class.
+        /// </summary>
+        protected BaseMatrix()
+        {
+            Size = defaultsize;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BaseMatrix{T}"/> class.
         /// </summary>
         /// <param name="matrix">The matrix.</param>
         /// <exception cref="ArgumentNullException">matrix</exception>
-        protected BaseMatrix(T[,] matrix)
+        /// <exception cref="ArgumentException"></exception>
+        protected BaseMatrix(T[][] matrix)
         {
-            if (ReferenceEquals(matrix, null))
+            if (matrix == null)
             {
-                throw new ArgumentNullException($"{nameof(matrix)} is null");
+                throw new ArgumentNullException($"Argument {nameof(matrix)} is null");
             }
 
-            Matrix = matrix;
-            Row = matrix.GetLength(0);
+            if (matrix[0].Length != matrix.Count())
+            {
+                throw new ArgumentException($"The matrix isn't square matrix");
+            }
+
+            Size = matrix[0].Length;
         }
 
+
         /// <summary>
-        /// Occurs when [items].
+        /// Occurs when [items changed].
         /// </summary>
-        public event EventHandler<MatrixEventArg<T>> Items = delegate { };
+        public event EventHandler<MatrixEventArg<T>> ItemsChanged = delegate { };
 
         /// <summary>
         /// Gets the row.
@@ -57,9 +71,9 @@ namespace NET.S._2018.Dvorkin.Task
         /// The row.
         /// </value>
         /// <exception cref="ArgumentOutOfRangeException">value</exception>
-        public int Row
+        public int Size
         {
-            get => row;
+            get => size;
             private set
             {
                 if (value < 0)
@@ -67,24 +81,10 @@ namespace NET.S._2018.Dvorkin.Task
                     throw new ArgumentOutOfRangeException($"{nameof(value)} is incorrect");
                 }
 
-                row = value;
+                size = value;
             }
         }
-
-        /// <summary>
-        /// Gets the matrix.
-        /// </summary>
-        /// <value>
-        /// The matrix.
-        /// </value>
-        public T[,] Matrix
-        {
-            get => matrix;
-            internal set => matrix = value;
-        }
-
-        //public abstract BaseMatrix<T> Add(BaseMatrix<T> first, BaseMatrix<T> second);
-
+        
         /// <summary>
         /// Gets or sets the <see cref="T"/> with the specified i.
         /// </summary>
@@ -93,34 +93,21 @@ namespace NET.S._2018.Dvorkin.Task
         /// </value>
         /// <param name="i">The i.</param>
         /// <param name="j">The j.</param>
-        /// <returns>Element at the current index.</returns>
-        /// <exception cref="ArgumentException">
-        /// i
-        /// or
-        /// j
-        /// </exception>
+        /// <returns></returns>
         public virtual T this[int i, int j]
         {
             get
             {
-                if (i < 0 || i > Row - 1)
-                {
-                    throw new ArgumentException($"{nameof(i)} is incorrect");
-                }
-
-                if (j < 0 || j > Row - 1)
-                {
-                    throw new ArgumentException($"{nameof(j)} is incorrect");
-                }
-
+                Check(i, j);
                 return this[i, j];
             }
 
             set
             {
-                T oldItem = this.Matrix[i, j];
-                this.matrix[i, j] = value;
-                OnSetItem(this, new MatrixEventArg<T>(oldItem, matrix[i, j]));
+                Check(i, j);
+                T oldItem = GetElement(i, j);
+                SetElement(value, i, j);
+                OnSetItem(this, new MatrixEventArg<T>(oldItem, value));
             }
         }
 
@@ -131,8 +118,63 @@ namespace NET.S._2018.Dvorkin.Task
         /// <param name="e">The e.</param>
         protected virtual void OnSetItem(object sender, MatrixEventArg<T> e)
         {
-            EventHandler<MatrixEventArg<T>> temp = Items;
+            EventHandler<MatrixEventArg<T>> temp = ItemsChanged;
             temp?.Invoke(sender, e);
+        }
+
+        /// <summary>
+        /// Gets the element.
+        /// </summary>
+        /// <param name="i">The i.</param>
+        /// <param name="j">The j.</param>
+        /// <returns></returns>
+        protected abstract T GetElement(int i, int j);
+
+        /// <summary>
+        /// Sets the element.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <param name="i">The i.</param>
+        /// <param name="j">The j.</param>
+        protected abstract void SetElement(T value, int i, int j);
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            for (int i = 0; i < Size; i++)
+            {
+                for (int j = 0; j < Size; j++)
+                {
+                    yield return this[i, j];
+                }
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        /// <summary>
+        /// Checks the specified indexes.
+        /// </summary>
+        /// <param name="i">The i.</param>
+        /// <param name="j">The j.</param>
+        /// <exception cref="ArgumentOutOfRangeException">
+        /// i is wrong value
+        /// or
+        /// j is wrong value.
+        /// </exception>
+        private void Check(int i, int j)
+        {
+            if (i < 0 || i > Size)
+            {
+                throw new ArgumentOutOfRangeException($"Index {nameof(i)} is out of range");
+            }
+
+            if (j < 0 || j > Size)
+            {
+                throw new ArgumentOutOfRangeException($"Index {nameof(j)} is out of range");
+            }
         }
     }
 }

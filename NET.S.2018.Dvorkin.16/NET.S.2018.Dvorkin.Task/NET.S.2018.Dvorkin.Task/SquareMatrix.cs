@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Linq;
 
 namespace NET.S._2018.Dvorkin.Task
 {
@@ -9,42 +9,50 @@ namespace NET.S._2018.Dvorkin.Task
     /// <seealso cref="NET.S._2018.Dvorkin.Task.BaseMatrix{T}" />
     public class SquareMatrix<T> : BaseMatrix<T>
     {
+        private readonly T[][] squareMatrix;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SquareMatrix{T}"/> class.
         /// </summary>
         /// <param name="size">The size.</param>
         public SquareMatrix(int size) : base(size)
         {
+            this.squareMatrix = new T[size][];
+            for (int i = 0; i < Size; i++)
+            {
+                this.squareMatrix[i] = new T[Size];
+            }
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SquareMatrix{T}"/> class.
         /// </summary>
         /// <param name="matrix">The matrix.</param>
-        /// <exception cref="ArgumentException">matrix</exception>
-        public SquareMatrix(T[,] matrix) : base(matrix)
+        public SquareMatrix(T[][] matrix) : base(matrix)
         {
-            if (this.IsSquare(matrix) == false)
-            {
-                throw new ArgumentException($"{nameof(matrix)} is wrong");
-            }
+            this.squareMatrix = matrix;
         }
 
         /// <summary>
-        /// Determines whether the specified matrix is square.
+        /// Gets the element.
         /// </summary>
-        /// <param name="matrix">The matrix.</param>
-        /// <returns>
-        ///   <c>true</c> if the specified matrix is square; otherwise, <c>false</c>.
-        /// </returns>
-        private bool IsSquare(T[,] matrix)
+        /// <param name="i">The i.</param>
+        /// <param name="j">The j.</param>
+        /// <returns>Element at current index.</returns>
+        protected override T GetElement(int i, int j)
         {
-            if (matrix.GetLength(0) == matrix.GetLength(1))
-            {
-                return true;
-            }
+            return squareMatrix[i].ElementAt(j);
+        }
 
-            return false;
+        /// <summary>
+        /// Sets the element.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <param name="i">The i.</param>
+        /// <param name="j">The j.</param>
+        protected override void SetElement(T value, int i, int j)
+        {
+            squareMatrix[i].SetValue(value, j);
         }
     }
 }

@@ -1,0 +1,12 @@
+F:\EPAM\Day16\NET.S.2018.Dvorkin.Task\MatrixTest\bin\Debug\MatrixTest.dll
+F:\EPAM\Day16\NET.S.2018.Dvorkin.Task\MatrixTest\bin\Debug\MatrixTest.pdb
+F:\EPAM\Day16\NET.S.2018.Dvorkin.Task\MatrixTest\bin\Debug\NET.S.2018.Dvorkin.Task.dll
+F:\EPAM\Day16\NET.S.2018.Dvorkin.Task\MatrixTest\bin\Debug\nunit.framework.dll
+F:\EPAM\Day16\NET.S.2018.Dvorkin.Task\MatrixTest\bin\Debug\NET.S.2018.Dvorkin.Task.pdb
+F:\EPAM\Day16\NET.S.2018.Dvorkin.Task\MatrixTest\bin\Debug\nunit.framework.pdb
+F:\EPAM\Day16\NET.S.2018.Dvorkin.Task\MatrixTest\bin\Debug\nunit.framework.xml
+F:\EPAM\Day16\NET.S.2018.Dvorkin.Task\MatrixTest\obj\Debug\NET.S.2018.Dvorkin.Task.Test.csprojAssemblyReference.cache
+F:\EPAM\Day16\NET.S.2018.Dvorkin.Task\MatrixTest\obj\Debug\NET.S.2018.Dvorkin.Task.Test.csproj.CoreCompileInputs.cache
+F:\EPAM\Day16\NET.S.2018.Dvorkin.Task\MatrixTest\obj\Debug\NET.S.2018.Dvorkin.Task.Test.csproj.CopyComplete
+F:\EPAM\Day16\NET.S.2018.Dvorkin.Task\MatrixTest\obj\Debug\MatrixTest.dll
+F:\EPAM\Day16\NET.S.2018.Dvorkin.Task\MatrixTest\obj\Debug\MatrixTest.pdb

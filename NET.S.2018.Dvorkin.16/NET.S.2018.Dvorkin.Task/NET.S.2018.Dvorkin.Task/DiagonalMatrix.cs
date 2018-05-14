@@ -9,78 +9,23 @@ namespace NET.S._2018.Dvorkin.Task
     /// <seealso cref="NET.S._2018.Dvorkin.Task.BaseMatrix{T}" />
     public class DiagonalMatrix<T> : BaseMatrix<T>
     {
+        private readonly T[] diagonal;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="DiagonalMatrix{T}"/> class.
         /// </summary>
         /// <param name="size">The size.</param>
         public DiagonalMatrix(int size) : base(size)
         {
+            this.diagonal = new T[size];
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DiagonalMatrix{T}"/> class.
         /// </summary>
         /// <param name="matrix">The matrix.</param>
-        /// <exception cref="ArgumentException">matrix</exception>
-        public DiagonalMatrix(T[,] matrix) : base(matrix)
+        public DiagonalMatrix(T[][] matrix) : base(matrix)
         {
-            if (this.IsDiagonal(matrix) == false)
-            {
-                throw new ArgumentException($"{nameof(matrix)} is wrong");
-            }
-        }
-
-        //public override BaseMatrix<T> Add(BaseMatrix<T> first, BaseMatrix<T> second)
-        //{
-        //    if (first is DiagonalMatrix<T> == false)
-        //    {
-        //        throw new ArgumentException($"{nameof(first)} is not a Diagonal Matrix");
-        //    }
-
-        //    if (second is DiagonalMatrix<T> == false)
-        //    {
-        //        throw new ArgumentException($"{nameof(second)} is not a Diagonal Matrix");
-        //    }
-
-        //    if (first.Row != second.Row)
-        //    {
-        //        throw new ArgumentException("Matrix is not the same order");
-        //    }
-
-        //    DiagonalMatrix<T> result = new DiagonalMatrix<T>(first.Row);
-        //    for (int i = 0; i < first.Row; i++)
-        //    {
-        //        for (int j = 0; j < first.Row; j++)
-        //        {
-        //            result[i, j] = first[i, j] + second[i, j];
-        //        }
-        //    }
-
-        //    return result;
-        //}
-
-        /// <summary>
-        /// Gets or sets the <see cref="T"/> with the specified i.
-        /// </summary>
-        /// <value>
-        /// The <see cref="T"/>.
-        /// </value>
-        /// <param name="i">The i.</param>
-        /// <param name="j">The j.</param>
-        /// <returns></returns>
-        /// <exception cref="ArgumentException">Elements outside the main diagonal should have default values for the element type.</exception>
-        public override T this[int i, int j]
-        {
-            get => base[i, j];
-            set
-            {
-                if ((i != j) && (!object.Equals(value, default(T))))
-                {
-                    throw new ArgumentException("Elements outside the main diagonal should have default values for the element type.");
-                }
-
-                base[i, j] = value;
-            }
         }
 
         /// <summary>
@@ -92,9 +37,9 @@ namespace NET.S._2018.Dvorkin.Task
         /// </returns>
         private bool IsDiagonal(T[,] matrix)
         {
-            for (int i = 0; i < this.Row; i++)
+            for (int i = 0; i < this.Size; i++)
             {
-                for (int j = 0; j < this.Row; j++)
+                for (int j = 0; j < this.Size; j++)
                 {
                     if ((i != j) && (!object.Equals(matrix[i, j], default(T))))
                     {
@@ -104,6 +49,29 @@ namespace NET.S._2018.Dvorkin.Task
             }
 
             return true;
+        }
+
+        /// <summary>
+        /// Gets the element.
+        /// </summary>
+        /// <param name="i">The i.</param>
+        /// <param name="j">The j.</param>
+        /// <returns></returns>
+        protected override T GetElement(int i, int j)
+        {
+            return i != j ? default(T) : this.diagonal[i];
+        }
+
+        /// <summary>
+        /// Sets the element.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <param name="i">The i.</param>
+        /// <param name="j">The j.</param>
+        /// <exception cref="ArgumentException"></exception>
+        protected override void SetElement(T value, int i, int j)
+        {
+            this.diagonal[i] = i != j ? throw new ArgumentException($"There is not diagonal matrix") : value;
         }
     }
 }
