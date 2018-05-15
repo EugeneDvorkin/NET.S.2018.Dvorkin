@@ -7,10 +7,9 @@ namespace Bll.Interface.Entities
     /// </summary>
     public abstract class AccountBll
     {
-        private int id;
         private int personeId;
         private int number;
-        private decimal balance;
+        protected decimal balance;
         private int point;
         private TypeBll typeId;
         private bool valid;
@@ -24,34 +23,14 @@ namespace Bll.Interface.Entities
         /// <param name="balance">The balance.</param>
         /// <param name="point">The point.</param>
         /// <param name="typeId">The type identifier.</param>
-        public AccountBll(int personalId, int number, decimal balance, int point, TypeBll typeId)
+        protected AccountBll(int personalId, int number, decimal balance, int point, TypeBll typeId)
         {
             this.PersoneId = personalId;
             this.Number = number;
             this.Valid = true;
-            this.Balance = balance;
+            Deposit(balance);
             this.Point = point;
             this.TypeId = typeId;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AccountBll"/> class.
-        /// </summary>
-        public AccountBll()
-        {
-        }
-
-        /// <summary>
-        /// Gets or sets the identifier.
-        /// </summary>
-        /// <value>
-        /// The identifier.
-        /// </value>
-        /// <exception cref="System.ArgumentException">value</exception>
-        public int Id
-        {
-            get => id;
-            set => id = value < 0 ? throw new ArgumentException($"{nameof(value)} is wrong") : value;
         }
 
         /// <summary>
@@ -64,7 +43,7 @@ namespace Bll.Interface.Entities
         public int PersoneId
         {
             get => personeId;
-            set => personeId = value < 0 ? throw new ArgumentException($"{nameof(value)} is wrong") : value;
+            private set => personeId = value < 0 ? throw new ArgumentException($"{nameof(value)} is wrong") : value;
         }
 
         /// <summary>
@@ -77,7 +56,7 @@ namespace Bll.Interface.Entities
         public int Number
         {
             get => number;
-            set => number = value < 0 ? throw new ArgumentException($"{nameof(value)} is wrong") : value;
+            private set => number = value < 0 ? throw new ArgumentException($"{nameof(value)} is wrong") : value;
         }
 
         /// <summary>
@@ -90,7 +69,7 @@ namespace Bll.Interface.Entities
         public bool Valid
         {
             get => valid;
-            set => valid = balance > 0 ? throw new ArgumentException($"You can't close this account. Count is more, than 0") : value;
+            private set => valid = balance > 0 ? throw new ArgumentException($"You can't close this account. Count is more, than 0") : value;
 
         }
 
@@ -101,11 +80,7 @@ namespace Bll.Interface.Entities
         /// The balance.
         /// </value>
         /// <exception cref="System.ArgumentException">value</exception>
-        public decimal Balance
-        {
-            get => this.balance;
-            set => this.balance = value < 0 ? throw new ArgumentException($"There is wrong {nameof(value)}") : value;
-        }
+        public abstract decimal Balance { get; protected set; }
 
         /// <summary>
         /// Gets or sets the point.
@@ -116,12 +91,12 @@ namespace Bll.Interface.Entities
         public int Point
         {
             get => point;
-            set
+            protected set
             {
-                ////if (score - value < 0)
-                ////{
-                ////    value = score;
-                ////}
+                if (Point - value < 0)
+                {
+                    value = Point;
+                }
 
                 this.point = value;
             }
@@ -137,7 +112,7 @@ namespace Bll.Interface.Entities
         public TypeBll TypeId
         {
             get => typeId;
-            set => typeId = value < 0 ? throw new ArgumentException($"There is wrong {nameof(value)}") : value;
+            private set => typeId = value < 0 ? throw new ArgumentException($"There is wrong {nameof(value)}") : value;
         }
 
         public PersonBll Person
@@ -222,7 +197,7 @@ namespace Bll.Interface.Entities
         {
             if (Check(this))
             {
-                if (this.Balance > 0)
+                if (this.Balance > 0 || this.Balance < 0)
                 {
                     throw new ArgumentException("There is money at the balance");
                 }

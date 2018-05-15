@@ -1,4 +1,6 @@
-﻿namespace Bll.Interface.Entities
+﻿using System;
+
+namespace Bll.Interface.Entities
 {
     public class SilverBll : AccountBll
     {
@@ -8,20 +10,14 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="SilverBll" /> class.
         /// </summary>
-        /// <param name="id">The identifier.</param>
         /// <param name="personId">The person identifier.</param>
         /// <param name="number">The number.</param>
         /// <param name="balance">The balance.</param>
-        public SilverBll(int id, int personId, int number, decimal balance) :
+        public SilverBll(int personId, int number, decimal balance) :
             base(personId, number, balance, 200, TypeBll.Silver)
         {
         }
-
-        public SilverBll()
-        {
-            Valid = true;
-        }
-
+        
         /// <summary>
         /// Calculates the benefits points deposit.
         /// </summary>
@@ -29,6 +25,21 @@
         protected override void CalculatePointDeposit(decimal count)
         {
             this.Point = this.Point = Point + (int)count * coefDepositPoint;
+        }
+
+        /// <summary>
+        /// Gets or sets the balance.
+        /// </summary>
+        /// <value>
+        /// The balance.
+        /// </value>
+        /// <exception cref="ArgumentException">value</exception>
+        public override decimal Balance
+        {
+            get => balance;
+            protected set => balance = value < 0 || balance - value < -20000m
+                ? throw new ArgumentException($"{nameof(value)} is wrong value or more than current balance")
+                : value;
         }
 
         /// <summary>

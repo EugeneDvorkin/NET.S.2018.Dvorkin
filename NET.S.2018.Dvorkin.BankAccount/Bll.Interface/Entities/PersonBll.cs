@@ -13,7 +13,6 @@ namespace Bll.Interface.Entities
         private string surname;
         private string passport;
         private string email;
-        private int id;
         private ObservableCollection<AccountBll> accounts;
 
         /// <summary>
@@ -24,9 +23,8 @@ namespace Bll.Interface.Entities
         /// <param name="surname">The surname.</param>
         /// <param name="passport">The passport.</param>
         /// <param name="email">The email.</param>
-        public PersonBll(int id, string name, string surname, string passport, string email = null)
+        public PersonBll(string name, string surname, string passport, string email = null)
         {
-            this.Id = id;
             this.Name = name;
             this.Surname = surname;
             this.Passport = passport;
@@ -38,26 +36,6 @@ namespace Bll.Interface.Entities
         /// </summary>
         public PersonBll()
         {
-        }
-
-        /// <summary>
-        /// Gets the identifier.
-        /// </summary>
-        /// <value>
-        /// The identifier.
-        /// </value>
-        public int Id
-        {
-            get => id;
-            set
-            {
-                if (value < 0)
-                {
-                    throw new ArgumentException($"{nameof(value)} is wrong");
-                }
-
-                id = value;
-            }
         }
 
         /// <summary>

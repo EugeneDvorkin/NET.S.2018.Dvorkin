@@ -1,4 +1,6 @@
-﻿namespace Bll.Interface.Entities
+﻿using System;
+
+namespace Bll.Interface.Entities
 {
     public class GoldBll : AccountBll
     {
@@ -8,7 +10,6 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="GoldBll" /> class.
         /// </summary>
-        /// <param name="id">The identifier.</param>
         /// <param name="personId">The person identifier.</param>
         /// <param name="number">The number.</param>
         /// <param name="balance">The balance.</param>
@@ -18,11 +19,18 @@
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GoldBll"/> class.
+        /// Gets or sets the balance.
         /// </summary>
-        public GoldBll()
+        /// <value>
+        /// The balance.
+        /// </value>
+        /// <exception cref="ArgumentException">value</exception>
+        public override decimal Balance
         {
-            Valid = true;
+            get => balance;
+            protected set => balance = value < 0 || balance - value < -30000m
+                ? throw new ArgumentException($"{nameof(value)} is wrong value or more than current balance")
+                : value;
         }
 
         /// <summary>

@@ -19,7 +19,6 @@ namespace DAL.Interface.DTO
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountDal" /> class.
         /// </summary>
-        /// <param name="id">The identifier.</param>
         /// <param name="personId">The person identifier.</param>
         /// <param name="number">The number.</param>
         /// <param name="balance">The balance.</param>

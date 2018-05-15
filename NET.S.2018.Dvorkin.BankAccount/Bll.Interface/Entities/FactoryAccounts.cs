@@ -11,10 +11,15 @@ namespace Bll.Interface.Entities
         /// Creates the account.
         /// </summary>
         /// <param name="accountType">Type of the account.</param>
-        /// <returns>Current BLL account.</returns>
+        /// <param name="personId">The person identifier.</param>
+        /// <param name="number">The number.</param>
+        /// <param name="balance">The balance.</param>
+        /// <returns>
+        /// Current BLL account.
+        /// </returns>
         /// <exception cref="ArgumentNullException">accountType</exception>
         /// <exception cref="ArgumentException">accountType</exception>
-        public static AccountBll CreateAccount(int accountType)
+        public static AccountBll CreateAccount(int accountType, int personId, int number, decimal balance)
         {
             if (!Enum.IsDefined(typeof(TypeBll), accountType))
             {
@@ -25,19 +30,19 @@ namespace Bll.Interface.Entities
             {
                 case (TypeBll.Base):
                 {
-                    return new BaseBll();
+                    return new BaseBll(personId, number, balance);
                 }
                 case (TypeBll.Silver):
                 {
-                    return new SilverBll();
+                    return new SilverBll(personId, number, balance);
                 }
                 case (TypeBll.Gold):
                 {
-                    return new GoldBll();
+                    return new GoldBll(personId, number, balance);
                 }
                 case (TypeBll.Platinum):
                 {
-                    return new PlatinumBll();
+                    return new PlatinumBll(personId, number, balance);
                 }
                 default:
                 {

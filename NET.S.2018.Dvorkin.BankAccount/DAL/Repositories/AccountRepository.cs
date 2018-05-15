@@ -43,7 +43,7 @@ namespace DAL.Repositories
                 Balance = dal.Balance,
                 Number = dal.Number,
                 Points = dal.Point,
-                PersonId = dal.Id,
+                PersonId = dal.PersonId,
                 Valid = dal.Valid
             };
             context.Accounts.Add(temp);
@@ -69,7 +69,7 @@ namespace DAL.Repositories
             }
 
             temp.Id = dal.Id;
-            temp.PersonId = dal.Id;
+            temp.PersonId = dal.PersonId;
             temp.Number = dal.Number;
             temp.AccountType.Id = dal.Type;
             temp.Balance = dal.Balance;
@@ -94,6 +94,11 @@ namespace DAL.Repositories
             if (ReferenceEquals(temp, null))
             {
                 throw new ArgumentException($"{nameof(dal)} doesn't contains in database");
+            }
+
+            if (temp.Balance>0||temp.Balance<0)
+            {
+                throw new ArgumentException($"{nameof(dal)} can't be close. Its balance doesn't equals 0");
             }
 
             temp.Valid = false;

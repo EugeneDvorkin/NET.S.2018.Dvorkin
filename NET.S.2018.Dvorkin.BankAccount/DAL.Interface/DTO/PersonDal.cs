@@ -7,7 +7,7 @@ namespace DAL.Interface.DTO
     /// <summary>
     /// Personal information.
     /// </summary>
-    public class PersonDal : IEntity,IEquatable<PersonDal>
+    public class PersonDal : IEntity, IEquatable<PersonDal>
     {
         private int id;
         private string name;
@@ -168,7 +168,7 @@ namespace DAL.Interface.DTO
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
             if (obj.GetType() != this.GetType()) return false;
-            return Equals((PersonDal) obj);
+            return Equals((PersonDal)obj);
         }
 
         /// <summary>

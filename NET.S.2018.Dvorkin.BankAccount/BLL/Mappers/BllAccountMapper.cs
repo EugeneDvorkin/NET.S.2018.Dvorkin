@@ -21,7 +21,7 @@ namespace BLL.Mappers
                 Number = accountBll.Number,
                 Balance = accountBll.Balance,
                 Point = accountBll.Point,
-                Id = accountBll.PersoneId
+                PersonId = accountBll.PersoneId
             };
 
             return temp;
@@ -34,13 +34,7 @@ namespace BLL.Mappers
         /// <returns>Equal BLL account.</returns>
         public static AccountBll ToBllAccount(this AccountDal accountDal)
         {
-            AccountBll temp = FactoryAccounts.CreateAccount(accountDal.Type);
-            temp.Id = accountDal.Id;
-            temp.Number = accountDal.Number;
-            temp.PersoneId = accountDal.Id;
-            temp.Point = accountDal.Point;
-            temp.Valid = accountDal.Valid;
-            temp.Balance = accountDal.Balance;
+            AccountBll temp = FactoryAccounts.CreateAccount(accountDal.Type, accountDal.PersonId, accountDal.Number, accountDal.Balance);
 
             return temp;
         }

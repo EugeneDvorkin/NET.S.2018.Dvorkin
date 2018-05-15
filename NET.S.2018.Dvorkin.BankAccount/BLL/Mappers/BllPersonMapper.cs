@@ -35,7 +35,6 @@ namespace BLL.Mappers
         {
             PersonBll temp = new PersonBll
             {
-                Id = personDal.Id,
                 Name = personDal.Name,
                 Surname = personDal.Surname,
                 Passport = personDal.Passport,

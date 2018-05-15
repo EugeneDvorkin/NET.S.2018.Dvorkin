@@ -81,11 +81,7 @@ namespace BLL.Service
         /// <param name="typeId">The type identifier.</param>
         public void NewAccount(int personId, decimal balance, int point, int typeId)
         {
-            AccountBll temp = FactoryAccounts.CreateAccount(typeId);
-            temp.PersoneId = personId;
-            temp.Balance = balance;
-            temp.Point = point;
-            temp.Number = generator.GenerateNumber(personId, balance, point, typeId);
+            AccountBll temp = FactoryAccounts.CreateAccount(typeId, personId, generator.GenerateNumber(personId, balance, point, typeId), balance);
             accountRepository.Create(temp.ToDalAccount());
             context.Save();
         }
@@ -105,7 +101,7 @@ namespace BLL.Service
                 throw new ArgumentException($"{nameof(passport)} already contains in the database");
             }
 
-            personRepository.Create(new PersonDal(name, surname, passport, email));
+            personRepository.Create(new PersonBll(name, surname, passport, email).ToDalPerson());
             context.Save();
         }
 
@@ -116,7 +112,8 @@ namespace BLL.Service
         public void CloseAccount(AccountBll account)
         {
             Check(account);
-            accountRepository.Delete(account.ToDalAccount());
+            account.Close();
+            accountRepository.Update(account.ToDalAccount());
             context.Save();
         }
 
