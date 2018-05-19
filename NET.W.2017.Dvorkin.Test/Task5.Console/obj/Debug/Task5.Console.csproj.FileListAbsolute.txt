@@ -28,3 +28,13 @@ d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task5.Console\obj\
 d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task5.Console\obj\Debug\Task5.Console.csproj.CopyComplete
 d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task5.Console\obj\Debug\Task5.Console.exe
 d:\GitRepositories\NET.S.2018.Dvorkin\NET.W.2017.Dvorkin.Test\Task5.Console\obj\Debug\Task5.Console.pdb
+e:\EPAM\NET.W.2017.Dvorkin.Test\Task5.Console\bin\Debug\Task5.Console.exe.config
+e:\EPAM\NET.W.2017.Dvorkin.Test\Task5.Console\bin\Debug\Task5.Console.exe
+e:\EPAM\NET.W.2017.Dvorkin.Test\Task5.Console\bin\Debug\Task5.Console.pdb
+e:\EPAM\NET.W.2017.Dvorkin.Test\Task5.Console\bin\Debug\Task5.Solution.dll
+e:\EPAM\NET.W.2017.Dvorkin.Test\Task5.Console\bin\Debug\Task5.Solution.pdb
+e:\EPAM\NET.W.2017.Dvorkin.Test\Task5.Console\obj\Debug\Task5.Console.csprojAssemblyReference.cache
+e:\EPAM\NET.W.2017.Dvorkin.Test\Task5.Console\obj\Debug\Task5.Console.csproj.CoreCompileInputs.cache
+e:\EPAM\NET.W.2017.Dvorkin.Test\Task5.Console\obj\Debug\Task5.Console.csproj.CopyComplete
+e:\EPAM\NET.W.2017.Dvorkin.Test\Task5.Console\obj\Debug\Task5.Console.exe
+e:\EPAM\NET.W.2017.Dvorkin.Test\Task5.Console\obj\Debug\Task5.Console.pdb

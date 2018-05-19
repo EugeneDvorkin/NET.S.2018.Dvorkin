@@ -16,40 +16,15 @@ namespace Task5
             this.parts = new List<DocumentPart>(parts);
         }
 
-        public string ToHtml()
+        public IEnumerable<DocumentPart> Parts
         {
-            string output = string.Empty;
-
-            foreach (DocumentPart part in this.parts)
+            get
             {
-                output += $"{part.ToHtml()}\n";
+                foreach (var part in parts)
+                {
+                    yield return part;
+                }
             }
-
-            return output;
-        }
-
-        public string ToPlainText()
-        {
-            string output = string.Empty;
-
-            foreach (DocumentPart part in this.parts)
-            {
-                output += $"{part.ToPlainText()}\n";
-            }
-
-            return output;
-        }
-
-        public string ToLaTeX()
-        {
-            string output = string.Empty;
-
-            foreach (DocumentPart part in this.parts)
-            {
-                output += $"{part.ToLaTeX()}\n";
-            }
-
-            return output;
         }
     }
 }
