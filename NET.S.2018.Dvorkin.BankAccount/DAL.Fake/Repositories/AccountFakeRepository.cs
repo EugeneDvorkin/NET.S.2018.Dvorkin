@@ -53,7 +53,6 @@ namespace DAL.Fake.Repositories
             temp.Number = dal.Number;
             temp.PersonId = dal.PersonId;
             temp.Point = dal.Point;
-            temp.Valid = dal.Valid;
             temp.Type = dal.Type;
         }
 
@@ -92,10 +91,6 @@ namespace DAL.Fake.Repositories
         public AccountDal Get(int id)
         {
             AccountDal result = accounts.Find(item => item.Id == id);
-            if (ReferenceEquals(result, null))
-            {
-                throw new ArgumentException($"{nameof(id)} doesn't contains in the storage");
-            }
 
             return result;
         }

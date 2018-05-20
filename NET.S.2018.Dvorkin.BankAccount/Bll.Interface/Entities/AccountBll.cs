@@ -142,20 +142,18 @@ namespace Bll.Interface.Entities
         /// <exception cref="System.ArgumentException">deposit</exception>
         public void Deposit(decimal count)
         {
-            if (Check(this))
-            {
-                if (count < 0)
-                {
-                    throw new ArgumentException($"{nameof(count)} is wrong");
-                }
-
-                this.Balance = Balance + count;
-                CalculatePointDeposit(count);
-            }
-            else
+            if (!Check(this))
             {
                 throw new ArgumentException($"AccountDal is closed");
             }
+
+            if (count < 0)
+            {
+                throw new ArgumentException($"{nameof(count)} is wrong");
+            }
+
+            this.Balance = Balance + count;
+            CalculatePointDeposit(count);
         }
 
         /// <summary>
@@ -167,26 +165,23 @@ namespace Bll.Interface.Entities
         /// count is more than balance.</exception>
         public void Withdraw(decimal count)
         {
-            if (Check(this))
-            {
-                if (count < 0)
-                {
-                    throw new ArgumentException($"{nameof(count)} is wrong");
-                }
-
-                if (this.Balance < count)
-                {
-                    throw new ArgumentException($"{nameof(count)} is more than balance");
-                }
-
-                this.Balance = Balance - count;
-                CalculatePointWithdraw(count);
-            }
-            else
+            if (!Check(this))
             {
                 throw new ArgumentException($"AccountDal is closed");
             }
+           
+            if (count < 0)
+            {
+                throw new ArgumentException($"{nameof(count)} is wrong");
+            }
 
+            if (this.Balance < count)
+            {
+                throw new ArgumentException($"{nameof(count)} is more than balance");
+            }
+
+            this.Balance = Balance - count;
+            CalculatePointWithdraw(count);
         }
 
         /// <summary>

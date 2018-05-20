@@ -32,13 +32,6 @@ namespace DAL.Interface.DTO
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PersonDal"/> class.
-        /// </summary>
-        //public PersonDal()
-        //{
-        //}
-
-        /// <summary>
         /// Gets the identifier.
         /// </summary>
         /// <value>
@@ -119,21 +112,15 @@ namespace DAL.Interface.DTO
         /// <value>
         /// The email.
         /// </value>
-        /// <exception cref="ArgumentNullException">value</exception>
         /// <exception cref="ArgumentException">value</exception>
         public string Email
         {
             get => email;
             set
             {
-                if (value == null)
-                {
-                    throw new ArgumentNullException($"{nameof(value)} is null");
-                }
-
                 Regex emailRegex = new Regex(@"^(?!.*@.*@.*$)(?!.*@.*\-\-.*\..*$)(?!.*@.*\-\..*$)(?!.*@.*\-$)(.*@.+(\..{1,11})?)");
 
-                if (!emailRegex.IsMatch(value))
+                if (!ReferenceEquals(value, null) && !emailRegex.IsMatch(value))
                 {
                     throw new ArgumentException($"{nameof(value)} is wrong email");
                 }

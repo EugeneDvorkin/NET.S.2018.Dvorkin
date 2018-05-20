@@ -72,7 +72,6 @@ namespace DAL.Repositories
             temp.PersonId = dal.PersonId;
             temp.Number = dal.Number;
             temp.AccountType.Id = dal.Type;
-            temp.Balance = dal.Balance;
             temp.Points = dal.Point;
             temp.Valid = dal.Valid;
         }

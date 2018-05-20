@@ -1,6 +1,7 @@
 ﻿using System.Data.Entity;
 using Bll.Interface.Interface;
 using BLL.Service;
+using DAL.Fake.Repositories;
 using DAL.Interface.Interfaces;
 using DAL.Repositories;
 using Ninject;
@@ -29,13 +30,18 @@ namespace DependencyResolver
         private static void Configure(IKernel kernel)
         {
             kernel.Bind<DbContext>().To<BankEntities>();
-            kernel.Bind<IPersonRepository>().To<PersonRepository>();
-            kernel.Bind<IAccountRepository>().To<AccountRepository>();
-            kernel.Bind<IUnitOfWork>().To<UnitOfWork>();
+            //kernel.Bind<IPersonRepository>().To<PersonRepository>();
+            //kernel.Bind<IAccountRepository>().To<AccountRepository>();
+            kernel.Bind<IPersonRepository>().To<PersonFakeRepository>();
+            kernel.Bind<IAccountRepository>().To<AccountFakeRepository>();
+            //kernel.Bind<IUnitOfWork>().To<UnitOfWork>();
+            kernel.Bind<IUnitOfWork>().To<FakeUnitOfWork>();
             IGenerator generator = NumberService.Instance;
             // kernel.Bind<IGenerator>().To<NumberService>().InSingletonScope();
-            kernel.Bind<IBankService>().To<BankService>().WithConstructorArgument("UnitOfWork")
-                .WithConstructorArgument("AccountRepository").WithConstructorArgument("PersonRepository").WithConstructorArgument(generator);
+            //kernel.Bind<IBankService>().To<BankService>().WithConstructorArgument("UnitOfWork")
+            //    .WithConstructorArgument("AccountRepository").WithConstructorArgument("PersonRepository").WithConstructorArgument(generator);
+            kernel.Bind<IBankService>().To<BankService>().WithConstructorArgument("FakeUnitOfWork")
+                .WithConstructorArgument("AccountFakeRepository").WithConstructorArgument("PersonFakeRepository").WithConstructorArgument(generator);
         }
     }
 }

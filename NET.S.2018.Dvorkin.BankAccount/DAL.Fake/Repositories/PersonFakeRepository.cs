@@ -94,7 +94,7 @@ namespace DAL.Fake.Repositories
             PersonDal result = people.Find(item => item.Passport == passport);
             if (ReferenceEquals(result, null))
             {
-                throw new ArgumentException($"{nameof(passport)} doesn't contains in the storage");
+                return null;
             }
 
             return result;

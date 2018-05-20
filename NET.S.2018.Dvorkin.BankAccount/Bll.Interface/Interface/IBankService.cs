@@ -1,4 +1,5 @@
-﻿using Bll.Interface.Entities;
+﻿using System.Collections.Generic;
+using Bll.Interface.Entities;
 
 namespace Bll.Interface.Interface
 {
@@ -36,7 +37,7 @@ namespace Bll.Interface.Interface
         /// <param name="surname">The surname.</param>
         /// <param name="passport">The passport.</param>
         /// <param name="email">The email.</param>
-        void NewOwner(string name, string surname, string passport, string email);
+        void NewOwner(string name, string surname, string passport, string email = null);
 
         /// <summary>
         /// Closes the account.
@@ -66,5 +67,16 @@ namespace Bll.Interface.Interface
         /// <returns>Current person.</returns>
         PersonBll FindPerson(string passport);
 
+        /// <summary>
+        /// Alls the person.
+        /// </summary>
+        /// <returns></returns>
+        IEnumerable<PersonBll> AllPerson();
+
+        /// <summary>
+        /// Alls the account.
+        /// </summary>
+        /// <returns></returns>
+        IEnumerable<AccountBll> AllAccount();
     }
 }

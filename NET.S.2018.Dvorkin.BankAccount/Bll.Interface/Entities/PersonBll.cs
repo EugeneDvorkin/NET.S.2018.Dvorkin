@@ -92,21 +92,15 @@ namespace Bll.Interface.Entities
         /// <value>
         /// The email.
         /// </value>
-        /// <exception cref="ArgumentNullException">value</exception>
         /// <exception cref="ArgumentException">value</exception>
         public string Email
         {
             get => email;
             set
             {
-                if (value == null)
-                {
-                    throw new ArgumentNullException($"{nameof(value)} is null");
-                }
-
                 Regex emailRegex = new Regex(@"^(?!.*@.*@.*$)(?!.*@.*\-\-.*\..*$)(?!.*@.*\-\..*$)(?!.*@.*\-$)(.*@.+(\..{1,11})?)");
 
-                if (!emailRegex.IsMatch(value))
+                if (!ReferenceEquals(value, null) && !emailRegex.IsMatch(value))
                 {
                     throw new ArgumentException($"{nameof(value)} is wrong email");
                 }

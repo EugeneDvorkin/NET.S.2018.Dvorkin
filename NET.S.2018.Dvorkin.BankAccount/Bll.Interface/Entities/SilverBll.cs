@@ -37,7 +37,7 @@ namespace Bll.Interface.Entities
         public override decimal Balance
         {
             get => balance;
-            protected set => balance = value < 0 || balance - value < -20000m
+            protected set => balance = value < 0 && balance - value < -20000m
                 ? throw new ArgumentException($"{nameof(value)} is wrong value or more than current balance")
                 : value;
         }

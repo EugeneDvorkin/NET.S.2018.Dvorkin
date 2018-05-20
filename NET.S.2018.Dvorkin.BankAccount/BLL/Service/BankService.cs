@@ -77,7 +77,6 @@ namespace BLL.Service
         /// </summary>
         /// <param name="personId">The person identifier.</param>
         /// <param name="balance">The balance.</param>
-        /// <param name="point">The point.</param>
         /// <param name="typeId">The type identifier.</param>
         public void NewAccount(int personId, decimal balance, int typeId)
         {
@@ -151,6 +150,32 @@ namespace BLL.Service
             }
 
             return temp;
+        }
+
+        /// <summary>
+        /// Alls the person.
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="System.NotImplementedException"></exception>
+        public IEnumerable<PersonBll> AllPerson()
+        {
+            foreach (PersonDal personDal in personRepository.GetAll())
+            {
+                yield return personDal.ToBllPerson();
+            }
+        }
+
+        /// <summary>
+        /// Alls the account.
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="System.NotImplementedException"></exception>
+        public IEnumerable<AccountBll> AllAccount()
+        {
+            foreach (AccountDal accountDal in accountRepository.GetAll())
+            {
+                yield return accountDal.ToBllAccount();
+            }
         }
 
         /// <summary>

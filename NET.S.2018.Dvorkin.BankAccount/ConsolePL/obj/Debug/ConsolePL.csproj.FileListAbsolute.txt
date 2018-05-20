@@ -12,14 +12,11 @@ E:\EPAM\NET.S.2018.Dvorkin.BankAccount\ConsolePL\obj\Debug\ConsolePL.exe
 E:\EPAM\NET.S.2018.Dvorkin.BankAccount\ConsolePL\obj\Debug\ConsolePL.pdb
 E:\EPAM\NET.S.2018.Dvorkin.BankAccount\ConsolePL\bin\Debug\BLL.dll
 E:\EPAM\NET.S.2018.Dvorkin.BankAccount\ConsolePL\bin\Debug\Bll.Interface.dll
-E:\EPAM\NET.S.2018.Dvorkin.BankAccount\ConsolePL\bin\Debug\DAL.dll
 E:\EPAM\NET.S.2018.Dvorkin.BankAccount\ConsolePL\bin\Debug\DAL.Interface.dll
 E:\EPAM\NET.S.2018.Dvorkin.BankAccount\ConsolePL\bin\Debug\ORM.dll
 E:\EPAM\NET.S.2018.Dvorkin.BankAccount\ConsolePL\bin\Debug\Bll.Interface.pdb
 E:\EPAM\NET.S.2018.Dvorkin.BankAccount\ConsolePL\bin\Debug\BLL.pdb
 E:\EPAM\NET.S.2018.Dvorkin.BankAccount\ConsolePL\bin\Debug\DAL.Interface.pdb
-E:\EPAM\NET.S.2018.Dvorkin.BankAccount\ConsolePL\bin\Debug\DAL.pdb
-E:\EPAM\NET.S.2018.Dvorkin.BankAccount\ConsolePL\bin\Debug\DAL.dll.config
 E:\EPAM\NET.S.2018.Dvorkin.BankAccount\ConsolePL\bin\Debug\ORM.pdb
 E:\EPAM\NET.S.2018.Dvorkin.BankAccount\ConsolePL\bin\Debug\ORM.dll.config
 E:\EPAM\NET.S.2018.Dvorkin.BankAccount\ConsolePL\bin\Debug\DependencyResolver.dll
@@ -27,3 +24,5 @@ E:\EPAM\NET.S.2018.Dvorkin.BankAccount\ConsolePL\bin\Debug\Ninject.dll
 E:\EPAM\NET.S.2018.Dvorkin.BankAccount\ConsolePL\bin\Debug\DependencyResolver.pdb
 E:\EPAM\NET.S.2018.Dvorkin.BankAccount\ConsolePL\bin\Debug\Ninject.xml
 E:\EPAM\NET.S.2018.Dvorkin.BankAccount\ConsolePL\bin\Debug\DependencyResolver.dll.config
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\ConsolePL\bin\Debug\DAL.Fake.dll
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\ConsolePL\bin\Debug\DAL.Fake.pdb

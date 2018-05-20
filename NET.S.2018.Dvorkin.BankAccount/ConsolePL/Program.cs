@@ -8,9 +8,11 @@ namespace ConsolePL
 {
     class Program
     {
+        private static IKernel kernel;
+
         static void Main(string[] args)
         {
-            IKernel kernel = new StandardKernel();
+            kernel = new StandardKernel();
             kernel.ConfigurateResolver();
             IBankService service = kernel.Get<IBankService>();
             //service.NewOwner("Owner1", "Owner1", "123456", "qwer@mail.ru");
