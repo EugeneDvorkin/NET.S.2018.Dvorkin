@@ -79,9 +79,9 @@ namespace BLL.Service
         /// <param name="balance">The balance.</param>
         /// <param name="point">The point.</param>
         /// <param name="typeId">The type identifier.</param>
-        public void NewAccount(int personId, decimal balance, int point, int typeId)
+        public void NewAccount(int personId, decimal balance, int typeId)
         {
-            AccountBll temp = FactoryAccounts.CreateAccount(typeId, personId, generator.GenerateNumber(personId, balance, point, typeId), balance);
+            AccountBll temp = FactoryAccounts.CreateAccount(typeId, personId, generator.GenerateNumber(personId, balance, typeId), balance);
             accountRepository.Create(temp.ToDalAccount());
             context.Save();
         }
@@ -135,12 +135,31 @@ namespace BLL.Service
         }
 
         /// <summary>
+        /// Finds the person.
+        /// </summary>
+        /// <param name="passport">The passport.</param>
+        /// <returns>
+        /// Current person.
+        /// </returns>
+        /// <exception cref="System.ArgumentNullException">passport</exception>
+        public PersonBll FindPerson(string passport)
+        {
+            PersonBll temp = personRepository.Get(passport).ToBllPerson();
+            if (ReferenceEquals(temp, null))
+            {
+                throw new ArgumentNullException($"{nameof(passport)} doesn't contains in the database");
+            }
+
+            return temp;
+        }
+
+        /// <summary>
         /// Finds the specified account.
         /// </summary>
         /// <param name="number">The number.</param>
         /// <returns>Current account for predicate.</returns>
         /// <exception cref="ArgumentNullException">number</exception>
-        public AccountBll Find(int number)
+        public AccountBll FindAccount(int number)
         {
             AccountBll temp = accountRepository.Get(number).ToBllAccount();
             if (ReferenceEquals(temp,null))

@@ -31,3 +31,14 @@ e:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\BLL\obj\Debug\BLL.csproj.CoreCompileInput
 e:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\BLL\obj\Debug\BLL.csproj.CopyComplete
 e:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\BLL\obj\Debug\BLL.dll
 e:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\BLL\obj\Debug\BLL.pdb
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\BLL\bin\Debug\BLL.dll
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\BLL\bin\Debug\BLL.pdb
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\BLL\bin\Debug\Bll.Interface.dll
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\BLL\bin\Debug\DAL.Interface.dll
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\BLL\bin\Debug\Bll.Interface.pdb
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\BLL\bin\Debug\DAL.Interface.pdb
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+E:\EPAM\NET.S.2018.Dvorkin.BankAccount\BLL\obj\Debug\BLL.csproj.CopyComplete
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\BLL\obj\Debug\BLL.dll
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\BLL\obj\Debug\BLL.pdb

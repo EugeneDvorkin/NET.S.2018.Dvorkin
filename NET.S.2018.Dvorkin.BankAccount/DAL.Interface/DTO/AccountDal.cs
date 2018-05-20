@@ -35,14 +35,6 @@ namespace DAL.Interface.DTO
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AccountDal"/> class.
-        /// </summary>
-        public AccountDal()
-        {
-            this.Valid = true;
-        }
-
-        /// <summary>
         /// Gets or sets the identifier.
         /// </summary>
         /// <value>

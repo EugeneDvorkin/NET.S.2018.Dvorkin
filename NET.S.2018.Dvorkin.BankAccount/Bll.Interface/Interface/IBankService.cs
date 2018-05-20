@@ -26,9 +26,8 @@ namespace Bll.Interface.Interface
         /// </summary>
         /// <param name="personId">The person identifier.</param>
         /// <param name="balance">The balance.</param>
-        /// <param name="point">The point.</param>
         /// <param name="typeId">The type identifier.</param>
-        void NewAccount(int personId, decimal balance, int point, int typeId);
+        void NewAccount(int personId, decimal balance, int typeId);
 
         /// <summary>
         /// News the owner.
@@ -52,5 +51,20 @@ namespace Bll.Interface.Interface
         /// <param name="transfer">The transfer.</param>
         /// <param name="count">The count.</param>
         void Transfer(AccountBll account, AccountBll transfer, decimal count);
+
+        /// <summary>
+        /// Finds the account.
+        /// </summary>
+        /// <param name="name">The name.</param>
+        /// <returns>Current account.</returns>
+        AccountBll FindAccount(int name);
+
+        /// <summary>
+        /// Finds the person.
+        /// </summary>
+        /// <param name="passport">The passport.</param>
+        /// <returns>Current person.</returns>
+        PersonBll FindPerson(string passport);
+
     }
 }

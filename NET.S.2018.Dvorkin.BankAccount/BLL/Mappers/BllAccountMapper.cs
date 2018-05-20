@@ -15,14 +15,8 @@ namespace BLL.Mappers
         /// <returns>Equal DAL account.</returns>
         public static AccountDal ToDalAccount(this AccountBll accountBll)
         {
-            AccountDal temp = new AccountDal
-            {
-                Valid = accountBll.Valid,
-                Number = accountBll.Number,
-                Balance = accountBll.Balance,
-                Point = accountBll.Point,
-                PersonId = accountBll.PersoneId
-            };
+            AccountDal temp = new AccountDal(accountBll.PersoneId, accountBll.Number, accountBll.Balance,
+                accountBll.Point, (int) accountBll.TypeId);
 
             return temp;
         }

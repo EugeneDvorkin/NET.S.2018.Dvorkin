@@ -42,6 +42,7 @@ namespace DAL.Repositories
                 Id = dal.Id,
                 Name = dal.Name,
                 Surname = dal.Surname,
+                Passport = dal.Passport,
                 Email = dal.Email
             };
             context.Persons.Add(temp);
@@ -107,17 +108,10 @@ namespace DAL.Repositories
             Person temp = context.Persons.FirstOrDefault(item => item.Passport == passport);
             if (ReferenceEquals(temp, null))
             {
-                throw new ArgumentNullException($"{nameof(passport)} doesn't contains in the database");
+                return null;
             }
 
-            PersonDal result = new PersonDal
-            {
-                Id = temp.Id,
-                Name = temp.Name,
-                Surname = temp.Surname,
-                Passport = temp.Passport,
-                Email = temp.Email
-            };
+            PersonDal result = new PersonDal(temp.Name, temp.Surname, temp.Passport, temp.Email);
 
             return result;
         }
@@ -132,15 +126,8 @@ namespace DAL.Repositories
         {
             foreach (Person person in context.Persons)
             {
-                PersonDal temp = new PersonDal
-                {
-                    Id = person.Id,
-                    Name = person.Name,
-                    Surname = person.Surname,
-                    Passport = person.Passport,
-                    Email = person.Email
-                };
-                
+                PersonDal temp = new PersonDal(person.Name, person.Surname, person.Passport, person.Email);
+
                 yield return temp;
             }
         }

@@ -22,3 +22,9 @@ e:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Interface\obj\Debug\DAL.Interface.csp
 e:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Interface\obj\Debug\DAL.Interface.csproj.CoreCompileInputs.cache
 e:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Interface\obj\Debug\DAL.Interface.dll
 e:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Interface\obj\Debug\DAL.Interface.pdb
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\DAL.Interface\bin\Debug\DAL.Interface.dll
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\DAL.Interface\bin\Debug\DAL.Interface.pdb
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\DAL.Interface\obj\Debug\DAL.Interface.csprojAssemblyReference.cache
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\DAL.Interface\obj\Debug\DAL.Interface.csproj.CoreCompileInputs.cache
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\DAL.Interface\obj\Debug\DAL.Interface.dll
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\DAL.Interface\obj\Debug\DAL.Interface.pdb

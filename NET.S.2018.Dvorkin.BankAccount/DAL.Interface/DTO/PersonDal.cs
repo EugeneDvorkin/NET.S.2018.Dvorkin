@@ -34,9 +34,9 @@ namespace DAL.Interface.DTO
         /// <summary>
         /// Initializes a new instance of the <see cref="PersonDal"/> class.
         /// </summary>
-        public PersonDal()
-        {
-        }
+        //public PersonDal()
+        //{
+        //}
 
         /// <summary>
         /// Gets the identifier.

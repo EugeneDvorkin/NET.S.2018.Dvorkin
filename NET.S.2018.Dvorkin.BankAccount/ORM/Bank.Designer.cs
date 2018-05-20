@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'd:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\ORM\Bank.edmx'. 
+﻿// T4 code generation is enabled for model 'e:\EPAM\NET.S.2018.Dvorkin.BankAccount\ORM\Bank.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

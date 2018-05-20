@@ -32,13 +32,6 @@ namespace Bll.Interface.Entities
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PersonBll"/> class.
-        /// </summary>
-        public PersonBll()
-        {
-        }
-
-        /// <summary>
         /// Gets or sets the name.
         /// </summary>
         /// <value>

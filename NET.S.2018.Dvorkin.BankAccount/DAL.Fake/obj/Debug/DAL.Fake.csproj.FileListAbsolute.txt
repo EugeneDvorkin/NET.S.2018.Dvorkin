@@ -7,3 +7,12 @@ E:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Fake\obj\Debug\DAL.Fake.csproj.CoreCo
 E:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Fake\obj\Debug\DAL.Fake.csproj.CopyComplete
 E:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Fake\obj\Debug\DAL.Fake.dll
 E:\EPAM\Day21\NET.S.2018.Dvorkin.Task1\DAL.Fake\obj\Debug\DAL.Fake.pdb
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\DAL.Fake\bin\Debug\DAL.Fake.dll
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\DAL.Fake\bin\Debug\DAL.Fake.pdb
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\DAL.Fake\bin\Debug\DAL.Interface.dll
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\DAL.Fake\bin\Debug\DAL.Interface.pdb
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\DAL.Fake\obj\Debug\DAL.Fake.csprojAssemblyReference.cache
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\DAL.Fake\obj\Debug\DAL.Fake.csproj.CoreCompileInputs.cache
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\DAL.Fake\obj\Debug\DAL.Fake.csproj.CopyComplete
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\DAL.Fake\obj\Debug\DAL.Fake.dll
+e:\EPAM\NET.S.2018.Dvorkin.BankAccount\DAL.Fake\obj\Debug\DAL.Fake.pdb

@@ -9,6 +9,6 @@
         /// Generates the number.
         /// </summary>
         /// <returns>Generated number for account.</returns>
-        int GenerateNumber(int personId, decimal balance, int point, int typeId);
+        int GenerateNumber(int personId, decimal balance, int typeId);
     }
 }

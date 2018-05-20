@@ -41,11 +41,10 @@ namespace BLL.Service
         /// <returns>
         /// Generated number.
         /// </returns>
-        public int GenerateNumber(int personId, decimal balance, int point, int typeId)
+        public int GenerateNumber(int personId, decimal balance, int typeId)
         {
             int hashcode = personId.GetHashCode();
             hashcode = (hashcode * 9) + balance.GetHashCode();
-            hashcode = (hashcode * 9) + point.GetHashCode();
             hashcode = (hashcode * 9) + typeId.GetHashCode();
 
             return hashcode;

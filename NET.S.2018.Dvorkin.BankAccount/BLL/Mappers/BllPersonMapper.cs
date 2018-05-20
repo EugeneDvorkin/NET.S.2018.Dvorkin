@@ -15,13 +15,7 @@ namespace BLL.Mappers
         /// <returns>Equals DAL person.</returns>
         public static PersonDal ToDalPerson(this PersonBll personBll)
         {
-            PersonDal temp = new PersonDal()
-            {
-                Name = personBll.Name,
-                Surname = personBll.Surname,
-                Passport = personBll.Passport,
-                Email = personBll.Email
-            };
+            PersonDal temp = new PersonDal(personBll.Name, personBll.Surname, personBll.Passport, personBll.Email);
 
             return temp;
         }
@@ -33,13 +27,7 @@ namespace BLL.Mappers
         /// <returns>Equals BLL person.</returns>
         public static PersonBll ToBllPerson(this PersonDal personDal)
         {
-            PersonBll temp = new PersonBll
-            {
-                Name = personDal.Name,
-                Surname = personDal.Surname,
-                Passport = personDal.Passport,
-                Email = personDal.Email
-            };
+            PersonBll temp = new PersonBll(personDal.Name, personDal.Surname, personDal.Passport, personDal.Email);
 
             return temp;
         }

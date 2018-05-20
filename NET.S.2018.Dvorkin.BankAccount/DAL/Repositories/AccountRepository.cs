@@ -120,16 +120,7 @@ namespace DAL.Repositories
                 throw new ArgumentNullException($"{nameof(number)} doesn't contains in the database");
             }
 
-            AccountDal result = new AccountDal
-            {
-                Id = temp.Id,
-                Number = temp.Number,
-                Balance = temp.Balance,
-                PersonId = temp.PersonId,
-                Point = temp.Points,
-                Valid = temp.Valid,
-                Type = temp.TypeId
-            };
+            AccountDal result = new AccountDal(temp.PersonId, temp.Number, temp.Balance, temp.Points, temp.TypeId);
 
             return result;
         }
@@ -144,16 +135,8 @@ namespace DAL.Repositories
         {
             foreach (Account account in context.Accounts)
             {
-                AccountDal temp = new AccountDal
-                {
-                    Id = account.Id,
-                    Number = account.Number,
-                    Balance = account.Balance,
-                    PersonId = account.PersonId,
-                    Point = account.Points,
-                    Valid = account.Valid,
-                    Type = account.TypeId
-                };
+                AccountDal temp = new AccountDal(account.PersonId, account.Number, account.Balance, account.Points,
+                    account.TypeId);
 
                 yield return temp;
             }
