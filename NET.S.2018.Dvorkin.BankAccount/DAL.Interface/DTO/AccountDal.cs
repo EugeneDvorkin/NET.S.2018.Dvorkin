@@ -15,6 +15,7 @@ namespace DAL.Interface.DTO
         private int point;
         private int type;
         private bool valid;
+        private PersonDal person;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountDal" /> class.
@@ -132,6 +133,21 @@ namespace DAL.Interface.DTO
         {
             get => type;
             set => type = value < 0 || value > 4 ? throw new ArgumentException($"{nameof(value)} is wrong") : value;
+        }
+
+        /// <summary>
+        /// Gets or sets the person.
+        /// </summary>
+        /// <value>
+        /// The person.
+        /// </value>
+        /// <exception cref="ArgumentException">value</exception>
+        public PersonDal Person
+        {
+            get => person;
+            set => person = value.GetType() == typeof(PersonDal)
+                ? value
+                : throw new ArgumentException($"{nameof(value)} doesn't current type");
         }
 
         /// <summary>

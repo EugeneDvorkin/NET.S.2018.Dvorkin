@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using DAL.Interface.Interfaces;
 
@@ -14,6 +15,7 @@ namespace DAL.Interface.DTO
         private string surname;
         private string passport;
         private string email;
+        private ICollection<AccountDal> accountsDal;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="PersonDal" /> class.
@@ -127,6 +129,19 @@ namespace DAL.Interface.DTO
 
                 this.email = value;
             }
+        }
+
+        /// <summary>
+        /// Gets or sets the accounts DAL.
+        /// </summary>
+        /// <value>
+        /// The accounts DAL.
+        /// </value>
+        /// <exception cref="ArgumentException">value</exception>
+        public ICollection<AccountDal> AccountsDal
+        {
+            get => accountsDal;
+            set => accountsDal = value ?? throw new ArgumentException($"{nameof(value)} doesn't current type");
         }
 
         /// <summary>

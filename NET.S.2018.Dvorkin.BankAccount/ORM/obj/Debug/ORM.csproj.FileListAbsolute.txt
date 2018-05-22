@@ -60,3 +60,15 @@ e:\EPAM\NET.S.2018.Dvorkin.BankAccount\ORM\obj\Debug\ORM.csproj.CoreCompileInput
 e:\EPAM\NET.S.2018.Dvorkin.BankAccount\ORM\obj\Debug\ORM.csproj.CopyComplete
 e:\EPAM\NET.S.2018.Dvorkin.BankAccount\ORM\obj\Debug\ORM.dll
 e:\EPAM\NET.S.2018.Dvorkin.BankAccount\ORM\obj\Debug\ORM.pdb
+d:\EPAM\NET.S.2018.Dvorkin.BankAccount\ORM\bin\Debug\ORM.dll.config
+d:\EPAM\NET.S.2018.Dvorkin.BankAccount\ORM\bin\Debug\ORM.dll
+d:\EPAM\NET.S.2018.Dvorkin.BankAccount\ORM\bin\Debug\ORM.pdb
+d:\EPAM\NET.S.2018.Dvorkin.BankAccount\ORM\bin\Debug\EntityFramework.dll
+d:\EPAM\NET.S.2018.Dvorkin.BankAccount\ORM\bin\Debug\EntityFramework.SqlServer.dll
+d:\EPAM\NET.S.2018.Dvorkin.BankAccount\ORM\bin\Debug\EntityFramework.xml
+d:\EPAM\NET.S.2018.Dvorkin.BankAccount\ORM\bin\Debug\EntityFramework.SqlServer.xml
+d:\EPAM\NET.S.2018.Dvorkin.BankAccount\ORM\obj\Debug\ORM.csprojAssemblyReference.cache
+d:\EPAM\NET.S.2018.Dvorkin.BankAccount\ORM\obj\Debug\ORM.csproj.CoreCompileInputs.cache
+d:\EPAM\NET.S.2018.Dvorkin.BankAccount\ORM\obj\Debug\ORM.csproj.CopyComplete
+d:\EPAM\NET.S.2018.Dvorkin.BankAccount\ORM\obj\Debug\ORM.dll
+d:\EPAM\NET.S.2018.Dvorkin.BankAccount\ORM\obj\Debug\ORM.pdb

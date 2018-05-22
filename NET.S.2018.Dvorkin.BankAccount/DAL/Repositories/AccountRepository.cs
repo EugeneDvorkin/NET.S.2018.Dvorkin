@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using DAL.Interface.DTO;
 using DAL.Interface.Interfaces;
+using DAL.Mappers;
 using ORM;
 
 namespace DAL.Repositories
@@ -37,15 +38,7 @@ namespace DAL.Repositories
                 throw new ArgumentNullException($"{nameof(dal)} is null");
             }
 
-            Account temp = new Account()
-            {
-                TypeId = dal.Type,
-                Balance = dal.Balance,
-                Number = dal.Number,
-                Points = dal.Point,
-                PersonId = dal.PersonId,
-                Valid = dal.Valid
-            };
+            Account temp = dal.ToOrmAccount();
             context.Accounts.Add(temp);
         }
 
@@ -68,12 +61,7 @@ namespace DAL.Repositories
                 throw new ArgumentException($"{nameof(dal)} doesn't contains in the storage");
             }
 
-            temp.Id = dal.Id;
-            temp.PersonId = dal.PersonId;
-            temp.Number = dal.Number;
-            temp.AccountType.Id = dal.Type;
-            temp.Points = dal.Point;
-            temp.Valid = dal.Valid;
+            temp = dal.ToOrmAccount();
         }
 
         /// <summary>
@@ -95,7 +83,7 @@ namespace DAL.Repositories
                 throw new ArgumentException($"{nameof(dal)} doesn't contains in database");
             }
 
-            if (temp.Balance>0||temp.Balance<0)
+            if (temp.Balance > 0 || temp.Balance < 0)
             {
                 throw new ArgumentException($"{nameof(dal)} can't be close. Its balance doesn't equals 0");
             }
@@ -113,13 +101,13 @@ namespace DAL.Repositories
         /// <exception cref="ArgumentNullException">Number.</exception>
         public AccountDal Get(int number)
         {
-            Account temp = context.Accounts.FirstOrDefault(item => item.Number == number);
+            Account temp = context.Accounts.FirstOrDefault(item => item.Number == number); 
             if (ReferenceEquals(temp, null))
             {
                 throw new ArgumentNullException($"{nameof(number)} doesn't contains in the database");
             }
 
-            AccountDal result = new AccountDal(temp.PersonId, temp.Number, temp.Balance, temp.Points, temp.TypeId);
+            AccountDal result = temp.ToDalAccount();
 
             return result;
         }
@@ -134,8 +122,7 @@ namespace DAL.Repositories
         {
             foreach (Account account in context.Accounts)
             {
-                AccountDal temp = new AccountDal(account.PersonId, account.Number, account.Balance, account.Points,
-                    account.TypeId);
+                AccountDal temp = account.ToDalAccount();
 
                 yield return temp;
             }

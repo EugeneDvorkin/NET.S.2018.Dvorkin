@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using DAL.Interface.DTO;
 using DAL.Interface.Interfaces;
+using DAL.Mappers;
 using ORM;
 
 namespace DAL.Repositories
@@ -111,7 +112,7 @@ namespace DAL.Repositories
                 return null;
             }
 
-            PersonDal result = new PersonDal(temp.Name, temp.Surname, temp.Passport, temp.Email);
+            PersonDal result = temp.ToDalPerson();
 
             return result;
         }
@@ -126,7 +127,7 @@ namespace DAL.Repositories
         {
             foreach (Person person in context.Persons)
             {
-                PersonDal temp = new PersonDal(person.Name, person.Surname, person.Passport, person.Email);
+                PersonDal temp = person.ToDalPerson();
 
                 yield return temp;
             }
