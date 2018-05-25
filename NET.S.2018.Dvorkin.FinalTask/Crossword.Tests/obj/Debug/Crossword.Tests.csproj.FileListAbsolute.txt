@@ -1,0 +1,10 @@
+D:\Crossword\Crossword.Tests\bin\Debug\Crossword.Tests.exe.config
+D:\Crossword\Crossword.Tests\bin\Debug\Crossword.Tests.exe
+D:\Crossword\Crossword.Tests\bin\Debug\Crossword.Tests.pdb
+D:\Crossword\Crossword.Tests\obj\Debug\Crossword.Tests.csproj.CoreCompileInputs.cache
+D:\Crossword\Crossword.Tests\obj\Debug\Crossword.Tests.exe
+D:\Crossword\Crossword.Tests\obj\Debug\Crossword.Tests.pdb
+D:\Crossword\Crossword.Tests\bin\Debug\Crossword.dll
+D:\Crossword\Crossword.Tests\bin\Debug\Crossword.pdb
+D:\Crossword\Crossword.Tests\obj\Debug\Crossword.Tests.csprojAssemblyReference.cache
+D:\Crossword\Crossword.Tests\obj\Debug\Crossword.Tests.csproj.CopyComplete

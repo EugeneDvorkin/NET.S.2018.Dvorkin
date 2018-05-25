@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crossword", "Crossword\Crossword.csproj", "{22B82ED1-BBF5-461D-988C-803E0C15A7E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crossword.Tests", "Crossword.Tests\Crossword.Tests.csproj", "{EE5D789C-4565-43BA-9E70-4A34DAC2AF14}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22B82ED1-BBF5-461D-988C-803E0C15A7E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22B82ED1-BBF5-461D-988C-803E0C15A7E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22B82ED1-BBF5-461D-988C-803E0C15A7E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22B82ED1-BBF5-461D-988C-803E0C15A7E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE5D789C-4565-43BA-9E70-4A34DAC2AF14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE5D789C-4565-43BA-9E70-4A34DAC2AF14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE5D789C-4565-43BA-9E70-4A34DAC2AF14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE5D789C-4565-43BA-9E70-4A34DAC2AF14}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CEE2D3EF-62B9-423F-B950-6E3F39F0A485}
+	EndGlobalSection
+EndGlobal
