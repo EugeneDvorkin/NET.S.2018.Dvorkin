@@ -1,0 +1,6 @@
+D:\Crossword\Crossword\obj\Debug\Crossword.csprojAssemblyReference.cache
+D:\Crossword\Crossword\obj\Debug\Crossword.csproj.CoreCompileInputs.cache
+D:\Crossword\Crossword\bin\Debug\Crossword.dll
+D:\Crossword\Crossword\bin\Debug\Crossword.pdb
+D:\Crossword\Crossword\obj\Debug\Crossword.dll
+D:\Crossword\Crossword\obj\Debug\Crossword.pdb
